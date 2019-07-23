@@ -15,7 +15,7 @@
   <script defer src="script.js"></script>
 </head>
 
-<body>
+<body class="has-navbar-fixed-top">
 
   <!-- Top bar -->
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
@@ -34,6 +34,26 @@
       <div class="navbar-item">
         <a href="https://linkedin.com/in/dogatekin"><i class="fab fa-linkedin-in has-text-dark"></i></a>
       </div>
+
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" id="navBurger">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end has-text-centered">
+        <div class="navbar-item">
+          <a onclick="openTab(event,'Resume')">Resume</a>
+        </div>
+        <div class="navbar-item">
+          <a onclick="openTab(event,'Projects')">Projects</a>
+        </div>
+        <div class="navbar-item">
+          <a onclick="openTab(event,'Hobbies')">Hobbies</a>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -41,7 +61,7 @@
   <section class="section">
     <div class="container">
 
-      <div class="tabs is-centered">
+      <!-- <div class="tabs is-centered">
         <ul>
           <li class="tab is-active" onclick="openTab(event,'Resume')"><a>Resume</a></li>
           <li class="tab" onclick="openTab(event,'Projects')"><a>Projects</a></li>
@@ -49,7 +69,7 @@
         </ul>
       </div>
 
-      <br>
+      <br> -->
 
       <div id="Resume" class="content-tab">
         <h1 class="title has-text-centered">Education</h1>
