@@ -5,3 +5,7 @@ a {
 a:hover {
     color: lightcoral;
 }
+
+.typed-cursor {
+    font-size: 32px;
+}

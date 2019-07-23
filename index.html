@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style.css">
 
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   <script defer src="script.js"></script>
 </head>
 
@@ -52,33 +53,42 @@
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end has-text-centered">
         <div class="navbar-item">
+          <a onclick="openTab(event,'About')">About</a>
+        </div>
+        <div class="navbar-item">
           <a onclick="openTab(event,'Resume')">Resume</a>
         </div>
         <div class="navbar-item">
           <a onclick="openTab(event,'Projects')">Projects</a>
         </div>
-        <div class="navbar-item">
+        <!-- <div class="navbar-item">
           <a onclick="openTab(event,'Hobbies')">Hobbies</a>
-        </div>
+        </div> -->
       </div>
     </div>
   </nav>
 
-  <!-- Main content -->
-  <section class="section">
-    <div class="container">
-
-      <!-- <div class="tabs is-centered">
-        <ul>
-          <li class="tab is-active" onclick="openTab(event,'Resume')"><a>Resume</a></li>
-          <li class="tab" onclick="openTab(event,'Projects')"><a>Projects</a></li>
-          <li class="tab" onclick="openTab(event,'Hobbies')"><a>Hobbies</a></li>
-        </ul>
+  <div id="About" class="content-tab">
+    <section class="hero is-fullheight-with-navbar">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-1">
+            Hi, I'm Doga Tekin.
+          </h1>
+          <h2 class="subtitle is-3">I <p class="typed" style="display: inline;"></p>
+          </h2>
+          <p>I'm currently in: <strong>Dublin, Ireland</strong></p>
+          <img id="animation" style="display: none;" src="images/bullet.gif">
+        </div>
       </div>
+    </section>
+  </div>
 
-      <br> -->
+  <!-- Main content -->
+  <div class="container">
 
-      <div id="Resume" class="content-tab">
+    <div id="Resume" class="content-tab" style="display: none;">
+      <section class="section">
         <div class="columns is-variable is-8 is-vcentered is-multiline" style="justify-content: center;">
           <div class="column is-full" style="max-width: 1024px;">
             <h1 class="title is-2 has-text-centered">Resume</h1>
@@ -472,9 +482,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
+    </div>
 
-      <div id="Projects" class="content-tab" style="display: none;">
+    <div id="Projects" class="content-tab" style="display: none;">
+      <section class="section">
         <h1 class="title is-2 has-text-centered">Projects</h1>
         <hr>
         <div class="columns is-multiline" style="justify-content: center;">
@@ -622,14 +634,15 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div id="Hobbies" class="content-tab has-text-centered" style="display: none;">
-        <h1 class="title">TV Recommendations</h1>
-
-      </div>
+      </section>
     </div>
-  </section>
+
+    <!-- <div id="Hobbies" class="content-tab has-text-centered" style="display: none;">
+      <section class="section">
+      </section>
+    </div> -->
+
+  </div>
 </body>
 
 </html>
