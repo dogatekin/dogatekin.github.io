@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "suggest you watch <a href='https://www.imdb.com/title/tt5687612/' target='_blank'>Fleabag</a>.",
             "wish you a pleasant day."
         ],
+        startDelay: 250,
         typeSpeed: 40,
         loop: true,
         autoInsertCss: false,
