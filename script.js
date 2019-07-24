@@ -58,8 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "used to make <a onclick='showAnimation()'>stick figure animations</a>.",
             "spend too much time on YouTube.",
             "suggest you watch <a href='https://www.imdb.com/title/tt5687612/' target='_blank'>Fleabag</a>.",
-            "wish you a pleasant day.",
-            "congratulate you for reading all of these."
+            "wish you a pleasant day."
         ],
         typeSpeed: 40,
         loop: true,
