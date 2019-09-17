@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="images/brackets.png" />
+
+  <title>Doga Tekin</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <script defer src="navbar.js"></script>
+</head>
+
+<body class="has-navbar-fixed-top">
+
+  <!-- Top bar -->
+  <nav class="navbar is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <h1 class="title is-5">
+          <a href="../">Doga Tekin</a>
+        </h1>
+      </div>
+      <div class="navbar-item">
+        <a href="mailto:dotekin@gmail.com">
+          <i class="far fa-envelope"></i>
+        </a>
+      </div>
+      <div class="navbar-item">
+        <a href="https://github.com/dogatekin" target='_blank'>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="navbar-item">
+        <a href="https://linkedin.com/in/dogatekin" target='_blank'>
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false"
+        id="navBurger">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end has-text-centered">
+        <div class="navbar-item">
+          <a href="../">About</a>
+        </div>
+        <div class="navbar-item">
+          <a href="resume.html">Resume</a>
+        </div>
+        <div class="navbar-item">
+          <a href="projects.html">Projects</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div class="container">
+    <div id="Resume" class="content-tab">
+      <section class="section">
+        <div class="columns is-variable is-8 is-vcentered is-multiline" style="justify-content: center;">
+          <div class="column is-full" style="max-width: 1024px;">
+            <h1 class="title is-2 has-text-centered">Resume</h1>
+            <hr style="max-width: 1024px;">
+            <h1 class="title has-text-centered">Education</h1>
+            <div class="notification has-background-light">
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    <img style="width: 64px;" src="images/epfl.svg">
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    <em>2018 – 2021</em>
+                  </div>
+                </div>
+              </nav>
+              <nav class="level title is-5 is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    EPFL
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    Lausanne, CH
+                  </div>
+                </div>
+              </nav>
+              <nav class="level subtitle is-6 is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    Master of Science, CS
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    GPA: 5.80 / 6.00
+                  </div>
+                </div>
+              </nav>
+              <div class="content">
+                <ul>
+                  <li>
+                    Coursework: Neural Networks, Machine Learning, Natural Language Processing,
+                    Applied
+                    Data Analysis,
+                    Data Visualization
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-full" style="max-width: 1024px;">
+            <div class="notification has-background-light">
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    <img style="width: 64px;" src="images/bilkent.svg">
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    <em>2014 – 2018</em>
+                  </div>
+                </div>
+              </nav>
+              <nav class="level title is-5 is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    Bilkent University
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    Ankara, TR
+                  </div>
+                </div>
+              </nav>
+              <nav class="level subtitle is-6 is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    Bachelor of Science, EE
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    GPA: 3.79 / 4.00
+                  </div>
+                </div>
+              </nav>
+              <div class="content">
+                <ul>
+                  <li>
+                    Graduated 13th among 120 graduates from a cohort of 160.
+                  </li>
+                  <li>
+                    Got awarded a 50% scholarship for ranking 1976th among 2,000,000 students taking
+                    the
+                    undergraduate
+                    placement examination.
+                  </li>
+                  <li>
+                    Coursework: Algorithms, Data Structures, Machine Learning, Neural Networks,
+                    Statistical Learning,
+                    Data Analysis
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 class="title has-text-centered">Experience</h1>
+        <div class="columns is-variable is-8 is-multiline is-vcentered" style="justify-content: center;">
+
+          <div class="column is-full" style="max-width: 1024px;">
+            <div class="notification has-background-light">
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    <img style="width: 64px;" src="images/accenture.svg">
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    <em>Fall 2019</em>
+                  </div>
+                </div>
+              </nav>
+              <nav class="level title is-6 is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    Accenture Labs
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    Dublin, IE
+                  </div>
+                </div>
+              </nav>
+              <h2 class="subtitle is-6">Research Assistant</h2>
+              <div class="content">
+                <ul>
+                  <li>Working on using evolutionary algorithms in a field they have not been used in
+                    before.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-full" style="max-width: 1024px;">
+            <div class="notification has-background-light">
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    <img style="width: 64px;" src="images/epfl.svg">
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    <em>Spring 2019</em>
+                  </div>
+                </div>
+              </nav>
+              <nav class="level title is-6 is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    EPFL LIONS Lab
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    Lausanne, CH
+                  </div>
+                </div>
+              </nav>
+              <h2 class="subtitle is-6">Research Assistant</h2>
+              <div class="content">
+                <ul>
+                  <li>Implemented a novel exploration method for deep reinforcement learning
+                    algorithms
+                    using
+                    TensorFlow.</li>
+                  <li>
+                    Co-authored a paper submitted to NeurIPS 2019.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-full" style="max-width: 1024px;">
+            <div class="notification has-background-light">
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    <img style="width: 64px;" src="images/bilkent.svg">
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    <em>Fall 2017</em>
+                  </div>
+                </div>
+              </nav>
+              <nav class="level title is-6 is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    Bilkent Data Science Group
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    Ankara, TR
+                  </div>
+                </div>
+              </nav>
+              <h2 class="subtitle is-6">Research Assistant</h2>
+              <div class="content">
+                <ul>
+                  <li>
+                    Built a Python framework for the offline evaluation of multi-armed bandit
+                    algorithms.
+                  </li>
+                  <li>
+                    Modified the SQL code of a medical dataset simulator to generate data to train
+                    three
+                    different
+                    bandit
+                    models.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-full" style="max-width: 1024px;">
+            <div class="notification has-background-light">
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    <img style="width: 64px;" src="images/eth.svg">
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    <em>Summer 2017</em>
+                  </div>
+                </div>
+              </nav>
+              <nav class="level title is-6 is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    ETH Computer Vision Lab
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    Zurich, CH
+                  </div>
+                </div>
+              </nav>
+              <h2 class="subtitle is-6">Research Assistant</h2>
+              <div class="content">
+                <ul>
+                  <li>Implemented a neural network in MATLAB to perform semantic segmentation on
+                    magnetic
+                    resonance
+                    images.</li>
+                  <li>Added four new features to the modeling platform <a href="https://www.artisynth.org/Main/HomePage"
+                      target='_blank'>ArtiSynth</a>
+                    by
+                    integrating my code into the large
+                    Java codebase.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-full" style="max-width: 1024px;">
+            <div class="notification has-background-light">
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    <img style="width: 64px;" src="images/huawei.svg">
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    <em>Summer 2016</em>
+                  </div>
+                </div>
+              </nav>
+              <nav class="level title is-6 is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    Huawei R&D Center
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    Istanbul, TR
+                  </div>
+                </div>
+              </nav>
+              <h2 class="subtitle is-6">Research Assistant</h2>
+              <div class="content">
+                <ul>
+                  <li>Collected live tweets using Java and predicted the response time of a Twitter
+                    account to new
+                    tweets using Weka.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="columns is-multiline is-variable is-8" style="justify-content: center;">
+          <div class="column is-full" style="max-width: 1024px;">
+            <h1 class="title has-text-centered">Skills</h1>
+            <article class="message">
+              <div class="message-body">
+                <em>"If it <strong>can</strong> be done with Python, I <strong>will</strong> do it with
+                  Python."</em> –
+                Me
+              </div>
+            </article>
+            <div class="notification has-background-white">
+              <div class="columns is-mobile">
+                <div class="column is-one-fifth">Python</div>
+                <div class="column"> <progress class="progress" value="90" max="100"></progress>
+                </div>
+              </div>
+              <div class="columns is-mobile">
+                <div class="column column is-one-fifth">Java</div>
+                <div class="column"> <progress class="progress" value="75" max="100"></progress>
+                </div>
+              </div>
+              <div class="columns is-mobile">
+                <div class="column column is-one-fifth">JS</div>
+                <div class="column"> <progress class="progress" value="60" max="100"></progress>
+                </div>
+              </div>
+              <div class="columns is-mobile">
+                <div class="column column is-one-fifth">SQL</div>
+                <div class="column"> <progress class="progress" value="50" max="100"></progress>
+                </div>
+              </div>
+              <div class="columns is-mobile">
+                <div class="column column is-one-fifth">C++</div>
+                <div class="column"> <progress class="progress" value="30" max="100"></progress>
+                </div>
+              </div>
+              <div class="columns is-mobile">
+                <div class="column column is-one-fifth">R</div>
+                <div class="column"> <progress class="progress" value="25" max="100"></progress>
+                </div>
+              </div>
+              <div class="columns is-mobile">
+                <div class="column column is-one-fifth">Scala</div>
+                <div class="column"> <progress class="progress" value="25" max="100"></progress>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-full" style="max-width: 1024px;">
+            <h1 class="title has-text-centered">Extracurricular</h1>
+            <div class="notification has-background-light">
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    <img style="width: 64px;" src="images/mt.png">
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    <em>2015 – 2016</em>
+                  </div>
+                </div>
+              </nav>
+              <nav class="level title is-6 is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    Bilkent Engineering Society
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    Ankara, TR
+                  </div>
+                </div>
+              </nav>
+              <h2 class="subtitle is-6">Vice President</h2>
+              <div class="content">
+                <ul>
+                  <li>Held weekly meetings with 100 members, managed a 150.000 TL budget and organized
+                    career/social
+                    events.</li>
+                  <li><a
+                      href="https://www.izlesene.com/video/turkiyenin-en-buyuk-yoneticilik-ve-liderlik-kampi-yonet16-yonetilmeyonet/9205914?fbclid=IwAR2gtFRt-f16Cyum-3sqJpMvLIJEYRURk0ZkFZQwWFd6ufM_-fcqoWCpN9k"
+                      target='_blank'>Video
+                      from the management and leadership conference I coordinated.</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="has-text-centered">
+              <a class="button" href="files/resume.pdf">
+                <span class="icon">
+                  <i class="fas fa-download"></i>
+                </span>
+                <span>PDF</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

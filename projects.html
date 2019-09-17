@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="images/brackets.png" />
+
+  <title>Doga Tekin</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <script defer src="navbar.js"></script>
+</head>
+
+<body class="has-navbar-fixed-top">
+
+  <!-- Top bar -->
+  <nav class="navbar is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <h1 class="title is-5">
+          <a href="../">Doga Tekin</a>
+        </h1>
+      </div>
+      <div class="navbar-item">
+        <a href="mailto:dotekin@gmail.com">
+          <i class="far fa-envelope"></i>
+        </a>
+      </div>
+      <div class="navbar-item">
+        <a href="https://github.com/dogatekin" target='_blank'>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="navbar-item">
+        <a href="https://linkedin.com/in/dogatekin" target='_blank'>
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false"
+        id="navBurger">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end has-text-centered">
+        <div class="navbar-item">
+          <a href="../">About</a>
+        </div>
+        <div class="navbar-item">
+          <a href="resume.html">Resume</a>
+        </div>
+        <div class="navbar-item">
+          <a href="projects.html">Projects</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div class="container">
+    <div id="Projects" class="content-tab">
+      <section class="section">
+        <h1 class="title is-2 has-text-centered">Projects</h1>
+        <hr>
+        <div class="columns is-multiline" style="justify-content: center;">
+          <div class="column is-half-tablet is-one-third-widescreen is-full" style="max-width: 1024px;">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="images/spotify.png" alt="Spotify Quiz">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="title is-5">Spotify Quiz Maker</h1>
+                An app that creates personal music quizzes from your own Spotify playlists.
+                <span class="tag">
+                  HTML
+                </span>
+                <span class="tag">
+                  CSS
+                </span>
+                <span class="tag">
+                  JS
+                </span>
+              </div>
+              <footer class="card-footer">
+                <a href="https://dogatekin.github.io/molto-vivace/" target='_blank' class="card-footer-item">
+                  <span class="icon">
+                    <i class="fas fa-link"></i>
+                  </span>
+                  <span>Website</span>
+                </a>
+                <a href="https://github.com/dogatekin/molto-vivace" target='_blank' class="card-footer-item">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>GitHub</span>
+                </a>
+              </footer>
+            </div>
+          </div>
+
+          <div class="column is-half-tablet is-one-third-widescreen is-full" style="max-width: 1024px;">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="images/demo.gif" alt="Evolving Dots">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="title is-5">Evolving Dots</h1>
+                A population learns to reach a goal by evolution using the genetic algorithm.
+                <span class="tag">
+                  Processing
+                </span>
+              </div>
+              <footer class="card-footer">
+                <a href="https://github.com/dogatekin/evolving-dots" target='_blank' class="card-footer-item"><span
+                    class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>GitHub</span></a>
+              </footer>
+            </div>
+          </div>
+
+          <div class="column is-half-tablet is-one-third-widescreen is-full" style="max-width: 1024px;">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="images/chatbot.png" alt="Chatbot">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="title is-5">Chatbot</h1>
+                A bot that chats with you using an RNN architecture with GRU units.
+                <span class="tag">
+                  Python
+                </span>
+                <span class="tag">
+                  TensorFlow
+                </span>
+              </div>
+              <footer class="card-footer">
+                <a href="https://github.com/dogatekin/ann" target='_blank' class="card-footer-item"><span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>GitHub</span></a>
+              </footer>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-third-widescreen is-full" style="max-width: 1024px;">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="images/natcap.png" alt="Natural Capital">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="title is-5">Natural Capital Visualization</h1>
+                An interactive dashboard created for Stanford Natural Capital Project's training
+                program.
+                <span class="tag">
+                  HTML
+                </span>
+                <span class="tag">
+                  CSS
+                </span>
+                <span class="tag">
+                  JS
+                </span>
+              </div>
+              <footer class="card-footer">
+                <a href="https://dogatekin.github.io/natcap-training-viz/" target='_blank' class="card-footer-item">
+                  <span class="icon">
+                    <i class="fas fa-link"></i>
+                  </span>
+                  <span>Website</span>
+                </a>
+                <a href="https://github.com/dogatekin/natcap-training-viz/" target='_blank' class="card-footer-item">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>GitHub</span></a>
+              </footer>
+            </div>
+          </div>
+
+          <div class="column is-half-tablet is-one-third-widescreen is-full" style="max-width: 1024px;">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="images/covers.png" alt="Judging Covers">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="title is-5">Judging Book Covers</h1>
+                An analysis of Amazon book data that investigates whether the visual features of book
+                covers
+                affect
+                sales.
+                <span class="tag">
+                  Python
+                </span>
+              </div>
+              <footer class="card-footer">
+                <a href="https://data-wizards.github.io/" target='_blank' class="card-footer-item">
+                  <span class="icon">
+                    <i class="fas fa-link"></i>
+                  </span>
+                  <span>Website</span>
+                </a>
+                <a href="https://github.com/dogatekin/judging-covers/" target='_blank' class="card-footer-item"><span
+                    class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>GitHub</span></a>
+              </footer>
+            </div>
+          </div>
+
+          <div class="column is-half-tablet is-one-third-widescreen is-full" style="max-width: 1024px;">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="images/acoustic.png" alt="Acoustic Corrector">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="title is-5">Acoustic Corrector</h1>
+                An app that identifies acoustic distortions and performs real-time
+                correction on streaming audio.
+                <span class="tag">
+                  Android
+                </span>
+                <span class="tag">
+                  Java
+                </span>
+              </div>
+              <footer class="card-footer">
+                <a href="https://drive.google.com/file/d/1sUyQfNe8_vizBKcLnhJ1W__qcrkrL--H/view" target='_blank'
+                  class="card-footer-item">
+                  <span class="icon">
+                    <i class="fas fa-play"></i>
+                  </span>
+                  <span>Video</span></a>
+                </a>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
