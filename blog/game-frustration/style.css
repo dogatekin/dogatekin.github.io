@@ -36,7 +36,8 @@ blockquote {
 }
 
 blockquote:before {
-    content: '\201C';
+    /* content: '\201C'; */
+    content: url(images/quote.svg);
     position: absolute;
     top: 0em;
     left: 50%;
@@ -44,8 +45,6 @@ blockquote:before {
     background: #fff;
     width: 3rem;
     height: 2rem;
-    font: 6em/1.08em 'PT Sans', sans-serif;
-    color: #666;
     text-align: center;
 }
 
