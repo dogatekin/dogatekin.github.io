@@ -1,0 +1,31 @@
+figure div {
+    position: relative;
+    padding-top: 56.25%;
+}
+
+figure div iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+article {
+    font-size: 14pt;
+}
+
+#lol {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 767.98px) {
+    article {
+        font-size: 12pt;
+    }
+}

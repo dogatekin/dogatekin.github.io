@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="images/brackets.png" />
+
+  <title>Doga Tekin's Blog</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link rel="stylesheet" href="../style.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <script defer src="../navbar.js"></script>
+</head>
+
+<body class="has-navbar-fixed-top">
+
+  <!-- Top bar -->
+  <nav class="navbar is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <h1 class="title is-5">
+          <a href="../">Doga Tekin</a>
+        </h1>
+      </div>
+      <div class="navbar-item">
+        <a href="mailto:dotekin@gmail.com">
+          <i class="far fa-envelope"></i>
+        </a>
+      </div>
+      <div class="navbar-item">
+        <a href="https://github.com/dogatekin" target='_blank'>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="navbar-item">
+        <a href="https://linkedin.com/in/dogatekin" target='_blank'>
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" id="navBurger">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end has-text-centered">
+        <div class="navbar-item">
+          <a href="../">About</a>
+        </div>
+        <div class="navbar-item">
+          <a href="../resume/">Resume</a>
+        </div>
+        <div class="navbar-item">
+          <a href="../projects/">Projects</a>
+        </div>
+        <div class="navbar-item">
+          <a href="./">Blog</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div id="Blog" class="content-tab">
+      <section class="section">
+        <div class="columns is-variable is-8 is-vcentered is-multiline" style="justify-content: center;">
+          <div class="column is-full" style="max-width: 800px;">
+            <h1 class="title is-2 has-text-centered">Blog</h1>
+            <hr>
+          </div>
+
+          <div class="column is-full" style="max-width: 800px;">
+            <a href='./game-frustration/'>
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="./game-frustration/images/cover.png" alt="Cover">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <h2>Frustration in Hollow Knight and Celeste</h2>
+                    <p>An analysis of how two of my favourite games manage (or fail to manage) player frustration.</p>
+                  </div>
+                  <nav class="level is-mobile">
+                    <div class='level-left'>
+                      <div class="level-item has-text-centered">
+                        <div>
+                          <span class="tag">
+                            Game Design
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='level-right'>
+                      <div class="level-item has-text-centered">
+                        <div>
+                          07 August 2020
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </a>
+
+          </div>
+      </section>
+    </div>
+  </div>
+
+</body>
+
+</html>
