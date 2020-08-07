@@ -9,3 +9,7 @@ a:hover {
 .typed-cursor {
     font-size: 32px;
 }
+
+body {
+    font-family: 'Gill Sans', sans-serif;
+}
