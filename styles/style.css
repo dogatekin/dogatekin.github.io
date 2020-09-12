@@ -1,13 +1,15 @@
-.wrapper {
-  position: relative;
-  overflow-y: hidden;
+body,html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
 }
 
 /* Full height jumbotron */
 .jumbotron {
   height: 100vh;
   background-color: var(--bg);
-  overflow-y: hidden;
 }
 
 #namecard {
