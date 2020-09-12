@@ -1,4 +1,5 @@
 body {
+  position: relative;
   overflow-y: hidden;
 }
 
