@@ -31,66 +31,69 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md fixed-top">
-    <a class="navbar-brand" href="/"><img class="mr-1" id="logo" src="/assets/logo.svg" width="25" height="25" alt="" loading="lazy"> Doga Tekin</a>
+  <div class="wrapper">
+    <nav class="navbar navbar-expand-md fixed-top">
+      <a class="navbar-brand" href="/"><img class="mr-1" id="logo" src="/assets/logo.svg" width="25" height="25" alt="" loading="lazy"> Doga Tekin</a>
 
-    <ul class="navbar-nav flex-row mr-auto mt-1">
-      <li class="nav-item"><a class="nav-link px-2 email" href="mailto:dotekin@gmail.com"><i class="fas fa-envelope"></i></a></li>
-      <li class="nav-item"><a class="nav-link px-2" href="https://github.com/dogatekin"><i class="fab fa-github"></i></a></li>
-      <li class="nav-item"><a class="nav-link px-2" href="https://www.linkedin.com/in/dogatekin/"><i class="fab fa-linkedin-in"></i></a></li>
-      <li class="nav-item"><a class="nav-link px-2 toggler" role="button" tabindex="0"><i class="fas fa-sun toggle-icon"></i></a></li>
-    </ul>
-
-    <button class="navbar-toggler collapsed mt-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="icon-bar top-bar"></span>
-      <span class="icon-bar middle-bar"></span>
-      <span class="icon-bar bottom-bar"></span>
-    </button>
-
-
-    <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a href="/resume" class="nav-link">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a href="/projects" class="nav-link">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a href="/blog" class="nav-link">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a href="/art" class="nav-link">Art</a>
-        </li>
+      <ul class="navbar-nav flex-row mr-auto mt-1">
+        <li class="nav-item"><a class="nav-link px-2 email" href="mailto:dotekin@gmail.com"><i class="fas fa-envelope"></i></a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="https://github.com/dogatekin"><i class="fab fa-github"></i></a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="https://www.linkedin.com/in/dogatekin/"><i class="fab fa-linkedin-in"></i></a></li>
+        <li class="nav-item"><a class="nav-link px-2 toggler" role="button" tabindex="0"><i class="fas fa-sun toggle-icon"></i></a></li>
       </ul>
-    </div>
-  </nav>
 
-  <div class="jumbotron jumbotron-fluid m-0 d-flex align-items-center">
-    <div class="container text-center">
-      <h1 id="namecard">Hi, I'm Doga Tekin.</h1>
+      <button class="navbar-toggler collapsed mt-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
 
-      <div id="typed-strings" class="d-none">
-        <p>I am a computer scientist.</p>
-        <p>I am a Master's student.</p>
-        <p>I am interested in artificial intelligence.</p>
-        <p>I love Python.</p>
-        <p>I can juggle <s>2</s> 3 balls.</p>
-        <p>I like making <a href="/art">animated loops</a>.</p>
-        <p>I am fascinated by <a href="/blog">game design</a>.</p>
-        <p>I wish you a pleasant day.</p>
+
+      <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="/resume" class="nav-link">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a href="/projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="/blog" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="/art" class="nav-link">Art</a>
+          </li>
+        </ul>
       </div>
-      <span id="typed"></span>
+    </nav>
 
-      <div class='mt-5'>
-        <a class="btn btn-link hvr-float button" href="/resume">Resume</a>
-        <a class="btn btn-link hvr-float button" href="/projects">Projects</a>
-        <a class="btn btn-link hvr-float button" href="/blog">Blog</a>
-        <a class="btn btn-link hvr-float button" href="/art">Art</a>
+    <div class="jumbotron jumbotron-fluid m-0 d-flex align-items-center">
+      <div class="container text-center">
+        <h1 id="namecard">Hi, I'm Doga Tekin.</h1>
+
+        <div id="typed-strings" class="d-none">
+          <p>I am a computer scientist.</p>
+          <p>I am a Master's student.</p>
+          <p>I am interested in artificial intelligence.</p>
+          <p>I love Python.</p>
+          <p>I can juggle <s>2</s> 3 balls.</p>
+          <p>I like making <a href="/art">animated loops</a>.</p>
+          <p>I am fascinated by <a href="/blog">game design</a>.</p>
+          <p>I wish you a pleasant day.</p>
+        </div>
+        <span id="typed"></span>
+
+        <div class='mt-5'>
+          <a class="btn btn-link hvr-float button" href="/resume">Resume</a>
+          <a class="btn btn-link hvr-float button" href="/projects">Projects</a>
+          <a class="btn btn-link hvr-float button" href="/blog">Blog</a>
+          <a class="btn btn-link hvr-float button" href="/art">Art</a>
+        </div>
+
+        <footer class="fixed-bottom mb-2">I'm currently in: <em>Lausanne, Switzerland</em></footer>
       </div>
-
-      <footer class="fixed-bottom mb-2">I'm currently in: <em>Lausanne, Switzerland</em></footer>
     </div>
+
   </div>
 
   <!-- Bootstrap -->

@@ -1,5 +1,5 @@
-html,
-body {
+.wrapper {
+  position: relative;
   overflow-y: hidden;
 }
 
