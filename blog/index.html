@@ -1,122 +1,119 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
+  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/png" href="../images/brackets.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon Boilerplate -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/site.webmanifest">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/icons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-config" content="/icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Dark User Agent UI -->
+  <meta name="color-scheme" content="dark light">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="/styles/common.css">
+  <link rel="stylesheet" href="/styles/navbar.css">
+  <link rel="stylesheet" href="./style.css">
 
   <title>Doga Tekin's Blog</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-  <link rel="stylesheet" href="../style.css">
-
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-  <script defer src="../navbar.js"></script>
 </head>
 
-<body class="has-navbar-fixed-top">
+<body>
+  <nav class="navbar navbar-expand-md">
+    <a class="navbar-brand" href="/"><img class="mr-1" id="logo" src="/assets/logo.svg" width="25" height="25" alt="" loading="lazy"> Doga Tekin</a>
 
-  <!-- Top bar -->
-  <nav class="navbar is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <div class="navbar-item">
-        <h1 class="title is-5">
-          <a href="../">Doga Tekin</a>
-        </h1>
-      </div>
-      <div class="navbar-item">
-        <a href="mailto:dotekin@gmail.com">
-          <i class="far fa-envelope"></i>
-        </a>
-      </div>
-      <div class="navbar-item">
-        <a href="https://github.com/dogatekin" target='_blank'>
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <div class="navbar-item">
-        <a href="https://linkedin.com/in/dogatekin" target='_blank'>
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
+    <ul class="navbar-nav flex-row mr-auto mt-1">
+      <li class="nav-item"><a class="nav-link px-2 email" href="mailto:dotekin@gmail.com"><i class="fas fa-envelope"></i></a></li>
+      <li class="nav-item"><a class="nav-link px-2" href="https://github.com/dogatekin"><i class="fab fa-github"></i></a></li>
+      <li class="nav-item"><a class="nav-link px-2" href="https://www.linkedin.com/in/dogatekin/"><i class="fab fa-linkedin-in"></i></a></li>
+      <li class="nav-item"><a class="nav-link px-2 toggler" role="button" tabindex="0"><i class="fas fa-sun toggle-icon"></i></a></li>
+    </ul>
 
-      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" id="navBurger">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
+    <button class="navbar-toggler collapsed mt-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-bar top-bar"></span>
+      <span class="icon-bar middle-bar"></span>
+      <span class="icon-bar bottom-bar"></span>
+    </button>
 
-    <div class="navbar-menu" id="navMenu">
-      <div class="navbar-end has-text-centered">
-        <div class="navbar-item">
-          <a href="../resume/">Resume</a>
-        </div>
-        <div class="navbar-item">
-          <a href="../projects/">Projects</a>
-        </div>
-        <div class="navbar-item">
-          <a href="./">Blog</a>
-        </div>
-        <div class="navbar-item">
-          <a href="../art">Art</a>
-        </div>
-      </div>
+
+    <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="/resume" class="nav-link">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a href="/projects" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="/blog" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="/art" class="nav-link">Art</a>
+        </li>
+      </ul>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <div class="container">
-    <div id="Blog" class="content-tab">
-      <section class="section">
-        <div class="columns is-variable is-8 is-vcentered is-multiline" style="justify-content: center;">
-          <div class="column is-full" style="max-width: 800px;">
-            <h1 class="title is-2 has-text-centered">Blog</h1>
-            <hr>
-          </div>
+  <div class="container posts mb-5">
+    <h1 class="text-center">Blog</h1>
+    <hr>
 
-          <div class="column is-full" style="max-width: 800px;">
-            <a href='./game-frustration/'>
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-3by2">
-                    <img src="./game-frustration/images/cover.png" alt="Cover">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="content">
-                    <h2>Frustration in Hollow Knight and Celeste</h2>
-                    <p>An analysis of how two of my favourite games manage (or fail to manage) player frustration.</p>
-                  </div>
-                  <nav class="level is-mobile">
-                    <div class='level-left'>
-                      <div class="level-item has-text-centered">
-                        <div>
-                          <span class="tag">
-                            Game Design
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class='level-right'>
-                      <div class="level-item has-text-centered">
-                        <div>
-                          07 August 2020
-                        </div>
-                      </div>
-                    </div>
-                  </nav>
-                </div>
-              </div>
-            </a>
-
-          </div>
-      </section>
+    <!-- <h2 class="mt-5"><a href="./indie-books-2020">Indie Book Recommendations 2020</a></h2>
+    <p>Is "indie book" a real term? I don't know but here are some I enjoyed in 2020.</p>
+    <div class="d-flex justify-content-between">
+      <span class="tags">
+        <span class="tag">Books</span>
+      </span>
+      <span class="date">30 September 2020</span>
     </div>
+
+    <hr class="my-4" style="border-top: 2px dashed">
+
+    <h2 class="mt-5"><a href="./indie-games-2020">Indie Game Recommendations 2020</a></h2>
+    <p>The independent games that affected me the most in 2020.</p>
+    <div class="d-flex justify-content-between">
+      <span class="tags">
+        <span class="tag">Games</span>
+      </span>
+      <span class="date">15 September 2020</span>
+    </div>
+
+    <hr class="my-4" style="border-top: 2px dashed"> -->
+
+    <h2 class="mt-5"><a href="./game-frustration">Frustration in Hollow Knight and Celeste</a></h2>
+    <p>An analysis of how two of my favourite games manage (or fail to manage) player frustration.</p>
+    <div class="d-flex justify-content-between">
+      <span class="tags">
+        <span class="tag">Game Design</span>
+      </span>
+      <span class="date">07 August 2020</span>
+    </div>
+
   </div>
 
+
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/1f5e88f762.js" crossorigin="anonymous"></script>
+
+  <!-- My JS -->
+  <script src="/scripts/theme.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,104 @@
+/* Font Size */
+html {
+  font-size: 14pt;
+}
+
+@media (max-width: 767.98px) {
+  html {
+    font-size: 12pt;
+  }
+}
+
+/* Themes */
+body {
+  --bg: #ffffff;
+  --primary: #666666;
+  --muted: #969696;
+  --accent: #ba0d37;
+  --tag-bg: rgb(230, 230, 230);
+  --card-bg: rgb(248, 248, 248);
+  --shadow: #9e9e9e38;
+}
+
+body.dark-theme {
+  --bg: #38444c;
+  --primary: #f0f2f3;
+  --muted: #c6c6c6;
+  /* --accent: #ec1a62; */
+  --accent: #f32462;
+  --tag-bg: rgb(115, 118, 126);
+  --card-bg: #556772;
+  --shadow: #11111180;
+}
+
+/* Font and Colors */
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: var(--bg);
+  color: var(--primary);
+}
+
+/* Link styling */
+a {
+  outline: none;
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  transition: color 0.25s, text-decoration-color 0.25s;
+}
+
+a:focus,
+a:hover {
+  color: var(--accent);
+}
+
+a:active {
+  text-decoration-color: transparent;
+}
+
+/* Horizontal Rules */
+hr {
+  border-top-color: var(--primary);
+}
+
+/* Tags */
+.tag {
+  font-size: 0.8rem;
+  background-color: var(--tag-bg);
+  padding: .2rem;
+  border-radius: .3rem;
+}
+
+/* Navigation buttons */
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.button {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  padding: 1.2rem;
+
+  transition-duration: 0.25s;
+  transition-property: transform, color, text-decoration-color;
+  transition-timing-function: ease-out;
+}
+
+.button:visited {
+  color: var(--primary);
+}
+
+.button:focus,
+.button:hover {
+  text-decoration-color: transparent;
+  color: var(--accent);
+  transform: translateY(-8px);
+}
+
+.button:active {
+  transform: translateY(-4px);
+}

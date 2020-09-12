@@ -1,0 +1,88 @@
+.navbar {
+  background-color: var(--bg);
+}
+
+/* Email icon animation */
+.email:hover .fa-envelope::before {
+  content: "\f2b6";
+}
+
+/* Burger animation */
+.icon-bar {
+  width: 22px;
+  height: 2px;
+  background-color: #B6B6B6;
+  display: block;
+  transition: all 0.25s;
+  margin-bottom: 4px;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none !important;
+  background: transparent !important;
+}
+
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+}
+
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+/* Logo animation and brand */
+#logo {
+  transition: transform 1s;
+}
+
+.navbar-brand:hover #logo,
+.navbar-brand:focus #logo {
+  transform: rotate(360deg);
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+/* Links */
+.navbar a {
+  text-decoration: none;
+  transition: color 0.25s;
+  outline: none;
+
+  transition-duration: 0.3s;
+  transition-property: color, transform;
+  transition-timing-function: ease-out;
+}
+
+.navbar a:visited {
+  color: var(--primary);
+}
+
+.navbar a:focus,
+.navbar a:hover {
+  color: var(--accent);
+}
+
+.navbar a:active {
+  transform: translateY(4px);
+}

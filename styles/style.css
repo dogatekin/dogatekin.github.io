@@ -1,0 +1,19 @@
+/* Full height jumbotron */
+.jumbotron {
+  height: 100vh;
+  background-color: var(--bg);
+}
+
+#namecard {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+#typed {
+  font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+  color: var(--muted);
+}
