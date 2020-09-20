@@ -14,9 +14,13 @@ ul {
   font-weight: 600;
 }
 
-.role, .extra {
+.company, .location {
   color: var(--accent);
 }
+
+/* .role, .extra {
+  color: var(--accent);
+} */
 
 .date {
   font-weight: 600;
