@@ -24,8 +24,8 @@ body.dark-theme {
   --bg: #38444c;
   --primary: #f0f2f3;
   --muted: #c6c6c6;
-  /* --accent: #ec1a62; */
-  --accent: #f32462;
+  --accent: #ec1a62;
+  /* --accent: rgb(235, 55, 120); */
   --tag-bg: rgb(115, 118, 126);
   --card-bg: #556772;
   --shadow: #11111180;

@@ -20,3 +20,8 @@
   border-bottom-left-radius: 20px !important;
   border-bottom-right-radius: 20px !important;
 }
+
+.card-title {
+  /* color: var(--accent); */
+  font-weight: 600;
+}
