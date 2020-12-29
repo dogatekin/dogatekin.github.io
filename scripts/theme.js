@@ -1,5 +1,5 @@
-const btn = document.querySelector(".toggler");
-const icon = document.querySelector(".toggle-icon")
+const btns = document.querySelectorAll(".toggler");
+const icons = document.querySelectorAll(".toggle-icon")
 const currentTheme = localStorage.getItem("theme");
 const lightLogos = document.querySelectorAll(".light-logo")
 const darkLogos = document.querySelectorAll(".dark-logo")
@@ -8,21 +8,21 @@ const darkLogos = document.querySelectorAll(".dark-logo")
 if (currentTheme == "dark") {
   // ...then use the .dark-theme class
   document.body.classList.add("dark-theme");
-  icon.classList.remove("fa-sun")
-  icon.classList.add("fa-moon")
+  icons.forEach(icon => icon.classList.remove("fa-sun"))
+  icons.forEach(icon => icon.classList.add("fa-moon"))
   lightLogos.forEach(x => x.classList.add("d-none"))
   darkLogos.forEach(x => x.classList.remove("d-none"))
 }
 
 // Listen for a click on the button 
-btn.addEventListener("click", function () {
+btns.forEach(btn => btn.addEventListener("click", function () {
   // Remove focus
   btn.blur();
 
   // Toggle the .dark-theme class on each click
   document.body.classList.toggle("dark-theme");
-  icon.classList.toggle("fa-sun");
-  icon.classList.toggle("fa-moon");
+  icons.forEach(icon => icon.classList.toggle("fa-sun"))
+  icons.forEach(icon => icon.classList.toggle("fa-moon"))
   lightLogos.forEach(x => x.classList.toggle("d-none"))
   darkLogos.forEach(x => x.classList.toggle("d-none"))
 
@@ -35,4 +35,4 @@ btn.addEventListener("click", function () {
   }
   // Then save the choice in localStorage
   localStorage.setItem("theme", theme);
-});
+}));

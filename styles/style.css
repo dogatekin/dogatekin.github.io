@@ -6,7 +6,7 @@
 
 #namecard {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 #typed {
@@ -16,4 +16,8 @@
 /* Footer */
 footer {
   color: var(--muted);
+}
+
+.button {
+  font-size: 1.15rem;
 }

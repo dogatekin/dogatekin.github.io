@@ -22,10 +22,15 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
   <!-- My CSS -->
   <link rel="stylesheet" href="/styles/common.css">
   <link rel="stylesheet" href="/styles/navbar.css">
   <link rel="stylesheet" href="./style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
   <title>Doga Tekin's Projects</title>
 </head>
@@ -34,11 +39,11 @@
   <nav class="navbar navbar-expand-md">
     <a class="navbar-brand" href="/"><img class="mr-1" id="logo" src="/assets/logo.svg" width="25" height="25" alt="" loading="lazy"> Doga Tekin</a>
 
-    <ul class="navbar-nav flex-row mr-auto mt-1">
-      <li class="nav-item"><a class="nav-link px-2 email" href="mailto:dotekin@gmail.com"><i class="fas fa-envelope"></i></a></li>
-      <li class="nav-item"><a class="nav-link px-2" href="https://github.com/dogatekin"><i class="fab fa-github"></i></a></li>
-      <li class="nav-item"><a class="nav-link px-2" href="https://www.linkedin.com/in/dogatekin/"><i class="fab fa-linkedin-in"></i></a></li>
-      <li class="nav-item"><a class="nav-link px-2 toggler" role="button" tabindex="0"><i class="fas fa-sun toggle-icon"></i></a></li>
+    <ul class="navbar-nav flex-row mr-auto mt-1 d-none d-md-flex">
+      <li class="nav-item"><a class="nav-link pl-3 email" href="mailto:dotekin@gmail.com"><i class="fas fa-envelope"></i></a></li>
+      <li class="nav-item"><a class="nav-link pl-3" href="https://github.com/dogatekin"><i class="fab fa-github"></i></a></li>
+      <li class="nav-item"><a class="nav-link pl-3" href="https://www.linkedin.com/in/dogatekin/"><i class="fab fa-linkedin-in"></i></a></li>
+      <li class="nav-item"><a class="nav-link pl-3 toggler" role="button" tabindex="0"><i class="fas fa-sun toggle-icon"></i></a></li>
     </ul>
 
     <button class="navbar-toggler collapsed mt-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,18 +55,24 @@
 
     <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
+        <li class="nav-item pr-1">
           <a href="/resume" class="nav-link">Resume</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item pr-1">
           <a href="/projects" class="nav-link">Projects</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item pr-1">
           <a href="/blog" class="nav-link">Blog</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item pr-1">
           <a href="/art" class="nav-link">Art</a>
         </li>
+        <ul class="navbar-nav flex-row d-md-none">
+          <li class="nav-item"><a class="nav-link pr-4 email" href="mailto:dotekin@gmail.com"><i class="fas fa-envelope"></i></a></li>
+          <li class="nav-item"><a class="nav-link pr-4" href="https://github.com/dogatekin"><i class="fab fa-github"></i></a></li>
+          <li class="nav-item"><a class="nav-link pr-4" href="https://www.linkedin.com/in/dogatekin/"><i class="fab fa-linkedin-in"></i></a></li>
+          <li class="nav-item"><a class="nav-link pr-4 toggler" role="button" tabindex="0"><i class="fas fa-sun toggle-icon"></i></a></li>
+        </ul>
       </ul>
     </div>
   </nav>

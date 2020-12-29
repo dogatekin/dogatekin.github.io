@@ -3,11 +3,11 @@ html {
   font-size: 14pt;
 }
 
-@media (max-width: 767.98px) {
+/* @media (max-width: 767.98px) {
   html {
     font-size: 12pt;
   }
-}
+} */
 
 /* Themes */
 body {
@@ -25,7 +25,6 @@ body.dark-theme {
   --primary: #f0f2f3;
   --muted: #c6c6c6;
   --accent: #ec1a62;
-  /* --accent: rgb(235, 55, 120); */
   --tag-bg: rgb(115, 118, 126);
   --card-bg: #556772;
   --shadow: #11111180;
@@ -33,7 +32,7 @@ body.dark-theme {
 
 /* Font and Colors */
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   background-color: var(--bg);
   color: var(--primary);
 }
@@ -65,8 +64,8 @@ hr {
 .tag {
   font-size: 0.8rem;
   background-color: var(--tag-bg);
-  padding: .2rem;
-  border-radius: .3rem;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
 }
 
 /* Navigation buttons */
