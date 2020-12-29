@@ -21,12 +21,12 @@ body {
 }
 
 body.dark-theme {
-  --bg: #38444c;
+  --bg: #1f2427;
   --primary: #f0f2f3;
   --muted: #c6c6c6;
   --accent: #ec1a62;
-  --tag-bg: rgb(115, 118, 126);
-  --card-bg: #556772;
+  --tag-bg: rgb(60, 62, 71);
+  --card-bg: #4f5a61;
   --shadow: #11111180;
 }
 
