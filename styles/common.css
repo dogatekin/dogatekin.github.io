@@ -3,12 +3,6 @@ html {
   font-size: 14pt;
 }
 
-/* @media (max-width: 767.98px) {
-  html {
-    font-size: 12pt;
-  }
-} */
-
 /* Themes */
 body {
   --bg: #ffffff;
