@@ -58,12 +58,8 @@ h2 {
   margin-top: 1.5rem;
 }
 
-@media (max-width: 767.98px) {
+/* @media (max-width: 767.98px) {
   article {
     font-size: 13pt;
   }
-}
-
-article {
-  font-family: 'Source Sans Pro';
-}
+} */
