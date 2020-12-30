@@ -50,17 +50,12 @@ figure {
   margin-bottom: 1rem;
 }
 
-h1 {
-  margin-bottom: 1rem;
-}
-
 h2 {
-  margin-top: 1.5rem;
-  color: rgb(251, 225, 76);
+  margin-top: 2rem;
+  color: var(--headline);
 }
 
-/* @media (max-width: 767.98px) {
-  article {
-    font-size: 13pt;
-  }
+/* figcaption {
+  color: var(--muted);
+  text-align: center;
 } */

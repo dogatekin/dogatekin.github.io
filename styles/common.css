@@ -12,6 +12,7 @@ body {
   --tag-bg: rgb(230, 230, 230);
   --card-bg: rgb(248, 248, 248);
   --shadow: #9e9e9e38;
+  --headline: #ba0d37;
 }
 
 body.dark-theme {
@@ -22,6 +23,7 @@ body.dark-theme {
   --tag-bg: rgb(60, 62, 71);
   --card-bg: #4f5a61;
   --shadow: #11111180;
+  --headline: rgb(251, 225, 76);
 }
 
 /* Font and Colors */
