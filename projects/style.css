@@ -35,8 +35,8 @@
   transition-timing-function: ease-out;
 }
 
-.category.collapsed:hover .caret,
-.category.collapsed:focus .caret,
-.category.collapsed:active .caret {
-  transform: rotate(90deg);
+.category:hover .caret,
+.category:focus .caret,
+.category:active .caret {
+  transform: rotate(-90deg);
 }
