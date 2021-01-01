@@ -27,13 +27,16 @@
 }
 
 .category .caret {
-  transition-duration: 0.1s;
+  margin-top: -0.125em;
+  margin-right: 0.25em;
+  vertical-align: middle;
+  transition-duration: 0.25s;
   transition-property: transform;
   transition-timing-function: ease-out;
 }
 
-.category:hover .caret,
-.category:focus .caret,
-.category:active .caret {
-  transform: translateY(6px);
+.category.collapsed:hover .caret,
+.category.collapsed:focus .caret,
+.category.collapsed:active .caret {
+  transform: rotate(90deg);
 }
