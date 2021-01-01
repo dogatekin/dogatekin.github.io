@@ -1,3 +1,8 @@
 .animations {
   max-width: 720px;
 }
+
+h3 {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
