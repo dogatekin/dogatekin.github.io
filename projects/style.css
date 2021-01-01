@@ -25,3 +25,15 @@
   /* color: var(--accent); */
   font-weight: 600;
 }
+
+.category .caret {
+  transition-duration: 0.1s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+
+.category:hover .caret,
+.category:focus .caret,
+.category:active .caret {
+  transform: translateY(6px);
+}
