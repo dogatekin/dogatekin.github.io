@@ -17,13 +17,13 @@ body {
 
 body.light-theme {
   --bg: #ffffff;
-  --primary: #666666;
+  --primary: #333;
   --muted: #969696;
   --accent: #ba0d37;
   --tag-bg: rgb(230, 230, 230);
   --card-bg: rgb(248, 248, 248);
   --shadow: #9e9e9e38;
-  --headline: #ba0d37;
+  --headline: #ba4c0d;
 }
 
 /* Font and Colors */
