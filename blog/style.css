@@ -13,9 +13,9 @@
 /* Blockquote Styling */
 blockquote {
   display: block;
-  border-width: 2px 0;
+  border-width: 1px 0;
   border-style: solid;
-  border-color: #eee;
+  border-color: var(--primary);
   padding: 1.5rem 0 0.5rem;
   margin: 1.5rem 0;
   position: relative;
@@ -46,8 +46,8 @@ blockquote:after {
 }
 
 figure {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
