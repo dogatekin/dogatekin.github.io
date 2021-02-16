@@ -16,7 +16,7 @@ body {
 }
 
 body.light-theme {
-  --bg: #ffffff;
+  --bg: #f8f8f8;
   --primary: #333;
   --muted: #969696;
   --accent: #ba0d37;
