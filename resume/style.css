@@ -15,20 +15,27 @@ ul {
 }
 
 .company, .location {
-  color: var(--accent);
+  /* color: var(--accent); */
+  /* color: var(--headline); */
+  /* font-size: larger; */
 }
 
 /* .role, .extra {
   color: var(--accent);
 } */
 
+h2 {
+  color: var(--headline);
+}
+
 .date {
   font-weight: 600;
-  color: var(--muted)
+  color: var(--muted);
 }
 
 h5 {
-  color: var(--accent);
+  /* color: var(--accent); */
+  font-weight: 600;
 }
 
 .button {
