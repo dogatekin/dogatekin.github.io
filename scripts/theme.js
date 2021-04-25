@@ -1,6 +1,6 @@
 const btns = document.querySelectorAll(".toggler");
 const icons = document.querySelectorAll(".toggle-icon")
-const currentTheme = localStorage.getItem("theme");
+let currentTheme = localStorage.getItem("theme");
 const lightLogos = document.querySelectorAll(".light-logo")
 const darkLogos = document.querySelectorAll(".dark-logo")
 
@@ -35,4 +35,5 @@ btns.forEach(btn => btn.addEventListener("click", function () {
   }
   // Then save the choice in localStorage
   localStorage.setItem("theme", theme);
+  currentTheme = theme;
 }));
