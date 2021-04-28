@@ -1,3 +1,11 @@
 .navbar {
   background-color: transparent;
 }
+
+html {
+  font-size: 1.25rem;
+}
+
+#recommendation a {
+  font-size: 1.5rem;
+}
