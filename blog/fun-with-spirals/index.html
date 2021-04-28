@@ -22,17 +22,18 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+  
   <!-- My CSS -->
   <link rel="stylesheet" href="/styles/common.css">
   <link rel="stylesheet" href="/styles/navbar.css">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
-  <title>Doga Tekin | Blog</title>
+  <title>Doga Tekin's Blog | Fun With Spirals</title>
 </head>
 
 <body>
@@ -51,7 +52,6 @@
       <span class="icon-bar middle-bar"></span>
       <span class="icon-bar bottom-bar"></span>
     </button>
-
 
     <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
@@ -80,57 +80,33 @@
     </div>
   </nav>
 
-  <div class="container posts mb-5">
-    <h1 class="text-center">Blog</h1>
-    <hr>
+  <div class="container post">
+    <article>
+      <div class="alert alert-warning" role="alert">
+        <strong>PSE WARNING:</strong> If you suffer from photosensitive epilepsy, please consider skipping this post! The visualisations on this page might trigger a seizure. Sorry!
+      </div>
+      
+      <h1>Fun With Spirals</h1>
+      
+      <div class="sketch" id="cover"></div>
+      
+      <p>Recently, I was looking for a way to add a spiral to my website<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. My search led me to this <a href="https://codepen.io/Twinbee/pen/gvMNJY">CodePen</a>, which I found fascinating. For one, the code for simulating the spiral was very simple. But the visualisation really caught my attention when I started playing with the provided "angle slider." Incredibly complex, intricate shapes were being drawn in front of my eyes from a few simple lines of code, and they didn't even look like spirals after some point.</p>
+      <p>I fell down an enjoyable rabbit hole trying to understand what was actually going on, and then I ended up finding and playing around with different types of spirals to see what other effects I could observe. I'd love to share my findings with you!</p>
+      
+      <h2>How to Draw a Spiral</h2>
+      
+      <div class="sketch" id="dots"></div>
 
-    <!-- <h2 class="mt-5"><a href="./indie-books-2020">Indie Book Recommendations 2020</a></h2>
-    <p>Is "indie book" a real term? I don't know but here are some I enjoyed in 2020.</p>
-    <div class="d-flex justify-content-between">
-      <span class="tags">
-        <span class="tag">Books</span>
-      </span>
-      <span class="date">30 September 2020</span>
-    </div>
-
-    <h2 class="mt-5"><a href="./indie-games-2020">Indie Game Recommendations 2020</a></h2>
-    <p>The independent games that affected me the most in 2020.</p>
-    <div class="d-flex justify-content-between">
-      <span class="tags">
-        <span class="tag">Games</span>
-      </span>
-      <span class="date">15 September 2020</span>
-    </div> -->
-
-    <!-- <h2 class="mt-5"><a href="./fun-with-spirals">Fun With Spirals</a></h2>
-    <p>Hypnotic and weird visualisations of simple mathematical spirals.</p>
-    <div class="d-flex justify-content-between">
-      <span class="tags">
-        <span class="tag">Visual</span>
-      </span>
-      <span class="date">07 May 2021</span>
-    </div> -->
-
-    <h2 class="mt-5"><a href="./good-mobile-games">Actually Good Mobile Games</a></h2>
-    <p>Great games that I think stand out among the growing number of disappointing mobile titles.</p>
-    <div class="d-flex justify-content-between">
-      <span class="tags">
-        <span class="tag">Games</span>
-      </span>
-      <span class="date">07 February 2021</span>
-    </div>
-    
-    <h2 class="mt-5"><a href="./game-frustration">Frustration in Hollow Knight and Celeste</a></h2>
-    <p>An analysis of how two of my favourite games manage (or fail to manage) player frustration.</p>
-    <div class="d-flex justify-content-between">
-      <span class="tags">
-        <span class="tag">Games</span>
-      </span>
-      <span class="date">07 August 2020</span>
-    </div>
-
+      <br>
+      <hr />
+      <h4 id="footnotes">Footnotes</h4>
+      <ol>
+        <li id="fn1" role="doc-endnote">
+          <p>As one does. <a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p>
+        </li>
+      </ol>
+    </article>
   </div>
-
 
   <!-- Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -142,6 +118,10 @@
 
   <!-- My JS -->
   <script src="/scripts/theme.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+  <script src="sketches/archimedean.js"></script>
+  <script src="sketches/dots.js"></script>
 </body>
 
 </html>
