@@ -24,9 +24,8 @@ h3 {
 
 .control:hover {
   color: var(--accent);
-  transform: translateY(-4px);
 }
 
 .control:active {
-  transform: translateY(-2px);
+  transform: translateY(2px);
 }

@@ -32,6 +32,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
   <title>Doga Tekin's Blog | Fun With Spirals</title>
 </head>
@@ -91,7 +92,7 @@
       <div class="sketch" id="cover"></div>
 
       <p>Recently, I was looking for a way to add a spiral to my website<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. My search led me to this <a href="https://codepen.io/Twinbee/pen/gvMNJY">CodePen</a>, which I found fascinating. For one, the code for simulating the spiral was very simple. But the visualisation really caught my attention when I started playing with the provided "angle slider." Incredibly complex, intricate shapes were being drawn in front of my eyes from a few simple lines of code, and they didn't even look like spirals after some point.</p>
-      <p>I fell down an enjoyable rabbit hole trying to understand what was actually going on, and then I ended up finding and playing around with different types of spirals to see what other effects I could observe. I'd love to share my findings with you!</p>
+      <p>I fell down an enjoyable rabbit hole trying to understand what was actually going on, and then I ended up finding and playing around with different types of spirals to see what other effects I could observe. I'd love to share all my findings with you, but if you don't care for the details then feel free to <a href="">jump directly to the visualisations</a>!</p>
 
       <h2>What is a Spiral?</h2>
       <blockquote cite="Wikipedia">In mathematics, a spiral is a curve which emanates from a point, moving farther away as it revolves around the point.</blockquote>
@@ -100,32 +101,32 @@
       <div class="sketch" id="circle"></div>
       
       <p>As the radius \(r\) is kept constant while the angle \(\theta\) keeps increasing, this motion traces a perfect circle after \(360^{\circ}\) and goes on to loop over itself forever.</p>
-      <p>When we look at a circle from this perspective, the only difference of a spiral is that the radius is not kept constant, but changes according to some function of the angle: \[r = f(\theta)\] Different functions lead to different spirals, some of which we will explore later on. For now, let's start with the simplest one, the Archimedean Spiral: \[r = a\theta\]</p>
+      <p>When we look at a circle from this perspective, the only difference of a spiral is that the radius is not kept constant, but changes according to some function of the angle: \[r = f(\theta)\] Different functions lead to different spirals, some of which we will explore later on. For now, let's start with the simplest one, the <a href="https://en.wikipedia.org/wiki/Archimedean_spiral">Archimedean Spiral</a>: \[r = a\theta\]</p>
       
       <div class="sketch" id="archimedean"></div>
       
       <p>In this example, I chose \(a = 0.1\) so the radius is always equal to \(\theta / 10\). Changing this parameter does not change the fundamental shape of the spiral, it only changes the distance between consecutive loops.</p>
       
       <div class="sketch" id="scaling"></div>
-
-      <p>To change the shape of the spiral, we need to change the relation between the angle and the radius. For example, Fermat's Spiral has loops that get closer to each other as the curve gets farther from the center: \[r = a \sqrt{\theta}\]</p>
-
+      
+      <p>To change the shape of the spiral, we need to change the relation between the angle and the radius. For example, <a href="https://en.wikipedia.org/wiki/Fermat%27s_spiral">Fermat's Spiral</a> has loops that get closer to each other as the curve gets farther from the center: \[r = a \sqrt{\theta}\]</p>
+      
       <div class="sketch" id="fermat"></div>
       
-      <p>With a small change, we can even get a spiral <em>converging</em> towards a point instead of <em>diverging</em> away from one, such as a lituus: \[r = a / \sqrt{\theta}\]</p>
+      <p>With a small change, we can even get a spiral <em>converging</em> towards a point instead of <em>diverging</em> away from one, such as a <a href="https://en.wikipedia.org/wiki/Lituus_(mathematics)">lituus</a>: \[r = a / \sqrt{\theta}\]</p>
       
       <div class="sketch" id="lituus"></div>
-
+      
       <h2>How to Draw a Spiral</h2>
-      <p>There are (at least) two ways of drawing a spiral using code:</p>
+      <p>There are multiple ways of drawing a spiral using code, and you can see different implementations in many languages at <a href="https://rosettacode.org/wiki/Archimedean_spiral">Rosetta Code</a>. We are interested in the approach using line segments, since that is the one that will lead to those interesting patterns at the start of this post.</p>
+      
+      <div class="sketch" id="drawing"></div>
 
-      <h3>Option 1: Draw lots of points very close together</h3>
-      <p>Lorem ipsum.</p>
-
-      <h3>Option 2: Draw fewer points and connect the dots</h3>
-      <p>Lorem ipsum.</p>
-
+      <div class="sketch" id="points"></div>
+      
       <h2>Spiraling into Madness</h2>
+      
+      <div class="sketch" id="archimedean-ooc"></div>
 
       <br>
       <hr />
@@ -160,6 +161,9 @@
   <script src="sketches/scaling.js"></script>
   <script src="sketches/fermat.js"></script>
   <script src="sketches/lituus.js"></script>
+  <script src="sketches/drawing.js"></script>
+  <script src="sketches/points.js"></script>
+  <script src="sketches/archimedean-ooc.js"></script>
 </body>
 
 </html>
