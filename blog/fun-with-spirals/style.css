@@ -3,3 +3,30 @@
   place-items: center;
   margin: 1.5rem 0;
 }
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.control {
+  margin: 0 2rem;
+  color: var(--primary);
+  transition-duration: 0.25s;
+  transition-property: transform, color;
+  transition-timing-function: ease-out;
+}
+
+.control:hover {
+  color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.control:active {
+  transform: translateY(-2px);
+}

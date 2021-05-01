@@ -1,4 +1,4 @@
-let dots = new p5(function(p) {
+let cover = new p5(function(p) {
   p.setup = function() {
     const parentDiv = p.canvas.parentElement
     p.createCanvas(p.min(parentDiv.offsetWidth, 640), 360)
@@ -25,9 +25,9 @@ let dots = new p5(function(p) {
       x = (p.width / 2) + (spiralWidth * newAngle) * Math.sin(newAngle);
       y = (p.height / 2) + (spiralWidth * newAngle) * Math.cos(newAngle);
   
-      p.ellipse(x, y, 1);
+      p.line(oldX, oldY, x, y);
       oldX = x;
       oldY = y;
     }
   }
-}, "dots")
+}, "cover")

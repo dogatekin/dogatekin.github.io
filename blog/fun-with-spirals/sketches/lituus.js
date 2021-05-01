@@ -1,4 +1,4 @@
-let archimedean = new p5(function (p) {
+let lituus = new p5(function (p) {
 
   let radius, theta, rotation, a
 
@@ -8,7 +8,7 @@ let archimedean = new p5(function (p) {
     p.angleMode(p.DEGREES)
 
     theta = 0
-    a = 0.1
+    a = 1500
     radius = a*theta
     rotation = 2
 
@@ -60,8 +60,8 @@ let archimedean = new p5(function (p) {
     p.translate(p.width / 2, p.height / 2)
     let px = 0, py = 0, x = 0, y = 0
     for (let angle = 0; angle <= theta; angle += 1) {
-      x = a * angle * p.cos(-angle)
-      y = a * angle * p.sin(-angle)
+      x = a / Math.sqrt(angle) * p.cos(-angle)
+      y = a / Math.sqrt(angle) * p.sin(-angle)
       p.line(px, py, x, y)
       px = x
       py = y
@@ -75,11 +75,11 @@ let archimedean = new p5(function (p) {
     p.ellipse(radius, 0, 5)
 
     theta += rotation
-    radius = a * theta
+    radius = a / Math.sqrt(theta)
 
     if (theta > 3600) {
       p.playPause()
       theta = 0
     }
   }
-}, "archimedean")
+}, "lituus")

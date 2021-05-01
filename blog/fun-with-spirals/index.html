@@ -22,7 +22,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  
+
   <!-- My CSS -->
   <link rel="stylesheet" href="/styles/common.css">
   <link rel="stylesheet" href="/styles/navbar.css">
@@ -85,17 +85,47 @@
       <div class="alert alert-warning" role="alert">
         <strong>PSE WARNING:</strong> If you suffer from photosensitive epilepsy, please consider skipping this post! The visualisations on this page might trigger a seizure. Sorry!
       </div>
-      
+
       <h1>Fun With Spirals</h1>
-      
+
       <div class="sketch" id="cover"></div>
-      
+
       <p>Recently, I was looking for a way to add a spiral to my website<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. My search led me to this <a href="https://codepen.io/Twinbee/pen/gvMNJY">CodePen</a>, which I found fascinating. For one, the code for simulating the spiral was very simple. But the visualisation really caught my attention when I started playing with the provided "angle slider." Incredibly complex, intricate shapes were being drawn in front of my eyes from a few simple lines of code, and they didn't even look like spirals after some point.</p>
       <p>I fell down an enjoyable rabbit hole trying to understand what was actually going on, and then I ended up finding and playing around with different types of spirals to see what other effects I could observe. I'd love to share my findings with you!</p>
+
+      <h2>What is a Spiral?</h2>
+      <blockquote cite="Wikipedia">In mathematics, a spiral is a curve which emanates from a point, moving farther away as it revolves around the point.</blockquote>
+      <p>I think it's useful to start by looking at a simple circle. Even though we usually think of circles as static, we could also think of them as curves revolving around a point, always staying at the exact same distance to that point.</p>
+
+      <div class="sketch" id="circle"></div>
       
+      <p>As the radius \(r\) is kept constant while the angle \(\theta\) keeps increasing, this motion traces a perfect circle after \(360^{\circ}\) and goes on to loop over itself forever.</p>
+      <p>When we look at a circle from this perspective, the only difference of a spiral is that the radius is not kept constant, but changes according to some function of the angle: \[r = f(\theta)\] Different functions lead to different spirals, some of which we will explore later on. For now, let's start with the simplest one, the Archimedean Spiral: \[r = a\theta\]</p>
+      
+      <div class="sketch" id="archimedean"></div>
+      
+      <p>In this example, I chose \(a = 0.1\) so the radius is always equal to \(\theta / 10\). Changing this parameter does not change the fundamental shape of the spiral, it only changes the distance between consecutive loops.</p>
+      
+      <div class="sketch" id="scaling"></div>
+
+      <p>To change the shape of the spiral, we need to change the relation between the angle and the radius. For example, Fermat's Spiral has loops that get closer to each other as the curve gets farther from the center: \[r = a \sqrt{\theta}\]</p>
+
+      <div class="sketch" id="fermat"></div>
+      
+      <p>With a small change, we can even get a spiral <em>converging</em> towards a point instead of <em>diverging</em> away from one, such as a lituus: \[r = a / \sqrt{\theta}\]</p>
+      
+      <div class="sketch" id="lituus"></div>
+
       <h2>How to Draw a Spiral</h2>
-      
-      <div class="sketch" id="dots"></div>
+      <p>There are (at least) two ways of drawing a spiral using code:</p>
+
+      <h3>Option 1: Draw lots of points very close together</h3>
+      <p>Lorem ipsum.</p>
+
+      <h3>Option 2: Draw fewer points and connect the dots</h3>
+      <p>Lorem ipsum.</p>
+
+      <h2>Spiraling into Madness</h2>
 
       <br>
       <hr />
@@ -118,10 +148,18 @@
 
   <!-- My JS -->
   <script src="/scripts/theme.js"></script>
-  
+
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+  <script src="sketches/cover.js"></script>
+  <script src="sketches/circle.js"></script>
   <script src="sketches/archimedean.js"></script>
-  <script src="sketches/dots.js"></script>
+  <script src="sketches/scaling.js"></script>
+  <script src="sketches/fermat.js"></script>
+  <script src="sketches/lituus.js"></script>
 </body>
 
 </html>
