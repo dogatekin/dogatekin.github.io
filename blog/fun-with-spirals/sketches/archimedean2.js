@@ -1,6 +1,6 @@
-let ooc = new p5(function (p) {
+let archimedean2 = new p5(function (p) {
 
-  let parentDiv, radius, theta, rotation, a, gap
+  let parentDiv, radius, theta, rotation, a
 
   p.setup = function () {
     parentDiv = p.canvas.parentElement
@@ -8,10 +8,9 @@ let ooc = new p5(function (p) {
     p.angleMode(p.DEGREES)
 
     theta = 0
-    a = 0.02
+    a = 0.1
     radius = a*theta
-    rotation = 5
-    numPoints = 100
+    rotation = 2
 
     p.controls = p.createDiv()
     p.controls.class('controls')
@@ -57,30 +56,39 @@ let ooc = new p5(function (p) {
     p.line(0, p.height / 2, p.width, p.height / 2)
     p.line(p.width / 2, 0, p.width / 2, p.height)
 
+    p.fill(255, 0, 0)
     p.text(`θ = ${theta}°`, 18, 20)
-
-    // The spiral
-    p.stroke(0)
+    p.fill(0, 0, 255)
+    p.text(`θ = ${-theta}°`, 18, 40)
+    
+    // The spirals
+    p.stroke(255, 0, 0)
     p.translate(p.width / 2, p.height / 2)
-    let px = 0, py = 0, x = 0, y = 0, angle = 0
-    for (let i = 0; i < numPoints; i++) {
+    let px = 0, py = 0, x = 0, y = 0
+    for (let angle = 0; angle <= theta; angle += 1) {
       x = a * angle * p.cos(-angle)
       y = a * angle * p.sin(-angle)
       p.line(px, py, x, y)
       px = x
       py = y
-      angle += theta / numPoints
     }
 
-    // The line and point
-    p.rotate(-theta)
-    p.stroke(100)
-    p.line(0, 0, radius, 0)
-    p.fill(0)
-    p.ellipse(radius, 0, 5)
+    p.stroke(0, 0, 255)
+    px = 0, py = 0, x = 0, y = 0
+    for (let angle = 0; angle <= theta; angle += 1) {
+      x = a * angle * p.cos(angle)
+      y = a * angle * p.sin(angle)
+      p.line(px, py, x, y)
+      px = x
+      py = y
+    }
 
-    gap += 0.1
     theta += rotation
     radius = a * theta
+
+    if (theta > 3600) {
+      p.playPause()
+      theta = 0
+    }
   }
-}, "ooc")
+}, "archimedean2")

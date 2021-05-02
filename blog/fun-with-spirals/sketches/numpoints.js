@@ -14,23 +14,23 @@ let numpoints = new p5(function (p) {
     p.controls.class('controls')
     p.controls.style('width', `${p.width}px`)
 
-    min = p.createP('1°')
+    min = p.createP('90°')
     min.parent(p.controls)
     min.class('label')
-    
-    slider = p.createSlider(100, 7200, 1800, 100)
+
+    slider = p.createSlider(90, 7200, 1800, 90)
     slider.parent(p.controls)
     slider.class('form-control-range')
     slider.input(() => p.redraw())
-    
-    max = p.createP('90°')
+
+    max = p.createP('7200°')
     max.parent(p.controls)
     max.class('label')
 
     p.noLoop()
   }
 
-  p.windowResized = function() {
+  p.windowResized = function () {
     p.resizeCanvas(p.min(parentDiv.offsetWidth, 640), 360);
   }
 
@@ -47,7 +47,10 @@ let numpoints = new p5(function (p) {
     // The spiral
     p.stroke(0)
     p.translate(p.width / 2, p.height / 2)
-    let px = 0, py = 0, x = 0, y = 0
+    let px = 0,
+      py = 0,
+      x = 0,
+      y = 0
     for (let angle = 0; angle <= theta; angle += gap) {
       x = a * angle * p.cos(-angle)
       y = a * angle * p.sin(-angle)
