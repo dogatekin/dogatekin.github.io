@@ -1,8 +1,15 @@
 let cover = new p5(function(p) {
+  
+  let parentDiv
+  
   p.setup = function() {
-    const parentDiv = p.canvas.parentElement
+    parentDiv = p.canvas.parentElement
     p.createCanvas(p.min(parentDiv.offsetWidth, 640), 360)
     angle = 0
+  }
+
+  p.windowResized = function() {
+    p.resizeCanvas(p.min(parentDiv.offsetWidth, 640), 360);
   }
 
   p.draw = function() {

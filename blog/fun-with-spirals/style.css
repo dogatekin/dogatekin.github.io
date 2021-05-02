@@ -12,6 +12,7 @@ h3 {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .control {
@@ -28,4 +29,8 @@ h3 {
 
 .control:active {
   transform: translateY(2px);
+}
+
+.label {
+  margin: 0 1rem;
 }

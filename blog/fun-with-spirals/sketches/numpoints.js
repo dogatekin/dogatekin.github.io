@@ -1,22 +1,31 @@
-let scaling = new p5(function (p) {
+let numpoints = new p5(function (p) {
 
-  let parentDiv, radius, theta, rotation, a, slider
+  let parentDiv, numPoints, a, slider, min, max
 
   p.setup = function () {
     parentDiv = p.canvas.parentElement
     p.createCanvas(p.min(parentDiv.offsetWidth, 640), 360)
     p.angleMode(p.DEGREES)
 
-    theta = 36000
+    numPoints = 100
+    a = 0.1
 
     p.controls = p.createDiv()
     p.controls.class('controls')
     p.controls.style('width', `${p.width}px`)
 
-    slider = p.createSlider(0.01, 0.19, 0.1, 0.01)
+    min = p.createP('1°')
+    min.parent(p.controls)
+    min.class('label')
+    
+    slider = p.createSlider(100, 7200, 1800, 100)
     slider.parent(p.controls)
     slider.class('form-control-range')
     slider.input(() => p.redraw())
+    
+    max = p.createP('90°')
+    max.parent(p.controls)
+    max.class('label')
 
     p.noLoop()
   }
@@ -27,7 +36,8 @@ let scaling = new p5(function (p) {
 
   p.draw = function () {
     p.background(180)
-    a = slider.value()
+    let theta = slider.value()
+    let gap = theta / numPoints
 
     // Coordinates
     p.stroke(150)
@@ -38,12 +48,13 @@ let scaling = new p5(function (p) {
     p.stroke(0)
     p.translate(p.width / 2, p.height / 2)
     let px = 0, py = 0, x = 0, y = 0
-    for (let angle = 0; angle <= theta; angle += 1) {
+    for (let angle = 0; angle <= theta; angle += gap) {
       x = a * angle * p.cos(-angle)
       y = a * angle * p.sin(-angle)
+      p.ellipse(x, y, 2)
       p.line(px, py, x, y)
       px = x
       py = y
     }
   }
-}, "scaling")
+}, "numpoints")

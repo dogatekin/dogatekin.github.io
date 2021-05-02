@@ -1,9 +1,9 @@
 let points = new p5(function (p) {
 
-  let theta, a, slider
+  let parentDiv, theta, a, slider, min, max
 
   p.setup = function () {
-    const parentDiv = p.canvas.parentElement
+    parentDiv = p.canvas.parentElement
     p.createCanvas(p.min(parentDiv.offsetWidth, 640), 360)
     p.angleMode(p.DEGREES)
 
@@ -14,12 +14,24 @@ let points = new p5(function (p) {
     p.controls.class('controls')
     p.controls.style('width', `${p.width}px`)
 
-    slider = p.createSlider(1, 100, 1, 1)
+    min = p.createP('1°')
+    min.parent(p.controls)
+    min.class('label')
+    
+    slider = p.createSlider(1, 90, 1, 1)
     slider.parent(p.controls)
     slider.class('form-control-range')
     slider.input(() => p.redraw())
+    
+    max = p.createP('90°')
+    max.parent(p.controls)
+    max.class('label')
 
     p.noLoop()
+  }
+
+  p.windowResized = function() {
+    p.resizeCanvas(p.min(parentDiv.offsetWidth, 640), 360);
   }
 
   p.draw = function () {

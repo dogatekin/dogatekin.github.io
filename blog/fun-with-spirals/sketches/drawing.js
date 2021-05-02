@@ -1,16 +1,16 @@
 let drawing = new p5(function (p) {
 
-  let radius, theta, rotation, a
+  let parentDiv, radius, theta, rotation, a
 
   p.setup = function () {
-    const parentDiv = p.canvas.parentElement
+    parentDiv = p.canvas.parentElement
     p.createCanvas(p.min(parentDiv.offsetWidth, 640), 360)
     p.angleMode(p.DEGREES)
 
     theta = 0
     a = 0.1
-    radius = a*theta
-    rotation = 2
+    radius = a * theta
+    rotation = 4
 
     p.controls = p.createDiv()
     p.controls.class('controls')
@@ -39,6 +39,10 @@ let drawing = new p5(function (p) {
     }
   }
 
+  p.windowResized = function() {
+    p.resizeCanvas(p.min(parentDiv.offsetWidth, 640), 360);
+  }
+
   p.restart = function () {
     theta = 0
     p.redraw()
@@ -52,35 +56,55 @@ let drawing = new p5(function (p) {
     p.line(0, p.height / 2, p.width, p.height / 2)
     p.line(p.width / 2, 0, p.width / 2, p.height)
 
-    p.text(`θ = ${theta}°`, 18, 20)
-    p.text(`r = ${radius.toFixed(1)}`, 20, 40)
+    if (theta < 1800) {
+      // The spiral
+      p.stroke(0)
+      p.translate(p.width / 2, p.height / 2)
+      let px = 0, py = 0, x = 0, y = 0
+      for (let angle = 0; angle <= theta; angle += 5) {
+        x = a * angle * p.cos(-angle)
+        y = a * angle * p.sin(-angle)
+        p.ellipse(x, y, 2)
+      }
 
-    // The spiral
-    p.stroke(0)
-    p.translate(p.width / 2, p.height / 2)
-    let px = 0, py = 0, x = 0, y = 0
-    for (let angle = 0; angle <= theta; angle += 50) {
-      x = a * angle * p.cos(-angle)
-      y = a * angle * p.sin(-angle)
-      p.ellipse(x, y, 2)
-      p.line(px, py, x, y)
-      px = x
-      py = y
-    }
+      // The line and point
+      p.rotate(-theta)
+      p.stroke(100)
+      p.line(0, 0, radius, 0)
+      p.fill(0)
+      p.ellipse(radius, 0, 5)
 
-    // The line and point
-    p.rotate(-theta)
-    p.stroke(100)
-    p.line(0, 0, radius, 0)
-    p.fill(0)
-    p.ellipse(radius, 0, 5)
+      theta += rotation
+      radius = a * theta
+    } else if (theta <= 3600) {
+      p.stroke(0)
+      p.translate(p.width / 2, p.height / 2)
+      let px = 0, py = 0, x = 0, y = 0
+      for (let angle = 0; angle <= 1800; angle += 5) {
+        x = a * angle * p.cos(-angle)
+        y = a * angle * p.sin(-angle)
+        p.ellipse(x, y, 2)
+      }
 
-    theta += rotation
-    radius = a * theta
+      px = 0
+      py = 0
+      x = 0
+      y = 0
+      for (let angle = 0; angle <= theta-1800; angle += 5) {
+        x = a * angle * p.cos(-angle)
+        y = a * angle * p.sin(-angle)
+        p.line(px, py, x, y)
+        px = x
+        py = y
+      }
+      
+      theta += rotation
+      radius = a * theta
+    } 
 
     if (theta > 3600) {
-      p.playPause()
       theta = 0
+      p.playPause()
     }
   }
 }, "drawing")

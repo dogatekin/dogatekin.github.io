@@ -1,9 +1,9 @@
 let dots = new p5(function(p) {
 
-  let radius, theta, rotation
+  let parentDiv, radius, theta, rotation
 
   p.setup = function() {
-    const parentDiv = p.canvas.parentElement
+    parentDiv = p.canvas.parentElement
     p.createCanvas(p.min(parentDiv.offsetWidth, 640), 360)
     p.angleMode(p.DEGREES)
     p.textAlign(p.CENTER)
@@ -27,6 +27,10 @@ let dots = new p5(function(p) {
     p.reset.mousePressed(p.restart)
 
     p.noLoop()
+  }
+
+  p.windowResized = function() {
+    p.resizeCanvas(p.min(parentDiv.offsetWidth, 640), 360);
   }
 
   p.playPause = function() {

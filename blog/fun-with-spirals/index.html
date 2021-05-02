@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
-  <title>Doga Tekin's Blog | Fun With Spirals</title>
+  <title>Doga Tekin's Blog | The Hypnotic World of Degenerate Spirals</title>
 </head>
 
 <body>
@@ -87,12 +87,12 @@
         <strong>PSE WARNING:</strong> If you suffer from photosensitive epilepsy, please consider skipping this post! The visualisations on this page might trigger a seizure. Sorry!
       </div>
 
-      <h1>Fun With Spirals</h1>
+      <h1>The Hypnotic World of Degenerate Spirals</h1>
 
       <div class="sketch" id="cover"></div>
 
-      <p>Recently, I was looking for a way to add a spiral to my website<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. My search led me to this <a href="https://codepen.io/Twinbee/pen/gvMNJY">CodePen</a>, which I found fascinating. For one, the code for simulating the spiral was very simple. But the visualisation really caught my attention when I started playing with the provided "angle slider." Incredibly complex, intricate shapes were being drawn in front of my eyes from a few simple lines of code, and they didn't even look like spirals after some point.</p>
-      <p>I fell down an enjoyable rabbit hole trying to understand what was actually going on, and then I ended up finding and playing around with different types of spirals to see what other effects I could observe. I'd love to share all my findings with you, but if you don't care for the details then feel free to <a href="">jump directly to the visualisations</a>!</p>
+      <p>Recently, I was looking for a way to add a spiral to my website<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. My search led me to this <a href="https://codepen.io/Twinbee/pen/gvMNJY">CodePen</a>, which I found fascinating. For one, the code for simulating the spiral was very simple. But what really caught my attention was what happened when I started playing with the provided "angle slider." Incredibly complex, intricate shapes were being drawn in front of my eyes from a few simple lines of code, and they didn't even look like spirals after some point.</p>
+      <p>I fell down an enjoyable rabbit hole trying to understand what was actually going on, and then I ended up finding and playing around with different types of spirals to see what other effects I could observe. I'd love to share all my findings with you, but if you don't care for the details then feel free to <a href="#visualisations">jump directly to the visualisations</a>!</p>
 
       <h2>What is a Spiral?</h2>
       <blockquote cite="Wikipedia">In mathematics, a spiral is a curve which emanates from a point, moving farther away as it revolves around the point.</blockquote>
@@ -119,14 +119,35 @@
       
       <h2>How to Draw a Spiral</h2>
       <p>There are multiple ways of drawing a spiral using code, and you can see different implementations in many languages at <a href="https://rosettacode.org/wiki/Archimedean_spiral">Rosetta Code</a>. We are interested in the approach using line segments, since that is the one that will lead to those interesting patterns at the start of this post.</p>
-      
+      <p>Let's say we want to draw a spiral that has completed 5 full rotations, so \(\theta\) has gone from \(0^\circ\) to \(1800^\circ\). We are going to approximate this curve by picking lots of points that would be on this spiral and connecting them with straight line segments.</p>
+
       <div class="sketch" id="drawing"></div>
+
+      <p>This is basically how I've been drawing all the spirals so far, but without showing you the actual points. To create an animation of an expanding spiral, all you need to do is increase \(\theta\) a little every frame and draw the corresponding spiral<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+      <p>In the above example, I chose to pick a point every \(5^\circ\) from \(0^\circ\) to \(1800^\circ\), which I think creates a pretty reasonable approximation. Of course, if we decrease this gap we will pick more points and get a better approximation, and similarly if we increase this gap we will get a worse approximation.</p>
 
       <div class="sketch" id="points"></div>
       
-      <h2>Spiraling into Madness</h2>
+      <p>If you played around a bit with the slider above, you might already see where we're going with this.</p>
       
-      <div class="sketch" id="archimedean-ooc"></div>
+      <h2>Spiraling into Madness</h2>
+      <p>What if, instead of committing to picking points at regular intervals (like every \(5^\circ\)), we limit ourselves to approximate the spiral with a fixed number of points (say, 100) no matter how big the spiral gets. In this case, as the spiral expands, the few points have to spread apart further and further to cover the entire shape, making our approximation progressively worse.</p>
+      
+      <div class="sketch" id="numpoints"></div>
+      
+      <p>And there we are! Now we just have to choose some arbitrary number of points, let \(\theta\) grow slowly and watch our spiral degenerate slowly into these cool, intricate patterns as our approximation fails spectacularly.</p>
+
+      <div class="sketch" id="ooc"></div>
+
+      <p>In the next section, I will remove the explanatory elements like the coordinate axes and the line/point showing the end of the spiral, so you can enjoy the hypnotic visualisations of what I'm now calling <em>degenerate</em> spirals.</p>
+
+      <h2 id="visualisations">Hypnotic Visualisations</h2>
+      <p><strong>Archimedean Spiral</strong></p>
+      <p><strong>Fermat's Spiral</strong></p>
+      <p><strong>Lituus</strong></p>
+
+      <h2>Bonus: The Second Branch</h2>
+
 
       <br>
       <hr />
@@ -134,6 +155,9 @@
       <ol>
         <li id="fn1" role="doc-endnote">
           <p>As one does. <a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p>
+        </li>
+        <li id="fn2" role="doc-endnote">
+          <p>If you are just trying to draw a proper spiral that keeps expanding, it is obviously inefficient to redraw the entire spiral every frame; you should just add a few new line segments to the end at every frame. However, we are not trying to draw proper spirals and redrawing every frame is essential for the effect we are pursuing here. <a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p>
         </li>
       </ol>
     </article>
@@ -163,7 +187,8 @@
   <script src="sketches/lituus.js"></script>
   <script src="sketches/drawing.js"></script>
   <script src="sketches/points.js"></script>
-  <script src="sketches/archimedean-ooc.js"></script>
+  <script src="sketches/numpoints.js"></script>
+  <script src="sketches/ooc.js"></script>
 </body>
 
 </html>

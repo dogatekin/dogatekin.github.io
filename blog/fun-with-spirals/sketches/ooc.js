@@ -1,14 +1,14 @@
-let archimedeanooc = new p5(function (p) {
+let ooc = new p5(function (p) {
 
-  let radius, theta, rotation, a, gap
+  let parentDiv, radius, theta, rotation, a, gap
 
   p.setup = function () {
-    const parentDiv = p.canvas.parentElement
+    parentDiv = p.canvas.parentElement
     p.createCanvas(p.min(parentDiv.offsetWidth, 640), 360)
     p.angleMode(p.DEGREES)
 
     theta = 0
-    a = 0.01
+    a = 0.02
     radius = a*theta
     rotation = 5
     numPoints = 100
@@ -28,6 +28,10 @@ let archimedeanooc = new p5(function (p) {
     p.reset.mousePressed(p.restart)
 
     p.noLoop()
+  }
+
+  p.windowResized = function() {
+    p.resizeCanvas(p.min(parentDiv.offsetWidth, 640), 360);
   }
 
   p.playPause = function () {
@@ -54,13 +58,12 @@ let archimedeanooc = new p5(function (p) {
     p.line(p.width / 2, 0, p.width / 2, p.height)
 
     p.text(`θ = ${theta}°`, 18, 20)
-    p.text(`r = ${radius.toFixed(1)}`, 20, 40)
 
     // The spiral
     p.stroke(0)
     p.translate(p.width / 2, p.height / 2)
     let px = 0, py = 0, x = 0, y = 0, angle = 0
-    for (let i = 0; i < numPoints; i++) {
+    for (let i = 0; i <= numPoints; i++) {
       x = a * angle * p.cos(-angle)
       y = a * angle * p.sin(-angle)
       p.line(px, py, x, y)
@@ -80,4 +83,4 @@ let archimedeanooc = new p5(function (p) {
     theta += rotation
     radius = a * theta
   }
-}, "archimedean-ooc")
+}, "ooc")
