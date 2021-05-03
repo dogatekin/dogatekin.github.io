@@ -61,6 +61,7 @@ let drawing = new p5(function (p) {
     if (theta < 1800) {
       // The spiral
       p.stroke(0)
+      p.fill(0)
       p.translate(p.width / 2, p.height / 2)
       let px = 0,
         py = 0,
@@ -71,8 +72,6 @@ let drawing = new p5(function (p) {
         y = a * angle * p.sin(-angle)
         p.ellipse(x, y, 2)
       }
-
-
 
       theta += rotation
       radius = a * theta
