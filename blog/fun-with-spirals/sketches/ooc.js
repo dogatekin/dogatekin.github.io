@@ -69,7 +69,7 @@ let ooc = new p5(function (p) {
       x = 0,
       y = 0,
       angle = 0
-    for (let i = 0; i < numPoints; i++) {
+    for (let i = 0; i <= numPoints; i++) {
       x = a * angle * p.cos(-angle)
       y = a * angle * p.sin(-angle)
       p.line(px, py, x, y)
