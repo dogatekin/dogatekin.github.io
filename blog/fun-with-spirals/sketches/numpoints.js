@@ -31,7 +31,9 @@ let numpoints = new p5(function (p) {
   }
 
   p.windowResized = function () {
-    p.resizeCanvas(p.min(parentDiv.offsetWidth, 640), 360);
+    if (p.width != p.min(parentDiv.offsetWidth, 640)) {
+      p.resizeCanvas(p.min(parentDiv.offsetWidth, 640), 360);
+    }
   }
 
   p.draw = function () {

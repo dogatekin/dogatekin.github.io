@@ -10,7 +10,7 @@ let drawing = new p5(function (p) {
     theta = 0
     a = 0.1
     radius = a * theta
-    rotation = 4
+    rotation = 4 * 2
 
     p.controls = p.createDiv()
     p.controls.class('controls')
@@ -39,8 +39,10 @@ let drawing = new p5(function (p) {
     }
   }
 
-  p.windowResized = function() {
-    p.resizeCanvas(p.min(parentDiv.offsetWidth, 640), 360);
+  p.windowResized = function () {
+    if (p.width != p.min(parentDiv.offsetWidth, 640)) {
+      p.resizeCanvas(p.min(parentDiv.offsetWidth, 640), 360);
+    }
   }
 
   p.restart = function () {
@@ -60,26 +62,27 @@ let drawing = new p5(function (p) {
       // The spiral
       p.stroke(0)
       p.translate(p.width / 2, p.height / 2)
-      let px = 0, py = 0, x = 0, y = 0
+      let px = 0,
+        py = 0,
+        x = 0,
+        y = 0
       for (let angle = 0; angle <= theta; angle += 5) {
         x = a * angle * p.cos(-angle)
         y = a * angle * p.sin(-angle)
         p.ellipse(x, y, 2)
       }
 
-      // The line and point
-      p.rotate(-theta)
-      p.stroke(100)
-      p.line(0, 0, radius, 0)
-      p.fill(0)
-      p.ellipse(radius, 0, 5)
+
 
       theta += rotation
       radius = a * theta
     } else if (theta <= 3600) {
       p.stroke(0)
       p.translate(p.width / 2, p.height / 2)
-      let px = 0, py = 0, x = 0, y = 0
+      let px = 0,
+        py = 0,
+        x = 0,
+        y = 0
       for (let angle = 0; angle <= 1800; angle += 5) {
         x = a * angle * p.cos(-angle)
         y = a * angle * p.sin(-angle)
@@ -90,17 +93,17 @@ let drawing = new p5(function (p) {
       py = 0
       x = 0
       y = 0
-      for (let angle = 0; angle <= theta-1800; angle += 5) {
+      for (let angle = 0; angle <= theta - 1800; angle += 5) {
         x = a * angle * p.cos(-angle)
         y = a * angle * p.sin(-angle)
         p.line(px, py, x, y)
         px = x
         py = y
       }
-      
+
       theta += rotation
       radius = a * theta
-    } 
+    }
 
     if (theta > 3600) {
       theta = 0

@@ -9,7 +9,7 @@ let archimedean2 = new p5(function (p) {
 
     theta = 0
     a = 0.1
-    radius = a*theta
+    radius = a * theta
     rotation = 2
 
     p.controls = p.createDiv()
@@ -29,8 +29,10 @@ let archimedean2 = new p5(function (p) {
     p.noLoop()
   }
 
-  p.windowResized = function() {
-    p.resizeCanvas(p.min(parentDiv.offsetWidth, 640), 360);
+  p.windowResized = function () {
+    if (p.width != p.min(parentDiv.offsetWidth, 640)) {
+      p.resizeCanvas(p.min(parentDiv.offsetWidth, 640), 360);
+    }
   }
 
   p.playPause = function () {
@@ -60,11 +62,14 @@ let archimedean2 = new p5(function (p) {
     p.text(`θ = ${theta}°`, 18, 20)
     p.fill(0, 0, 255)
     p.text(`θ = ${-theta}°`, 18, 40)
-    
+
     // The spirals
     p.stroke(255, 0, 0)
     p.translate(p.width / 2, p.height / 2)
-    let px = 0, py = 0, x = 0, y = 0
+    let px = 0,
+      py = 0,
+      x = 0,
+      y = 0
     for (let angle = 0; angle <= theta; angle += 1) {
       x = a * angle * p.cos(-angle)
       y = a * angle * p.sin(-angle)
