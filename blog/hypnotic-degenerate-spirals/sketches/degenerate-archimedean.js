@@ -1,4 +1,4 @@
-let archimedean2 = new p5(function (p) {
+let dArchimedean = new p5(function (p) {
 
   let parentDiv, radius, theta, rotation, a
 
@@ -8,9 +8,10 @@ let archimedean2 = new p5(function (p) {
     p.angleMode(p.DEGREES)
 
     theta = 0
-    a = 0.1
+    a = 0.02
     radius = a * theta
-    rotation = 2
+    rotation = 5
+    numPoints = 100
 
     p.controls = p.createDiv()
     p.controls.class('controls')
@@ -53,47 +54,24 @@ let archimedean2 = new p5(function (p) {
   p.draw = function () {
     p.background(180)
 
-    // Coordinates
-    p.stroke(150)
-    p.line(0, p.height / 2, p.width, p.height / 2)
-    p.line(p.width / 2, 0, p.width / 2, p.height)
-
-    p.fill(255, 0, 0)
-    p.text(`θ = ${theta}°`, 18, 20)
-    p.fill(0, 0, 255)
-    p.text(`θ = ${-theta}°`, 18, 40)
-
-    // The spirals
-    p.stroke(255, 0, 0)
+    // The spiral
+    p.stroke(0)
     p.translate(p.width / 2, p.height / 2)
     let px = 0,
       py = 0,
       x = 0,
-      y = 0
-    for (let angle = 0; angle <= theta; angle += 1) {
+      y = 0,
+      angle = 0
+    for (let i = 0; i <= numPoints; i++) {
       x = a * angle * p.cos(-angle)
       y = a * angle * p.sin(-angle)
       p.line(px, py, x, y)
       px = x
       py = y
-    }
-
-    p.stroke(0, 0, 255)
-    px = 0, py = 0, x = 0, y = 0
-    for (let angle = 0; angle <= theta; angle += 1) {
-      x = a * angle * p.cos(angle)
-      y = a * angle * p.sin(angle)
-      p.line(px, py, x, y)
-      px = x
-      py = y
+      angle += theta / numPoints
     }
 
     theta += rotation
     radius = a * theta
-
-    if (theta > 3600) {
-      p.playPause()
-      theta = 0
-    }
   }
-}, "archimedean2")
+}, "degenerate-archimedean")

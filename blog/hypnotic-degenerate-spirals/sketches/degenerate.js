@@ -1,6 +1,6 @@
-let archimedeanooc = new p5(function (p) {
+let degenerate = new p5(function (p) {
 
-  let parentDiv, radius, theta, rotation, a
+  let parentDiv, radius, theta, rotation, a, gap
 
   p.setup = function () {
     parentDiv = p.canvas.parentElement
@@ -54,6 +54,13 @@ let archimedeanooc = new p5(function (p) {
   p.draw = function () {
     p.background(180)
 
+    // Coordinates
+    p.stroke(150)
+    p.line(0, p.height / 2, p.width, p.height / 2)
+    p.line(p.width / 2, 0, p.width / 2, p.height)
+
+    p.text(`θ = ${theta}°`, 18, 20)
+
     // The spiral
     p.stroke(0)
     p.translate(p.width / 2, p.height / 2)
@@ -71,7 +78,15 @@ let archimedeanooc = new p5(function (p) {
       angle += theta / numPoints
     }
 
+    // The line and point
+    p.rotate(-theta)
+    p.stroke(100)
+    p.line(0, 0, radius, 0)
+    p.fill(0)
+    p.ellipse(radius, 0, 5)
+
+    gap += 0.1
     theta += rotation
     radius = a * theta
   }
-}, "archimedean-ooc")
+}, "degenerate")

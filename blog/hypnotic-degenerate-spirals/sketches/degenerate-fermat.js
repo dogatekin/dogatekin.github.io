@@ -1,6 +1,6 @@
-let archimedeanooc2 = new p5(function (p) {
+let dFermat = new p5(function (p) {
 
-  let parentDiv, radius, theta, rotation, a, gap
+  let parentDiv, radius, theta, rotation, a
 
   p.setup = function () {
     parentDiv = p.canvas.parentElement
@@ -8,7 +8,7 @@ let archimedeanooc2 = new p5(function (p) {
     p.angleMode(p.DEGREES)
 
     theta = 0
-    a = 0.02
+    a = 3
     radius = a * theta
     rotation = 5
     numPoints = 100
@@ -55,7 +55,7 @@ let archimedeanooc2 = new p5(function (p) {
     p.background(180)
 
     // The spiral
-    p.stroke(0, 0, 0)
+    p.stroke(0)
     p.translate(p.width / 2, p.height / 2)
     let px = 0,
       py = 0,
@@ -63,18 +63,8 @@ let archimedeanooc2 = new p5(function (p) {
       y = 0,
       angle = 0
     for (let i = 0; i <= numPoints; i++) {
-      x = a * angle * p.cos(-angle)
-      y = a * angle * p.sin(-angle)
-      p.line(px, py, x, y)
-      px = x
-      py = y
-      angle += theta / numPoints
-    }
-    p.stroke(0, 0, 0)
-    px = 0, py = 0, x = 0, y = 0, angle = 0
-    for (let i = 0; i <= numPoints; i++) {
-      x = a * angle * p.cos(angle)
-      y = a * angle * p.sin(angle)
+      x = a * Math.sqrt(angle) * p.cos(-angle)
+      y = a * Math.sqrt(angle) * p.sin(-angle)
       p.line(px, py, x, y)
       px = x
       py = y
@@ -84,4 +74,4 @@ let archimedeanooc2 = new p5(function (p) {
     theta += rotation
     radius = a * theta
   }
-}, "archimedean-ooc2")
+}, "degenerate-fermat")

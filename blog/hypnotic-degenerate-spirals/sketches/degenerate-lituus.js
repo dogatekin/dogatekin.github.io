@@ -1,4 +1,4 @@
-let fermatooc = new p5(function (p) {
+let dLituus = new p5(function (p) {
 
   let parentDiv, radius, theta, rotation, a
 
@@ -8,7 +8,7 @@ let fermatooc = new p5(function (p) {
     p.angleMode(p.DEGREES)
 
     theta = 0
-    a = 3
+    a = 2500
     radius = a * theta
     rotation = 5
     numPoints = 100
@@ -63,8 +63,8 @@ let fermatooc = new p5(function (p) {
       y = 0,
       angle = 0
     for (let i = 0; i <= numPoints; i++) {
-      x = a * Math.sqrt(angle) * p.cos(-angle)
-      y = a * Math.sqrt(angle) * p.sin(-angle)
+      x = a / Math.sqrt(angle) * p.cos(-angle)
+      y = a / Math.sqrt(angle) * p.sin(-angle)
       p.line(px, py, x, y)
       px = x
       py = y
@@ -74,4 +74,4 @@ let fermatooc = new p5(function (p) {
     theta += rotation
     radius = a * theta
   }
-}, "fermat-ooc")
+}, "degenerate-lituus")
