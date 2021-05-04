@@ -1,3 +1,3 @@
-# Home Sweet Home
+# https://www.dogatekin.com
 
-My personal website.
+![](assets/home.png)
