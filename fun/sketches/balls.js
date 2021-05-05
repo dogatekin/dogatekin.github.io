@@ -7,24 +7,16 @@ let initV = 1;
 let balls = [];
 
 function windowResized() {
-  // clientHeight = document.getElementById('main').clientHeight;
-	// clientWidth = document.getElementById('main').clientWidth;
-  // resizeCanvas(clientWidth, clientHeight);
   resizeCanvas(windowWidth, windowHeight);
 }
 
 function setup() {
-  // clientHeight = document.getElementById('main').clientHeight;
-	// clientWidth = document.getElementById('main').clientWidth;
-
-  // canvas = createCanvas(clientWidth, clientHeight);
-	// canvas.parent("main");
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
   canvas.style('z-index', '-1');
 
   numBalls = int(width / 40);
-  console.log(width, numBalls);
+  // console.log(width, numBalls);
 
   for (let i = 0; i < numBalls; i++) {
     balls[i] = new Ball(
@@ -46,12 +38,7 @@ function setup() {
 }
 
 function draw() {
-  if (currentTheme == 'light') {
-    background('#f3f3f3');  
-  }
-  else {
-    background('#1f2427');
-  }
+  clear()
   balls.forEach(ball => {
     ball.collide();
     ball.move();
@@ -77,15 +64,11 @@ class Ball {
 
   collide() {
     for (let i = this.id + 1; i < numBalls; i++) {
-      // console.log(others[i]);
       let dx = this.others[i].x - this.x;
       let dy = this.others[i].y - this.y;
       let distance = sqrt(dx * dx + dy * dy);
       let minDist = this.others[i].diameter / 2 + this.diameter / 2;
-      //   console.log(distance);
-      //console.log(minDist);
       if (distance < minDist) {
-        //console.log("2");
         let angle = atan2(dy, dx);
         let targetX = this.x + cos(angle) * minDist;
         let targetY = this.y + sin(angle) * minDist;
