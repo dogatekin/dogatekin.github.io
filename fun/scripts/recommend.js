@@ -19,6 +19,5 @@ function newRecommendation() {
     link
   } = candidates[Math.floor(Math.random() * candidates.length)])
 
-  console.log(category)
   reccomendation.innerHTML = `Random <strong>${category}</strong> recommendation:<button onclick="newRecommendation()" class="btn btn-link control"><i class="fas fa-redo"></i></button><br><a href=${link}>${title}</a>`
 }

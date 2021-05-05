@@ -61,7 +61,7 @@ let anagram = new p5(function (p) {
       }
     }
 
-    // p.noLoop()
+    p.noLoop()
   }
   
   p.newAnagram = function () {
@@ -84,11 +84,10 @@ let anagram = new p5(function (p) {
     }
 
     animTime = frames
-    // p.loop()
+    p.loop()
   }
   
   p.draw = function () {
-    // p.background(100)
     p.clear()
 
     if (currentTheme == 'dark') {
@@ -106,7 +105,7 @@ let anagram = new p5(function (p) {
 
       animTime -= 1
     } else {
-      // p.noLoop()
+      p.noLoop()
     }
 
     for (const letter in offsets) {

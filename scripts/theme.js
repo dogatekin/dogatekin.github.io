@@ -36,4 +36,8 @@ btns.forEach(btn => btn.addEventListener("click", function () {
   // Then save the choice in localStorage
   localStorage.setItem("theme", theme);
   currentTheme = theme;
+
+  if (typeof anagram !== 'undefined') {
+    anagram.redraw()
+}
 }));
