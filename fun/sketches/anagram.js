@@ -90,12 +90,12 @@ let anagram = new p5(function (p) {
   p.draw = function () {
     p.clear()
 
-    if (currentTheme == 'dark') {
-      p.stroke('#f0f2f3')
-      p.fill('#f0f2f3')
-    } else {
+    if (currentTheme == 'light') {
       p.stroke('#333')
       p.fill('#333')
+    } else {
+      p.stroke('#f0f2f3')
+      p.fill('#f0f2f3')
     }
 
     if (animTime > 0) {

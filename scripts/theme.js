@@ -12,6 +12,8 @@ if (currentTheme == "light") {
   icons.forEach(icon => icon.classList.remove("fa-moon"))
   lightLogos.forEach(x => x.classList.remove("d-none"))
   darkLogos.forEach(x => x.classList.add("d-none"))
+} else {
+  currentTheme = "dark"
 }
 
 // Listen for a click on the button 
