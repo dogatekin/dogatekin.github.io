@@ -64,3 +64,18 @@ h2 {
   color: var(--muted);
   text-align: center;
 } */
+
+/* article a {
+  text-decoration-thickness: 2px;
+}
+
+article a:focus,
+article a:hover {
+  color: var(--accent);
+  text-decoration: none;
+  text-decoration-thickness: 2px;
+} */
+
+.tag {
+  margin-right: 0.2rem;
+}

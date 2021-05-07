@@ -41,15 +41,13 @@ a {
   color: var(--primary);
   text-decoration: underline;
   text-decoration-color: var(--accent);
+  text-decoration-thickness: 0.14em;
   transition: color 0.25s, text-decoration-color 0.25s;
 }
 
 a:focus,
 a:hover {
   color: var(--accent);
-}
-
-a:active {
   text-decoration-color: transparent;
 }
 

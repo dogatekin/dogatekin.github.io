@@ -4,7 +4,7 @@ let anagram = new p5(function (p) {
     sourceCodePro = p.loadFont('assets/SourceCodePro-Regular.otf')
   }
 
-  let offsets, time = 1, frameRate = 60, animTime = 0, initOffset = 100
+  let offsets, time = 1, frameRate = 60, animTime = 0, initOffset = 95
 
   let anagrams = [
     'teak dingo',
@@ -70,11 +70,11 @@ let anagram = new p5(function (p) {
     const newName = anagrams[Math.floor(Math.random() * anagrams.length)];
     
     if (newName.length == 12) {
-      initOffset = 80
+      initOffset = 75
     } else if (newName.length == 11) {
-      initOffset = 90
+      initOffset = 85
     } else {
-      initOffset = 100
+      initOffset = 95
     }
 
     for (let i = 0; i < newName.length; i++) {
