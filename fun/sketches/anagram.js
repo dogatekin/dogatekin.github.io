@@ -4,7 +4,7 @@ let anagram = new p5(function (p) {
     sourceCodePro = p.loadFont('assets/SourceCodePro-Regular.otf')
   }
 
-  let offsets, time = 1, frameRate = 60, animTime = 0, initOffset = 95
+  let offsets, time = 1, frameRate = 60, animTime = 0, initOffset = 95, i = 0
 
   let anagrams = [
     'teak dingo',
@@ -34,6 +34,15 @@ let anagram = new p5(function (p) {
     'no get a kid'
   ]
 
+
+  let shuffleArray = function(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+
   p.setup = function () {
     parentDiv = p.canvas.parentElement
     p.createCanvas(400, 50)
@@ -61,13 +70,15 @@ let anagram = new p5(function (p) {
       }
     }
 
+    shuffleArray(anagrams)
+
     p.noLoop()
   }
   
   p.newAnagram = function () {
     let frames = time * frameRate
     
-    const newName = anagrams[Math.floor(Math.random() * anagrams.length)];
+    const newName = anagrams[i];
     
     if (newName.length == 12) {
       initOffset = 75
@@ -84,6 +95,7 @@ let anagram = new p5(function (p) {
     }
 
     animTime = frames
+    i = (i + 1) % anagrams.length
     p.loop()
   }
   
