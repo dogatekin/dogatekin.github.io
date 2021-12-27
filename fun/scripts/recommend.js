@@ -28,7 +28,7 @@ function newRecommendation() {
     link
   } = candidates[i])
 
-  reccomendation.innerHTML = `Media recommendations:<button onclick="newRecommendation()" class="btn btn-link control" style="touch-action: manipulation;"><i class="fas fa-redo"></i></button><br><a href=${link} target="_blank">${title}</a><br><strong>(${category})</strong>`
+  reccomendation.innerHTML = `Media recommendations:<button onclick="newRecommendation()" class="btn btn-link control" style="touch-action: manipulation;"><i class="fas fa-redo" style="touch-action: manipulation;"></i></button><br><a href=${link} target="_blank">${title}</a><br><strong>(${category})</strong>`
 
   i = (i + 1) % candidates.length
 }
