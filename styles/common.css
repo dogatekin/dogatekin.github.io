@@ -112,3 +112,7 @@ hr {
   height: 1px;
   background-color: var(--primary);
 }
+
+.themer {
+  margin-bottom: -2px;
+}

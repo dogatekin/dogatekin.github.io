@@ -27,18 +27,17 @@
   <link rel="stylesheet" href="/styles/common.css">
   <link rel="stylesheet" href="/styles/navbar.css">
   <link rel="stylesheet" href="../style.css">
-
-  <!-- zero-md -->
-  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
   <!-- GoatCounter -->
   <script data-goatcounter="https://dogatekin.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-  <title>Doga Tekin's Blog | Good Mobile Games</title>
+  <title>Doga Tekin's Blog | Solving Wordle with Reinforcement Learning</title>
 </head>
 
 <body>
@@ -91,17 +90,67 @@
 
   <div class="container post">
     <article>
-      <zero-md no-shadow=true src="./good-mobile-games.md">
-        <template>
-          <style>
-            div img {
-              max-width: 100%;
-              height: auto;
-              margin: 1rem 0;
-            }
-          </style>
-        </template>
-      </zero-md>
+      <h1>Solving Wordle with Deep Reinforcement Learning</h1>
+
+      <p>After watching <a href="https://www.youtube.com/watch?v=v68zYyaEmEA">3Blue1Brown's amazing video</a> on solving Wordle with Information Theory, I wanted to try my hand at the problem from a very different perspective. While it is very cool to hand-craft mathematically optimal solvers, I think it is also interesting to explore whether an intelligent artificial agent can learn good strategies just by playing the game and observing the outcomes.</p>
+      <p>I want this blog post to be accessible, so I'll start with a small background of Wordle and Reinforcement Learning. If you are already comfortable with both, feel free to skip to <a href="#creating-the-environment">Creating the Environment</a>. I will also generally avoid talking about the mathematical / technical details and focus on the bigger picture where possible.</p>
+
+      <h2>Background</h2>
+      <h3>What is Wordle?</h3>
+
+      <p><a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> is a game about finding a chosen secret word by making guesses. The game provides feedback for each guess that can help you eliminate candidates and pinpoint the answer. A picture of an example game is almost self-explanatory:</p>
+
+      <figure>
+        <img style="width: 300px;" src="assets/example.PNG" alt="An example game of Wordle.">
+      </figure>
+
+      <p>For each letter in your guess, you get feedback in the form of one of three colors:</p>
+      <ul>
+        <li><span class="gray">Gray:</span> the letter does not appear in the secret word</li>
+        <li><span class="yellow">Yellow:</span> the letter appears in the secret word but in a different position</li>
+        <li><span class="green">Green:</span> the letter appears in the secret word in that position</li>
+      </ul>
+
+      <p>You can use this feedback to make more and more informative guesses and try to find the answer in as few guesses as possible.</p>
+
+      <h3>What is Reinforcement Learning?</h3>
+
+      <p>Reinforcement Learning (RL) is a field of machine learning concerned with training agents that can learn to behave optimally and optimize the rewards they receive from their environment.</p>
+
+      <h2 id="creating-the-environment">Creating the Environment</h2>
+
+      <p>To start training an agent to play Wordle, we need a well-defined Wordle environment. A reinforcement learning environment requires us to define three main things: the observation space, the action space, and the reward function.</p>
+
+      <h3>Observation Space</h3>
+
+      <p>The observation space defines what information the agent will receive from the environment at every step to make its decisions. As our agent will try to learn a policy that makes decisions solely based on what it observes at each step, we must make sure the observations it will receive contain all the necessary information to enable optimal behavior.</p>
+      <p>It is often a good idea to model the observations on what humans observe when making a decision in the game. If you'd like an exercise, scroll back up to the example game image above and try to define what an observation should look like for an agent (human or artificial) to have all the information they need to pick a good next action.</p>
+      <p>I believe the most natural way to define a Wordle observation is a representation of the entire grid. That is, all you need to know to take your next action is to know all the previous guesses and the feedback received from the game for each of those guesses.</p>
+      <p>One might argue humans also observe the keyboard at the bottom which tells the player any feedback received so far for each letter. While I agree this is a nice visual aid for human players who use that keyboard to make their guesses, the same information can also be obtained by looking at the grid, and an artificial agent will probably not need that redundant information.</p>
+
+
+      <h3>Action Space</h3>
+
+
+
+      <h3>Reward Function</h3>
+
+
+
+      <h2>Training the Agent</h2>
+
+      <h2>Evaluating the Agent</h2>
+
+      <h2>Final Remarks</h2>
+
+      <br>
+      <hr />
+      <h4 id="footnotes">Footnotes</h4>
+      <ol>
+        <li id="fn1" role="doc-endnote">
+          <p>Footnote 1 <a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p>
+        </li>
+      </ol>
     </article>
   </div>
 

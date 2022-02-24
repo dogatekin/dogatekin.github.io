@@ -28,17 +28,15 @@
   <link rel="stylesheet" href="/styles/navbar.css">
   <link rel="stylesheet" href="../style.css">
 
-  <!-- zero-md -->
-  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
   <!-- GoatCounter -->
   <script data-goatcounter="https://dogatekin.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-  <title>Doga Tekin's Blog | Good Mobile Games</title>
+  <title>Doga Tekin's Blog | Test</title>
 </head>
 
 <body>
@@ -91,19 +89,100 @@
 
   <div class="container post">
     <article>
-      <zero-md no-shadow=true src="./good-mobile-games.md">
-        <template>
-          <style>
-            div img {
-              max-width: 100%;
-              height: auto;
-              margin: 1rem 0;
-            }
-          </style>
-        </template>
-      </zero-md>
+      <h1 class="text-center">Test Page</h1>
+
+      <p>
+        Hello, I am writing here<label for="sn-demo" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="sn-demo" class="margin-toggle" />
+        <span class="sidenote">This is a sidenote.</span>.
+        Afterwards, here is more text. Afterwards, here is more text. Afterwards, here is more text. Afterwards, here is more text. Afterwards, here is more text.
+      </p>
     </article>
   </div>
+
+  <style>
+    .sidenote,
+    .marginnote {
+      float: right;
+      clear: right;
+      margin-right: -60%;
+      width: 50%;
+      margin-top: 0.3rem;
+      margin-bottom: 0;
+      vertical-align: baseline;
+      position: relative;
+    }
+
+    .sidenote-number {
+      counter-increment: sidenote-counter;
+    }
+
+    .sidenote-number:after,
+    .sidenote:before {
+      font-family: et-book-roman-old-style;
+      position: relative;
+      vertical-align: baseline;
+    }
+
+    .sidenote-number:after {
+      content: counter(sidenote-counter);
+      font-size: 1rem;
+      top: -0.5rem;
+      left: 0.1rem;
+    }
+
+    .sidenote:before {
+      content: counter(sidenote-counter) " ";
+      font-size: 1rem;
+      top: -0.5rem;
+    }
+
+    blockquote .sidenote,
+    blockquote .marginnote {
+      margin-right: -82%;
+      min-width: 59%;
+      text-align: left;
+    }
+
+    input.margin-toggle {
+      display: none;
+    }
+
+    label.sidenote-number {
+      display: inline-block;
+      max-height: 2rem;
+      /* should be less than or equal to paragraph line-height */
+    }
+
+    label.margin-toggle:not(.sidenote-number) {
+      display: none;
+    }
+
+    label.margin-toggle:not(.sidenote-number) {
+      display: inline;
+    }
+
+    .sidenote,
+    .marginnote {
+      display: none;
+    }
+
+    .margin-toggle:checked+.sidenote,
+    .margin-toggle:checked+.marginnote {
+      display: block;
+      float: left;
+      left: 1rem;
+      clear: both;
+      width: 95%;
+      margin: 1rem 2.5%;
+      vertical-align: baseline;
+      position: relative;
+    }
+
+    label {
+      cursor: pointer;
+    }
+  </style>
 
   <!-- Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
