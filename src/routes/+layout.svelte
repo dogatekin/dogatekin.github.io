@@ -6,6 +6,15 @@
 	let menu = false;
 </script>
 
+<svelte:head>
+	<!-- GoatCounter -->
+	<script
+		data-goatcounter="https://dogatekin.goatcounter.com/count"
+		async
+		src="//gc.zgo.at/count.js"
+	></script>
+</svelte:head>
+
 <Navbar bind:menu />
 <Menu bind:open={menu} />
 
