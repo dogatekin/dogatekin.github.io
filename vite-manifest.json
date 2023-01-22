@@ -1,11 +1,11 @@
 {
-  "src/routes/art/assets/Recursion.svg": {
-    "file": "_app/immutable/assets/Recursion-35e76cff.svg",
-    "src": "src/routes/art/assets/Recursion.svg"
-  },
   "src/routes/art/assets/Juggle.svg": {
     "file": "_app/immutable/assets/Juggle-7ecb20a7.svg",
     "src": "src/routes/art/assets/Juggle.svg"
+  },
+  "src/routes/art/assets/Recursion.svg": {
+    "file": "_app/immutable/assets/Recursion-35e76cff.svg",
+    "src": "src/routes/art/assets/Recursion.svg"
   },
   "src/routes/art/assets/Unpack.svg": {
     "file": "_app/immutable/assets/Unpack-8b45889a.svg",
@@ -18,38 +18,6 @@
   "src/routes/art/assets/Stroll.svg": {
     "file": "_app/immutable/assets/Stroll-0d87a133.svg",
     "src": "src/routes/art/assets/Stroll.svg"
-  },
-  "src/routes/blog/good-mobile-games/assets/florence.jpg": {
-    "file": "_app/immutable/assets/florence-47020209.jpg",
-    "src": "src/routes/blog/good-mobile-games/assets/florence.jpg"
-  },
-  "src/routes/blog/good-mobile-games/assets/song-of-bloom.jpg": {
-    "file": "_app/immutable/assets/song-of-bloom-5609eafe.jpg",
-    "src": "src/routes/blog/good-mobile-games/assets/song-of-bloom.jpg"
-  },
-  "src/routes/blog/good-mobile-games/assets/pianista.jpg": {
-    "file": "_app/immutable/assets/pianista-e74e99e8.jpg",
-    "src": "src/routes/blog/good-mobile-games/assets/pianista.jpg"
-  },
-  "src/routes/blog/good-mobile-games/assets/imagzle.jpg": {
-    "file": "_app/immutable/assets/imagzle-05c12b2d.jpg",
-    "src": "src/routes/blog/good-mobile-games/assets/imagzle.jpg"
-  },
-  "src/routes/blog/good-mobile-games/assets/seesaw.jpg": {
-    "file": "_app/immutable/assets/seesaw-7160a418.jpg",
-    "src": "src/routes/blog/good-mobile-games/assets/seesaw.jpg"
-  },
-  "src/routes/blog/good-mobile-games/assets/sensense.png": {
-    "file": "_app/immutable/assets/sensense-ac4a8a07.png",
-    "src": "src/routes/blog/good-mobile-games/assets/sensense.png"
-  },
-  "src/routes/blog/good-mobile-games/assets/zipzap.jpg": {
-    "file": "_app/immutable/assets/zipzap-2f89e0d1.jpg",
-    "src": "src/routes/blog/good-mobile-games/assets/zipzap.jpg"
-  },
-  "src/routes/blog/good-mobile-games/assets/spaceteam.jpg": {
-    "file": "_app/immutable/assets/spaceteam-bdefb077.jpg",
-    "src": "src/routes/blog/good-mobile-games/assets/spaceteam.jpg"
   },
   "src/routes/blog/game-frustration/assets/hollowknight.jpg": {
     "file": "_app/immutable/assets/hollowknight-d84620f1.jpg",
@@ -67,149 +35,103 @@
     "file": "_app/immutable/assets/goi-b6858e4a.png",
     "src": "src/routes/blog/game-frustration/assets/goi.png"
   },
+  "src/routes/blog/good-mobile-games/assets/florence.jpg": {
+    "file": "_app/immutable/assets/florence-47020209.jpg",
+    "src": "src/routes/blog/good-mobile-games/assets/florence.jpg"
+  },
+  "src/routes/blog/good-mobile-games/assets/imagzle.jpg": {
+    "file": "_app/immutable/assets/imagzle-05c12b2d.jpg",
+    "src": "src/routes/blog/good-mobile-games/assets/imagzle.jpg"
+  },
+  "src/routes/blog/good-mobile-games/assets/song-of-bloom.jpg": {
+    "file": "_app/immutable/assets/song-of-bloom-5609eafe.jpg",
+    "src": "src/routes/blog/good-mobile-games/assets/song-of-bloom.jpg"
+  },
+  "src/routes/blog/good-mobile-games/assets/sensense.png": {
+    "file": "_app/immutable/assets/sensense-ac4a8a07.png",
+    "src": "src/routes/blog/good-mobile-games/assets/sensense.png"
+  },
+  "src/routes/blog/good-mobile-games/assets/spaceteam.jpg": {
+    "file": "_app/immutable/assets/spaceteam-bdefb077.jpg",
+    "src": "src/routes/blog/good-mobile-games/assets/spaceteam.jpg"
+  },
+  "src/routes/blog/good-mobile-games/assets/zipzap.jpg": {
+    "file": "_app/immutable/assets/zipzap-2f89e0d1.jpg",
+    "src": "src/routes/blog/good-mobile-games/assets/zipzap.jpg"
+  },
+  "src/routes/blog/good-mobile-games/assets/seesaw.jpg": {
+    "file": "_app/immutable/assets/seesaw-7160a418.jpg",
+    "src": "src/routes/blog/good-mobile-games/assets/seesaw.jpg"
+  },
   "src/routes/blog/game-frustration/assets/cover.png": {
     "file": "_app/immutable/assets/cover-024fa9e8.png",
     "src": "src/routes/blog/game-frustration/assets/cover.png"
-  },
-  "src/routes/blog/game-frustration/assets/death_count.png": {
-    "file": "_app/immutable/assets/death_count-0f537991.png",
-    "src": "src/routes/blog/game-frustration/assets/death_count.png"
   },
   "src/routes/blog/game-frustration/assets/PoH.png": {
     "file": "_app/immutable/assets/PoH-d947ec19.png",
     "src": "src/routes/blog/game-frustration/assets/PoH.png"
   },
-  "src/routes/art/+page.css": {
-    "file": "_app/immutable/assets/_page-ce835eea.css",
-    "src": "src/routes/art/+page.css"
+  "src/routes/blog/game-frustration/assets/death_count.png": {
+    "file": "_app/immutable/assets/death_count-0f537991.png",
+    "src": "src/routes/blog/game-frustration/assets/death_count.png"
   },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-b7c1cb97.css",
-    "src": "src/routes/+page.css"
-  },
-  "Quote.css": {
-    "file": "_app/immutable/assets/Quote-4c5ebb8f.css",
-    "src": "Quote.css"
-  },
-  "src/routes/fun/+page.css": {
-    "file": "_app/immutable/assets/_page-e023ef42.css",
-    "src": "src/routes/fun/+page.css"
-  },
-  "src/routes/+layout.css": {
-    "file": "_app/immutable/assets/_layout-914bd92e.css",
-    "src": "src/routes/+layout.css"
-  },
-  "src/routes/blog/hypnotic-degenerate-spirals/+page.css": {
-    "file": "_app/immutable/assets/_page-636973d8.css",
-    "src": "src/routes/blog/hypnotic-degenerate-spirals/+page.css"
-  },
-  "src/routes/projects/+page.css": {
-    "file": "_app/immutable/assets/_page-708c84ec.css",
-    "src": "src/routes/projects/+page.css"
-  },
-  "src/routes/blog/+page.css": {
-    "file": "_app/immutable/assets/_page-5a0c9329.css",
-    "src": "src/routes/blog/+page.css"
-  },
-  "src/routes/blog/tweetcart/+page.css": {
-    "file": "_app/immutable/assets/_page-dcaebcf2.css",
-    "src": "src/routes/blog/tweetcart/+page.css"
+  "src/routes/blog/good-mobile-games/assets/pianista.jpg": {
+    "file": "_app/immutable/assets/pianista-e74e99e8.jpg",
+    "src": "src/routes/blog/good-mobile-games/assets/pianista.jpg"
   },
   "src/routes/blog/+layout.css": {
     "file": "_app/immutable/assets/_layout-c4cb7633.css",
     "src": "src/routes/blog/+layout.css"
   },
+  "src/routes/projects/+page.css": {
+    "file": "_app/immutable/assets/_page-708c84ec.css",
+    "src": "src/routes/projects/+page.css"
+  },
   "src/routes/resume/+page.css": {
     "file": "_app/immutable/assets/_page-acd54e2b.css",
     "src": "src/routes/resume/+page.css"
+  },
+  "Quote.css": {
+    "file": "_app/immutable/assets/Quote-4c5ebb8f.css",
+    "src": "Quote.css"
+  },
+  "src/routes/art/+page.css": {
+    "file": "_app/immutable/assets/_page-ce835eea.css",
+    "src": "src/routes/art/+page.css"
+  },
+  "src/routes/blog/tweetcart/+page.css": {
+    "file": "_app/immutable/assets/_page-dcaebcf2.css",
+    "src": "src/routes/blog/tweetcart/+page.css"
+  },
+  "src/routes/blog/+page.css": {
+    "file": "_app/immutable/assets/_page-5a0c9329.css",
+    "src": "src/routes/blog/+page.css"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-b7c1cb97.css",
+    "src": "src/routes/+page.css"
   },
   "src/routes/blog/game-frustration/+page.css": {
     "file": "_app/immutable/assets/_page-7cee8e70.css",
     "src": "src/routes/blog/game-frustration/+page.css"
   },
-  ".svelte-kit/generated/nodes/10.js": {
-    "file": "_app/immutable/chunks/10-926545ec.js",
-    "src": ".svelte-kit/generated/nodes/10.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/fun/+page.svelte"
-    ]
+  "src/routes/fun/+page.css": {
+    "file": "_app/immutable/assets/_page-e023ef42.css",
+    "src": "src/routes/fun/+page.css"
   },
-  ".svelte-kit/generated/nodes/6.js": {
-    "file": "_app/immutable/chunks/6-9a4bae19.js",
-    "src": ".svelte-kit/generated/nodes/6.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/blog/game-frustration/+page.md"
-    ]
+  "src/routes/blog/hypnotic-degenerate-spirals/+page.css": {
+    "file": "_app/immutable/assets/_page-636973d8.css",
+    "src": "src/routes/blog/hypnotic-degenerate-spirals/+page.css"
   },
-  "__layout-79cb23d1.js": {
-    "file": "_app/immutable/chunks/_layout-79cb23d1.js"
+  "src/routes/+layout.css": {
+    "file": "_app/immutable/assets/_layout-914bd92e.css",
+    "src": "src/routes/+layout.css"
   },
   "_shared-5d0213f0.js": {
     "file": "_app/immutable/chunks/shared-5d0213f0.js"
   },
-  ".svelte-kit/generated/nodes/11.js": {
-    "file": "_app/immutable/chunks/11-7005a4df.js",
-    "src": ".svelte-kit/generated/nodes/11.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/projects/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-a6944b3b.js",
-    "src": ".svelte-kit/generated/nodes/2.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/blog/+layout.svelte"
-    ]
-  },
-  "__commonjsHelpers-725317a4.js": {
-    "file": "_app/immutable/chunks/_commonjsHelpers-725317a4.js"
-  },
-  ".svelte-kit/generated/nodes/7.js": {
-    "file": "_app/immutable/chunks/7-49155cc4.js",
-    "src": ".svelte-kit/generated/nodes/7.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/blog/good-mobile-games/+page.md"
-    ]
-  },
-  "src/routes/+error.svelte": {
-    "file": "_app/immutable/components/pages/_error.svelte-845a957f.js",
-    "src": "src/routes/+error.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-adae72ea.js"
-    ]
-  },
-  ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-a5d94812.js",
-    "src": ".svelte-kit/generated/nodes/3.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/9.js": {
-    "file": "_app/immutable/chunks/9-4651ceb0.js",
-    "src": ".svelte-kit/generated/nodes/9.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/blog/tweetcart/+page.md"
-    ]
-  },
-  ".svelte-kit/generated/nodes/8.js": {
-    "file": "_app/immutable/chunks/8-8195396a.js",
-    "src": ".svelte-kit/generated/nodes/8.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/blog/hypnotic-degenerate-spirals/+page.md"
-    ]
-  },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-9ac119a4.js",
+    "file": "_app/immutable/chunks/1-08746c33.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -217,7 +139,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-1c164a47.js",
+    "file": "_app/immutable/chunks/0-78325e28.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -225,24 +147,8 @@
       "src/routes/+layout.svelte"
     ]
   },
-  ".svelte-kit/generated/nodes/4.js": {
-    "file": "_app/immutable/chunks/4-ad419db5.js",
-    "src": ".svelte-kit/generated/nodes/4.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/art/+page.md"
-    ]
-  },
-  ".svelte-kit/generated/nodes/5.js": {
-    "file": "_app/immutable/chunks/5-19f0eb96.js",
-    "src": ".svelte-kit/generated/nodes/5.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/blog/+page.svelte"
-    ]
-  },
   ".svelte-kit/generated/nodes/12.js": {
-    "file": "_app/immutable/chunks/12-f508e7e7.js",
+    "file": "_app/immutable/chunks/12-d41a0ec3.js",
     "src": ".svelte-kit/generated/nodes/12.js",
     "isDynamicEntry": true,
     "imports": [
@@ -252,25 +158,119 @@
   "_preload-helper-41c905a7.js": {
     "file": "_app/immutable/chunks/preload-helper-41c905a7.js"
   },
-  "_P5-8547f19e.js": {
-    "file": "_app/immutable/chunks/P5-8547f19e.js",
+  ".svelte-kit/generated/nodes/9.js": {
+    "file": "_app/immutable/chunks/9-c0fe5b68.js",
+    "src": ".svelte-kit/generated/nodes/9.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/blog/tweetcart/+page.md"
+    ]
+  },
+  ".svelte-kit/generated/nodes/3.js": {
+    "file": "_app/immutable/chunks/3-7ee9630e.js",
+    "src": ".svelte-kit/generated/nodes/3.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/4.js": {
+    "file": "_app/immutable/chunks/4-3023d986.js",
+    "src": ".svelte-kit/generated/nodes/4.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/art/+page.md"
+    ]
+  },
+  "__layout-79cb23d1.js": {
+    "file": "_app/immutable/chunks/_layout-79cb23d1.js"
+  },
+  ".svelte-kit/generated/nodes/8.js": {
+    "file": "_app/immutable/chunks/8-627f3230.js",
+    "src": ".svelte-kit/generated/nodes/8.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/blog/hypnotic-degenerate-spirals/+page.md"
+    ]
+  },
+  ".svelte-kit/generated/nodes/10.js": {
+    "file": "_app/immutable/chunks/10-4b94e73e.js",
+    "src": ".svelte-kit/generated/nodes/10.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/fun/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/2.js": {
+    "file": "_app/immutable/chunks/2-8a60d405.js",
+    "src": ".svelte-kit/generated/nodes/2.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/blog/+layout.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/5.js": {
+    "file": "_app/immutable/chunks/5-ec9282c9.js",
+    "src": ".svelte-kit/generated/nodes/5.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/blog/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/7.js": {
+    "file": "_app/immutable/chunks/7-0b829ce0.js",
+    "src": ".svelte-kit/generated/nodes/7.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/blog/good-mobile-games/+page.md"
+    ]
+  },
+  "__commonjsHelpers-725317a4.js": {
+    "file": "_app/immutable/chunks/_commonjsHelpers-725317a4.js"
+  },
+  ".svelte-kit/generated/nodes/6.js": {
+    "file": "_app/immutable/chunks/6-fd0f9d12.js",
+    "src": ".svelte-kit/generated/nodes/6.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/blog/game-frustration/+page.md"
+    ]
+  },
+  ".svelte-kit/generated/nodes/11.js": {
+    "file": "_app/immutable/chunks/11-07385053.js",
+    "src": ".svelte-kit/generated/nodes/11.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/projects/+page.svelte"
+    ]
+  },
+  "src/routes/+error.svelte": {
+    "file": "_app/immutable/components/pages/_error.svelte-7b4c1f4d.js",
+    "src": "src/routes/+error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20bd7fd1.js"
+    ]
+  },
+  "_P5-f25d1b01.js": {
+    "file": "_app/immutable/chunks/P5-f25d1b01.js",
     "imports": [
       "_preload-helper-41c905a7.js",
-      "_index-adae72ea.js"
+      "_index-20bd7fd1.js"
     ],
     "dynamicImports": [
       "_p5.min-281f4ebc.js"
     ]
   },
-  "_index-adae72ea.js": {
-    "file": "_app/immutable/chunks/index-adae72ea.js"
+  "_index-20bd7fd1.js": {
+    "file": "_app/immutable/chunks/index-20bd7fd1.js"
   },
   "src/routes/blog/good-mobile-games/+page.md": {
-    "file": "_app/immutable/components/pages/blog/good-mobile-games/_page.md-bf8879bd.js",
+    "file": "_app/immutable/components/pages/blog/good-mobile-games/_page.md-39d3de42.js",
     "src": "src/routes/blog/good-mobile-games/+page.md",
     "isEntry": true,
     "imports": [
-      "_index-adae72ea.js"
+      "_index-20bd7fd1.js"
     ],
     "assets": [
       "_app/immutable/assets/florence-47020209.jpg",
@@ -283,47 +283,12 @@
       "_app/immutable/assets/seesaw-7160a418.jpg"
     ]
   },
-  "src/routes/+layout.js": {
-    "file": "_app/immutable/modules/pages/_layout.js-5612100c.js",
-    "src": "src/routes/+layout.js",
-    "isEntry": true,
-    "imports": [
-      "__layout-79cb23d1.js"
-    ]
-  },
-  "_Quote-de84ee7a.js": {
-    "file": "_app/immutable/chunks/Quote-de84ee7a.js",
-    "imports": [
-      "_index-adae72ea.js"
-    ],
-    "css": [
-      "_app/immutable/assets/Quote-4c5ebb8f.css"
-    ]
-  },
-  "src/routes/art/+page.md": {
-    "file": "_app/immutable/components/pages/art/_page.md-7572d27d.js",
-    "src": "src/routes/art/+page.md",
-    "isEntry": true,
-    "imports": [
-      "_index-adae72ea.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page-ce835eea.css"
-    ],
-    "assets": [
-      "_app/immutable/assets/Juggle-7ecb20a7.svg",
-      "_app/immutable/assets/Recursion-35e76cff.svg",
-      "_app/immutable/assets/Pencil-Factory-b7189f88.svg",
-      "_app/immutable/assets/Unpack-8b45889a.svg",
-      "_app/immutable/assets/Stroll-0d87a133.svg"
-    ]
-  },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-7ae064c6.js",
+    "file": "_app/immutable/start-12a31822.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-adae72ea.js",
+      "_index-20bd7fd1.js",
       "_shared-5d0213f0.js",
       "_preload-helper-41c905a7.js"
     ],
@@ -343,62 +308,40 @@
       ".svelte-kit/generated/nodes/12.js"
     ]
   },
-  "src/routes/+layout.svelte": {
-    "file": "_app/immutable/components/pages/_layout.svelte-b68c2407.js",
-    "src": "src/routes/+layout.svelte",
+  "src/routes/+layout.js": {
+    "file": "_app/immutable/modules/pages/_layout.js-5612100c.js",
+    "src": "src/routes/+layout.js",
     "isEntry": true,
     "imports": [
-      "_index-adae72ea.js",
-      "_shared-5d0213f0.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_layout-914bd92e.css"
-    ]
-  },
-  "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-a0c305a9.js",
-    "src": "src/routes/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-adae72ea.js",
-      "__commonjsHelpers-725317a4.js",
-      "_shared-5d0213f0.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page-b7c1cb97.css"
-    ]
-  },
-  "src/routes/fun/+page.svelte": {
-    "file": "_app/immutable/components/pages/fun/_page.svelte-1f138aff.js",
-    "src": "src/routes/fun/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-adae72ea.js",
-      "_P5-8547f19e.js",
-      "__commonjsHelpers-725317a4.js",
-      "_shared-5d0213f0.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page-e023ef42.css"
+      "__layout-79cb23d1.js"
     ]
   },
   "src/routes/blog/+layout.svelte": {
-    "file": "_app/immutable/components/pages/blog/_layout.svelte-d95ddb1f.js",
+    "file": "_app/immutable/components/pages/blog/_layout.svelte-98418754.js",
     "src": "src/routes/blog/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-adae72ea.js"
+      "_index-20bd7fd1.js"
     ],
     "css": [
       "_app/immutable/assets/_layout-c4cb7633.css"
     ]
   },
+  "_Quote-31009faa.js": {
+    "file": "_app/immutable/chunks/Quote-31009faa.js",
+    "imports": [
+      "_index-20bd7fd1.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Quote-4c5ebb8f.css"
+    ]
+  },
   "src/routes/blog/+page.svelte": {
-    "file": "_app/immutable/components/pages/blog/_page.svelte-bff91943.js",
+    "file": "_app/immutable/components/pages/blog/_page.svelte-85b3f9e6.js",
     "src": "src/routes/blog/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-adae72ea.js",
+      "_index-20bd7fd1.js",
       "_shared-5d0213f0.js"
     ],
     "css": [
@@ -406,49 +349,93 @@
     ]
   },
   "src/routes/blog/tweetcart/+page.md": {
-    "file": "_app/immutable/components/pages/blog/tweetcart/_page.md-aeaf672a.js",
+    "file": "_app/immutable/components/pages/blog/tweetcart/_page.md-790b4a06.js",
     "src": "src/routes/blog/tweetcart/+page.md",
     "isEntry": true,
     "imports": [
-      "_index-adae72ea.js",
-      "_P5-8547f19e.js"
+      "_index-20bd7fd1.js",
+      "_P5-f25d1b01.js"
     ],
     "css": [
       "_app/immutable/assets/_page-dcaebcf2.css"
     ]
   },
+  "src/routes/art/+page.md": {
+    "file": "_app/immutable/components/pages/art/_page.md-2d4f4f4e.js",
+    "src": "src/routes/art/+page.md",
+    "isEntry": true,
+    "imports": [
+      "_index-20bd7fd1.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-ce835eea.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/Juggle-7ecb20a7.svg",
+      "_app/immutable/assets/Recursion-35e76cff.svg",
+      "_app/immutable/assets/Pencil-Factory-b7189f88.svg",
+      "_app/immutable/assets/Unpack-8b45889a.svg",
+      "_app/immutable/assets/Stroll-0d87a133.svg"
+    ]
+  },
+  "src/routes/+layout.svelte": {
+    "file": "_app/immutable/components/pages/_layout.svelte-17cdd1c0.js",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20bd7fd1.js",
+      "_shared-5d0213f0.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout-914bd92e.css"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "_app/immutable/components/pages/_page.svelte-7b958827.js",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20bd7fd1.js",
+      "__commonjsHelpers-725317a4.js",
+      "_shared-5d0213f0.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-b7c1cb97.css"
+    ]
+  },
   "src/routes/resume/+page.svelte": {
-    "file": "_app/immutable/components/pages/resume/_page.svelte-636f0aa6.js",
+    "file": "_app/immutable/components/pages/resume/_page.svelte-538ee011.js",
     "src": "src/routes/resume/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-adae72ea.js",
+      "_index-20bd7fd1.js",
       "_shared-5d0213f0.js"
     ],
     "css": [
       "_app/immutable/assets/_page-acd54e2b.css"
     ]
   },
-  "src/routes/blog/hypnotic-degenerate-spirals/+page.md": {
-    "file": "_app/immutable/components/pages/blog/hypnotic-degenerate-spirals/_page.md-63918914.js",
-    "src": "src/routes/blog/hypnotic-degenerate-spirals/+page.md",
+  "src/routes/fun/+page.svelte": {
+    "file": "_app/immutable/components/pages/fun/_page.svelte-8c43f703.js",
+    "src": "src/routes/fun/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-adae72ea.js",
-      "_P5-8547f19e.js",
-      "_Quote-de84ee7a.js"
+      "_index-20bd7fd1.js",
+      "_P5-f25d1b01.js",
+      "__commonjsHelpers-725317a4.js",
+      "_shared-5d0213f0.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-636973d8.css"
+      "_app/immutable/assets/_page-e023ef42.css"
     ]
   },
   "src/routes/blog/game-frustration/+page.md": {
-    "file": "_app/immutable/components/pages/blog/game-frustration/_page.md-5ac7fc6c.js",
+    "file": "_app/immutable/components/pages/blog/game-frustration/_page.md-64e0bd44.js",
     "src": "src/routes/blog/game-frustration/+page.md",
     "isEntry": true,
     "imports": [
-      "_index-adae72ea.js",
-      "_Quote-de84ee7a.js"
+      "_index-20bd7fd1.js",
+      "_Quote-31009faa.js"
     ],
     "css": [
       "_app/immutable/assets/_page-7cee8e70.css"
@@ -463,12 +450,25 @@
       "_app/immutable/assets/death_count-0f537991.png"
     ]
   },
+  "src/routes/blog/hypnotic-degenerate-spirals/+page.md": {
+    "file": "_app/immutable/components/pages/blog/hypnotic-degenerate-spirals/_page.md-00433ad0.js",
+    "src": "src/routes/blog/hypnotic-degenerate-spirals/+page.md",
+    "isEntry": true,
+    "imports": [
+      "_index-20bd7fd1.js",
+      "_P5-f25d1b01.js",
+      "_Quote-31009faa.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-636973d8.css"
+    ]
+  },
   "src/routes/projects/+page.svelte": {
-    "file": "_app/immutable/components/pages/projects/_page.svelte-b6c0ad66.js",
+    "file": "_app/immutable/components/pages/projects/_page.svelte-52ac0d7b.js",
     "src": "src/routes/projects/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-adae72ea.js",
+      "_index-20bd7fd1.js",
       "__commonjsHelpers-725317a4.js",
       "_shared-5d0213f0.js"
     ],
