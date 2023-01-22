@@ -1,24 +1,18 @@
 <script>
 	import Navbar from '$lib/Navbar.svelte';
 	import Menu from '$lib/Menu.svelte';
+	import A from '$lib/A.svelte';
 	import '../app.css';
 
 	let menu = false;
 </script>
 
-<svelte:head>
-	<!-- GoatCounter -->
-	<script
-		data-goatcounter="https://dogatekin.goatcounter.com/count"
-		async
-		src="//gc.zgo.at/count.js"
-	></script>
-</svelte:head>
+<A />
 
 <Navbar bind:menu />
 <Menu bind:open={menu} />
 
-<main>
+<main id="content">
 	<slot />
 </main>
 
