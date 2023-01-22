@@ -1,3 +1,3 @@
-# https://www.dogatekin.com
+# My Personal Website
 
-![](assets/home.png)
+Written using SvelteKit.
