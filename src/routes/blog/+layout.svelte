@@ -38,4 +38,9 @@
 	article :global(#footnotes) {
 		margin-top: 3rem;
 	}
+
+	article :global(table) {
+		margin: 1rem auto;
+		border-spacing: 50px 0;
+	}
 </style>

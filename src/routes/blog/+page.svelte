@@ -14,7 +14,7 @@
 	link="{base}/blog/makemore-jax"
 	desc="Re-implementing makemore, Andrej Karpathy's simple implementation of a language model, in JAX."
 	tags={['Machine Learning', 'Python']}
-	date="07 May 2023"
+	date="25 April 2023"
 />
 
 <Post
