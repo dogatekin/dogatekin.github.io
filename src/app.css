@@ -81,3 +81,7 @@ h2 {
   color: var(--headline);
   margin-bottom: 1rem;
 }
+
+code {
+  font-size: 16px;
+}

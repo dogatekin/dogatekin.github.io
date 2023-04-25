@@ -10,6 +10,14 @@
 <h1>Blog</h1>
 
 <Post
+	title="Learning JAX by Implementing a Simple Language Model"
+	link="{base}/blog/makemore-jax"
+	desc="Re-implementing makemore, Andrej Karpathy's simple implementation of a language model, in JAX."
+	tags={['Machine Learning', 'Python']}
+	date="07 May 2023"
+/>
+
+<Post
 	title="The Hypnotic World of Degenerate Spirals"
 	link="{base}/blog/hypnotic-degenerate-spirals"
 	desc="An exploration of spirals and the interesting patterns produced when we fail to properly draw them
