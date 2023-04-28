@@ -5,6 +5,8 @@ date: '2023-04-25'
 
 <script>
     import Tabs from '$lib/Tabs.svelte';
+    import { base } from '$app/paths';
+    import './assets/atom-dark.css';
 
     let tabItems = ['Torch', 'JAX']
 	let activeItem = 'JAX'
@@ -17,7 +19,6 @@ date: '2023-04-25'
 <svelte:head>
 
     <title>Doga Tekin on Learning JAX</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-tomorrow.min.css">
 
 </svelte:head>
 
