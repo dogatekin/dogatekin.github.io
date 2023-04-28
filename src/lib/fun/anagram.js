@@ -97,7 +97,7 @@ const anagram = function (p) {
   p.draw = function () {
     p.clear()
 
-    if (currentTheme == 'light') {
+    if (localStorage.getItem('theme') == 'light-theme') {
       p.stroke('#333')
       p.fill('#333')
     } else {
