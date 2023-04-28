@@ -1,9 +1,31 @@
 <script>
 	import { base } from '$app/paths';
 	import Burger from '$lib/Burger.svelte';
+	import { theme } from '$lib/stores';
+
+	function toggleTheme() {
+		if ($theme == 'dark-theme') {
+			$theme = 'light-theme';
+			document.documentElement.classList.add('light-theme');
+		} else {
+			$theme = 'dark-theme';
+			document.documentElement.classList.remove('light-theme');
+		}
+	}
 
 	export let menu = false;
 </script>
+
+<svelte:head>
+	<script>
+		if (document) {
+			let theme = localStorage.getItem('theme') || 'dark-theme';
+			if (theme === 'light-theme') {
+				document.documentElement.classList.add('light-theme');
+			}
+		}
+	</script>
+</svelte:head>
 
 <nav>
 	<div id="left">
@@ -26,7 +48,9 @@
 			</a>
 
 			<!-- svelte-ignore a11y-missing-attribute -->
-			<a class="toggler" role="button"><i class="fas fa-adjust" /></a>
+			<!-- svelte-ignore missing-declaration -->
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<a class="toggler" role="button" on:click={toggleTheme}><i class="fas fa-adjust" /></a>
 		</div>
 	</div>
 
@@ -40,7 +64,9 @@
 
 	<div id="mobile-buttons">
 		<!-- svelte-ignore a11y-missing-attribute -->
-		<a class="toggler" role="button"><i class="fas fa-adjust" /></a>
+		<!-- svelte-ignore missing-declaration -->
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<a class="toggler" role="button" on:click={toggleTheme}><i class="fas fa-adjust" /></a>
 		<Burger bind:open={menu} />
 	</div>
 </nav>

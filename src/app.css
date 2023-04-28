@@ -4,7 +4,7 @@ html {
 }
 
 /* Themes */
-body {
+html {
   --bg: #1f2427;
   --bgt: #1f2427fa;
   --primary: #f0f2f3;
@@ -17,7 +17,7 @@ body {
   --footer: #c6c6c6;
 }
 
-body.light-theme {
+html.light-theme {
   --bg: #f3f3f3;
   --bgt: #f3f3f3fa;
   --primary: #333;
