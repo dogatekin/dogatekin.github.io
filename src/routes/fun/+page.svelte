@@ -3,6 +3,7 @@
 	import Recommender from '$lib/Recommender.svelte';
 	import { anagram } from '$lib/fun/anagram.js';
 	import { balls } from '$lib/fun/balls.js';
+	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -21,7 +22,7 @@
 
 	<P5 sketch={balls} />
 
-	<div class="funlink">📚 <a href="./bookshelf">Bookshelf</a> 📚</div>
+	<div class="funlink">📚 <a href="{base}/fun/bookshelf/">Bookshelf</a> 📚</div>
 </div>
 
 <style>
