@@ -20,6 +20,8 @@
 	</div>
 
 	<P5 sketch={balls} />
+
+	<div class="funlink">📚 <a href="./bookshelf">Bookshelf</a> 📚</div>
 </div>
 
 <style>
@@ -70,5 +72,11 @@
 
 	.content :global(.control:hover) {
 		color: var(--accent);
+	}
+
+	.funlink {
+		margin-top: 4rem;
+		font-size: 1.25rem;
+		text-align: center;
 	}
 </style>
