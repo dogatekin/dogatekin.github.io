@@ -41,6 +41,13 @@
 			image: `${base}/projects/gpa.png`,
 			link: '',
 			github: 'https://github.com/dogatekin/epfl-gpa'
+		},
+		anagrammer: {
+			name: 'Anagrammer',
+			desc: `JS script to animate between anagrams, a simplified version is used on my <a href="${base}/fun">Fun</a> page.`,
+			image: `${base}/projects/anagrammer.png`,
+			link: 'https://editor.p5js.org/dogatekin/sketches/boIta5qY9',
+			github: ''
 		}
 	};
 
@@ -86,7 +93,7 @@
 			let box = Bodies.rectangle(window.innerWidth / 2 + xOffset, 250 + yOffset, w, w, {
 				render: {
 					sprite: {
-						texture: `${base}/projects/${proj}.png`,
+						texture: projects[proj].image,
 						xScale: w / 500,
 						yScale: w / 500
 					}

@@ -20,7 +20,7 @@
 
 		<img src={image} alt="Project" />
 
-		<p>{desc}</p>
+		<p>{@html desc}</p>
 
 		<div id="links">
 			{#if link}
