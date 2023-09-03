@@ -61,7 +61,24 @@
 		name="Oracle Labs"
 		lightlogo="{base}/resume/oracle.png"
 		darklogo="{base}/resume/oracle.png"
-		dates="Oct 2021 – Present"
+		dates="Sep 2023 – Present"
+		location="Zurich, CH"
+		role="Senior Research Engineer"
+		gpa=""
+	>
+		<ul>
+			<li>
+				Researching and developing ML solutions to improve Oracle-internal and customer products
+				worldwide.
+			</li>
+		</ul>
+	</Experience>
+
+	<Experience
+		name="Oracle Labs"
+		lightlogo="{base}/resume/oracle.png"
+		darklogo="{base}/resume/oracle.png"
+		dates="Oct 2021 – Aug 2023"
 		location="Zurich, CH"
 		role="Research Engineer"
 		gpa=""
@@ -80,7 +97,7 @@
 		darklogo="{base}/resume/oracle.png"
 		dates="Feb 2021 – Sep 2021"
 		location="Zurich, CH"
-		role="Research Intern"
+		role="Research Engineer Intern"
 		gpa=""
 	>
 		<ul>
@@ -97,7 +114,7 @@
 		darklogo="{base}/resume/accenture-dark.svg"
 		dates="Aug 2019 – Jan 2020"
 		location="Dublin, IE"
-		role="Research Intern"
+		role="Research Engineer Intern"
 		gpa=""
 	>
 		<ul>
