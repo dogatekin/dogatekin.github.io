@@ -20,19 +20,18 @@
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
-	<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout-c5958770.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/_page-b7c1cb97.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-d4f2d1c3.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-a28fa1ae.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-acfbc68a.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/shared-23917130.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-c685d4f2.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-5612100c.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-79cb23d1.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-961fe3ea.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_commonjsHelpers-725317a4.js"><title>Doga Tekin</title><!-- HEAD_svelte-p12ljh_START --><script>if (document) {
+	
+		<link href="./_app/immutable/assets/0.b3f73420.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/3.b7c1cb97.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.3cc2e729.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.4d16eeca.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.9121e888.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.f46d22c7.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.a25e19f3.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.a4192956.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.ded3f985.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/3.47c4ca11.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_commonjsHelpers.725317a4.js"><title>Doga Tekin</title><!-- HEAD_svelte-p12ljh_START --><script>if (document) {
 			let theme = localStorage.getItem('theme') || 'dark-theme';
 			if (theme === 'light-theme') {
 				document.documentElement.classList.add('light-theme');
@@ -115,23 +114,32 @@
 <footer></footer>
 
 
-		<script type="module" data-sveltekit-hydrate="1yxouba">
-			import { start } from "./_app/immutable/start-d4f2d1c3.js";
+			
+			<script>
+				{
+					__sveltekit_57d6og = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
 
-			start({
-				env: {},
-				paths: {"assets":"","base":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1yxouba"]').parentNode,
-				version: "1682791825816",
-				hydrate: {
-					node_ids: [0, 3],
-					data: [null,null],
-					form: null,
-					error: null
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.3cc2e729.js"),
+						import("./_app/immutable/entry/app.a25e19f3.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
 
 	<!-- FontAwesome -->
 	<script src="https://kit.fontawesome.com/1f5e88f762.js" crossorigin="anonymous"></script>

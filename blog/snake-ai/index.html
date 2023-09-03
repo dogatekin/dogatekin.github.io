@@ -22,6 +22,7 @@
 
 	
 		<link href="../../_app/immutable/assets/0.b3f73420.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/2.b2d07b2f.css" rel="stylesheet">
 		<link rel="modulepreload" href="../../_app/immutable/entry/start.3cc2e729.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index.4d16eeca.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.9121e888.js">
@@ -29,13 +30,14 @@
 		<link rel="modulepreload" href="../../_app/immutable/entry/app.a25e19f3.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.a4192956.js">
 		<link rel="modulepreload" href="../../_app/immutable/nodes/0.ded3f985.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/14.e031ca79.js"><title>Doga Tekin | Bookshelf</title><!-- HEAD_svelte-p12ljh_START --><script>if (document) {
+		<link rel="modulepreload" href="../../_app/immutable/nodes/2.92bde1f7.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/10.6a98cd8c.js"><title>Doga Tekin on Snake AI</title><!-- HEAD_svelte-p12ljh_START --><script>if (document) {
 			let theme = localStorage.getItem('theme') || 'dark-theme';
 			if (theme === 'light-theme') {
 				document.documentElement.classList.add('light-theme');
 			}
 		}
-	</script><!-- HEAD_svelte-p12ljh_END --><!-- HEAD_svelte-rvjx8y_START --><!-- HEAD_svelte-rvjx8y_END -->
+	</script><!-- HEAD_svelte-p12ljh_END --><!-- HEAD_svelte-kntsus_START --><!-- HEAD_svelte-kntsus_END -->
 </head>
 
 <body data-sveltekit-preload-data="hover">
@@ -84,41 +86,25 @@
 		<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/dogatekin/" class="svelte-rfheuh"><i class="fab fa-linkedin-in"></i></a></div>
 </aside>
 
-<main id="content">
+<main id="content"><article class="svelte-1er77a2">
 
 
-<h1>Bookshelf</h1>
-<h2>2022</h2>
-<ol><li>“just like hamburger; exactly like hamburger” – Tim Rogers</li>
-<li>The Anthropocene Reviewed – John Green</li>
-<li>Kıyamet Park – Alper Canıgüz</li>
-<li>Skulduggery Pleasant: Until the End – Derek Landy</li>
-<li>Why Vegan? – Peter Singer</li>
-<li>Utopia for Realists – Rutger Bregman</li>
-<li>The Days That Disappear – Timothé Le Boucher</li>
-<li>The Paper Menagerie – Ken Liu</li>
-<li>What If 2 – Randall Munroe</li>
-<li>Escape into Meaning – Evan Puschak</li>
-<li>Valuable Humans In Transit and Other Stories – qntm</li></ol>
-<h2>2021</h2>
-<ol><li>Stories of Your Life and Others – Ted Chiang</li>
-<li>Unsong – Scott Alexander</li>
-<li>Skulduggery Pleasant: Dead or Alive – Derek Landy</li>
-<li>AMORALMAN – Derek DelGaudio</li>
-<li>Exhalation – Ted Chiang</li>
-<li>There Is No Antimemetics Division – qntm</li>
-<li>Ra – qntm</li>
-<li><span style="color: rgb(125, 157, 247);">House</span> of Leaves – Mark Z. Danielewski</li>
-<li>A Ladder to the Sky – John Boyne</li>
-<li>Friday Black – Nana Kwame Adjei-Brenyah</li>
-<li>Welcome to the Monkey House – Kurt Vonnegut</li></ol>
-<h2>2020</h2>
-<ol><li>What If? – Randall Munroe</li>
-<li>Name of Author by Title of Book – Tom Murphy VII</li>
-<li>His Sophomoric Effort – Tom Murphy VII</li>
-<li>Skulduggery Pleasant: Bedlam – Derek Landy</li>
-<li>The Art of Failure: An Essay on the Pain of Playing Video Games – Jesper Juul</li>
-<li>Harry Potter and the Methods of Rationality – Eliezer Yudkowsky</li></ol></main>
+<h1>Snake AI: X Ways</h1>
+<p>There are countless ways to implement an Artificial Intelligence (AI) to achieve a given task, such as playing a game.
+This post is an exploration of a few approaches.</p>
+<h2>The Task</h2>
+<p>As the “playground” for this exploration, I’m taking one of the simplest games I know: <a href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)" rel="nofollow">Snake</a>.
+I put together a basic implementation of the game in Python for this purpose:</p>
+<blockquote><p>insert gif of Snake game</p></blockquote>
+<h2>AI 1: “By Hand”</h2>
+<p>One way to make an AI play Snake is to come up with an “explicit” algorithm on how the AI should act in each situation, and implement it such that it acts accordingly.
+Of course, this category by itself has countless ways of implementing an AI by hand, ranging from a “dumb” snake that moves around randomly hoping to run into apples, to complicated algorithms simulating different futures and picking actions leading to the best outcomes.</p>
+<p>Let’s look at two different algorithms a Snake-playing AI might use.</p>
+<h3>Path-finding</h3>
+<h3>“Optimal”</h3>
+<h2>AI 2: Reinforcement Learning</h2>
+<h2>AI 3: Evolution</h2>
+</article></main>
 
 <footer></footer>
 
@@ -133,14 +119,14 @@
 
 					const element = document.currentScript.parentElement;
 
-					const data = [null,null];
+					const data = [null,null,null];
 
 					Promise.all([
 						import("../../_app/immutable/entry/start.3cc2e729.js"),
 						import("../../_app/immutable/entry/app.a25e19f3.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 14],
+							node_ids: [0, 2, 10],
 							data,
 							form: null,
 							error: null
