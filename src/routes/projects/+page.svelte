@@ -206,7 +206,7 @@
 
 <h1>Projects</h1>
 
-<p style="text-align: center;">Click the boxes to learn more!</p>
+<p style="text-align: center;">Click the boxes to learn more, or drag them around if you want!</p>
 
 <div id="matter-container" />
 

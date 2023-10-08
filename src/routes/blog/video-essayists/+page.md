@@ -1,6 +1,6 @@
 ---
-title: Video Essayist Hall of Fame
-date: '2023-05-30'
+title: Video Essayist Recommendations
+date: '2023-10-10'
 ---
 
 <svelte:head>
@@ -11,9 +11,11 @@ date: '2023-05-30'
 
 # {title}
 
-I've spent a remarkable amount of my time online watching video essays on YouTube. These are my favorite essayists, and a few recommendations from each one's catalogue. Consequently, these are some of my favorite videos on the platform.
+I spend a substantial amount of my time online watching video essays on YouTube. These are some of my favorite essayists and a few recommendations from each one's catalogue.
 
 ## Jacob Geller
+
+Jacob has an unparalleled skill in making profound connections between seemingly disconnected concepts. His videos bring together real events, games, movies, politics, architecture, art and more to both give you things to think about, and to give you goosebumps with sharp writing and editing.
 
 #### Recommendations
 
@@ -23,6 +25,10 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 
 ## Action Button
 
+Tim Rogers is in a league of his own with essays ranging from 3 hours to 10 hours. Don't let the runtimes discourage you though, I've yet to regret an hour spent watching Action Button. He appears to review video games, and he does, but always within the context and culture that surrounds the games, with a depth that boggles the mind.
+
+You come out the other side of a Tim Rogers video not only entertained, but with appreciation for the game he talked about, video games in general, entire cultures, and Tim himself.
+
 #### Recommendations
 
 - [ACTION BUTTON REVIEWS Tokimeki Memorial](https://www.youtube.com/watch?v=xb-DtICmPTY)
@@ -31,45 +37,47 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 
 ## Folding Ideas
 
+Dan Olson can deconstruct financial scams, conspiracy theories, important events and internet trends all with an incredible clarity; and turn these deconstructions into entertaining movie-length videos. There is some reason to believe he played a part in "bursting the NFT bubble", so worth watching for this alone. His older content still certainly holds up as well, which offer thoughtful takes on filmmaking, specific movies, games, and more.
+
 #### Recommendations
 
 - [In Search Of A Flat Earth](https://www.youtube.com/watch?v=JTfhYyTuT44)
 - [Line Goes Up – The Problem With NFTs](https://www.youtube.com/watch?v=YQ_xWvX1n9g)
 - [A Lukewarm Defence of Fifty Shades of Grey](https://www.youtube.com/watch?v=qzk9N7dJBec)
 
+## Hbomberguy
+
+In addition to persuasive opinion pieces on media, Harry produces very deep and informative deep dives into both important and completely obscure things, always keeping them funny with a controlled but somewhat unhinged energy.
+
+#### Recommendations
+
+- [Vaccines and Autism: A Measured Response](https://www.youtube.com/watch?v=8BIcAZxFfrc)
+- [ROBLOX_OOF.mp3](https://www.youtube.com/watch?v=0twDETh6QaI)
+- [Sherlock Is Garbage, And Here's Why](https://www.youtube.com/watch?v=LkoGBOs5ecM)
+
 ## Whitelight
 
+What sets Whitelight apart for me is his writing and delivery. He does present well-thought out arguments and critiques of games, yes, but for me half the enjoyment of a Whitelight video is the prose, the beauty, the almost poetic cadence.
+
 #### Recommendations
 
+- [Driveclub: Playstation's Fallen Masterpiece](https://www.youtube.com/watch?v=mPGaYRIz3es)
 - [A Serious Critique of Minecraft](https://www.youtube.com/watch?v=ha1rO0btVLU)
-- [Blur: 11 Years Later](https://www.youtube.com/watch?v=uwJPHUkft0A)
 - [Mirror's Edge: 13 Years Later](https://www.youtube.com/watch?v=7e_zNLyEReg)
-
-## BobbyBroccoli
-
-#### Recommendations
-
-- [The man who almost faked his way to a Nobel Prize](https://www.youtube.com/watch?v=nfDoml-Db64)
-- [The man who tried to fake an element](https://www.youtube.com/watch?v=Qe5WT22-AO8)
-- [The man who faked human cloning](https://www.youtube.com/watch?v=ett_8wLJ87U)
-
-## Ahoy
-
-#### Recommendations
-
-- [Four-Byte Burger](https://www.youtube.com/watch?v=i4EFkspO5p4)
-- [POLYBIUS - The Video Game That Doesn't Exist](https://www.youtube.com/watch?v=_7X6Yeydgyg)
-- [A Brief History of Graphics](https://www.youtube.com/watch?v=QyjyWUrHsFc)
 
 ## Carlos Maza
 
+Carlos makes funny and easy to consume political videos without compromising at all on the informative or argumentative value.
+
 #### Recommendations
 
-- [What The Hell Is "Too Far Left"](https://www.youtube.com/watch?v=IMzIzk6xP9o)
 - [How To Be Hopeless](https://www.youtube.com/watch?v=iJaE_BvLK6U)
+- [What The Hell Is "Too Far Left"](https://www.youtube.com/watch?v=IMzIzk6xP9o)
 - [Coronavirus And America's Death Cult](https://www.youtube.com/watch?v=vG37wwhbS88)
 
 ## Innuendo Studios
+
+Whether applying art theory to analyze games or deconstructing the psychology and rhetorical strategies of the alt-right, Ian's videos are always engaging and convincing.
 
 #### Recommendations
 
@@ -79,6 +87,8 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 
 ## Just Write
 
+Sage has been making high quality essays consistently for many years now. Very thoughtful praise and criticism about movies and series, especially about their writing but also about other aspects filmmaking.
+
 #### Recommendations
 
 - [Why The Hobbit Sucks Part Two: Tensionless Action](https://www.youtube.com/watch?v=dFq3VGVA8_Y)
@@ -86,6 +96,8 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 - [Game of Thrones; Or The Pain Of Falling Out Of Love With A Story](https://www.youtube.com/watch?v=HoLhcdapmqg)
 
 ## LEMMiNO
+
+Some of the highest production quality documentaries on YouTube come from LEMMiNO.
 
 #### Recommendations
 
@@ -95,6 +107,8 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 
 ## Leo Vader
 
+In my opinion, Leo is simply one of the funniest people on YouTube and keeps coming up with very "Leo Vader" video ideas and executing on them perfectly. The one non-silly video he has is also amazing.
+
 #### Recommendations
 
 - [were the magicians in Now You See Me wizards or what?](https://www.youtube.com/watch?v=uKfdls1fqJE)
@@ -102,6 +116,8 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 - [when you slip on a banana peel](https://www.youtube.com/watch?v=_jaWvHVMGik)
 
 ## NakeyJakey
+
+Jakey has an infectious energy that makes it entertaining to watch him talk about anything.
 
 #### Recommendations
 
@@ -111,6 +127,8 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 
 ## Nerdwriter1
 
+Evan engages with art and media in a way I hope I could as well, but at least I can see what that would feel like through his YouTube channel.
+
 #### Recommendations
 
 - [Passengers, Rearranged](https://www.youtube.com/watch?v=Gksxu-yeWcU)
@@ -118,6 +136,8 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 - [Arrival: A Response To Bad Movies](https://www.youtube.com/watch?v=z18LY6NME1s)
 
 ## Nick Robinson
+
+Nick somehow turns admittedly silly video ideas into great stories, and often fits in a trip to Japan in there as well.
 
 #### Recommendations
 
@@ -127,6 +147,8 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 
 ## Pop Culture Detective
 
+Pop Culture Detective's videos are absolutely eye-opening about problematic things in popular media. I can only hope watching him made me a bit more critical about depictions of serious issues in media I consume.
+
 #### Recommendations
 
 - [Marvel’s Guardians of The Status Quo](https://www.youtube.com/watch?v=LpitmEnaYeU)
@@ -134,6 +156,8 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 - [Sexual Assault of Men Played for Laughs - Part 1 Male Perpetrators](https://www.youtube.com/watch?v=uc6QxD2_yQw)
 
 ## Philosophy Tube
+
+Abigail has great videos combining philosophy and politics, often using philosophical lenses to look at current events and/or social issues. Always well-written scripts and high production quality as well.
 
 #### Recommendations
 
@@ -143,6 +167,8 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 
 ## Razbuten
 
+Raz has many great essays offering opinions on different video game mechanics, but I think his most memorable essays are the ones that focus on the personal aspect of playing games by describing his personal experiences and relationships with some of the games he played.
+
 #### Recommendations
 
 - [What Games Are Like For Someone Who Doesn't Play Games](https://www.youtube.com/watch?v=ax7f3JZJHSw)
@@ -151,13 +177,17 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 
 ## Shaun
 
+Shaun has a very calm, collected, and logical approach and creates detailed and persuasive essays, often on political subjects.
+
 #### Recommendations
 
-- [Harry Potter](https://www.youtube.com/watch?v=-1iaJWSwUZs)
 - [Dropping the Bomb: Hiroshima & Nagasaki](https://www.youtube.com/watch?v=RCRTgtpC-Go)
+- [Harry Potter](https://www.youtube.com/watch?v=-1iaJWSwUZs)
 - [CinemaSins is Still Wrong About Everything](https://www.youtube.com/watch?v=b9IBlbfjNH0)
 
 ## Super Eyepatch Wolf
+
+Eyepath Wolf is a great dramatic storyteller and frequently makes me feel very invested in subjects I normally care very little about.
 
 #### Recommendations
 
@@ -167,16 +197,30 @@ I've spent a remarkable amount of my time online watching video essays on YouTub
 
 ## Jon Bois
 
+An absolute video essay icon, Jon Bois somehow makes incredible videos in Google Earth about interesting stories, usually but not always about sports, accompanied by a smooth jazz soundtrack.
+
 #### Recommendations
 
 - ["I WISH EVERYONE ELSE WAS DEAD." PRETTY GOOD, EPISODE 7.](https://www.youtube.com/watch?v=_P52G4Kyq5M&list=PL-acudFSrTlVyH_Z5Md6JfgGKWFBobtWF&index=6&pp=iAQB)
 - [Chart Party: My favorite worst baseball player](https://www.youtube.com/watch?v=1VtKxqbwpm0&list=PL-acudFSrTlVyH_Z5Md6JfgGKWFBobtWF&index=10&pp=iAQB)
 - [222-0. PRETTY GOOD, EPISODE 10.](https://www.youtube.com/watch?v=doZzrsDJo-4&list=PL-acudFSrTlVyH_Z5Md6JfgGKWFBobtWF&index=11)
 
-## Hbomberguy
+## BobbyBroccoli
+
+Bobby took the Jon Bois style of making video essays in Google Earth, adapted it, and is making great use of it to make high-quality documentaries diving deep into science scandals. Interesting stories told in entertaining ways.
 
 #### Recommendations
 
-- [Vaccines and Autism: A Measured Response](https://www.youtube.com/watch?v=8BIcAZxFfrc)
-- [Climate Denial: A Measured Response](https://www.youtube.com/watch?v=RLqXkYrdmjY)
-- [ROBLOX_OOF.mp3](https://www.youtube.com/watch?v=0twDETh6QaI)
+- [The man who almost faked his way to a Nobel Prize](https://www.youtube.com/watch?v=nfDoml-Db64)
+- [The man who tried to fake an element](https://www.youtube.com/watch?v=Qe5WT22-AO8)
+- [The man who faked human cloning](https://www.youtube.com/watch?v=ett_8wLJ87U)
+
+## Ahoy
+
+Ahoy has a great catalogue of well-researched and detailed documentary-style video essays, narrated with one of the deepest, smoothest voices on the platform, animated with stylish aesthetics and visualizations.
+
+#### Recommendations
+
+- [Four-Byte Burger](https://www.youtube.com/watch?v=i4EFkspO5p4)
+- [POLYBIUS - The Video Game That Doesn't Exist](https://www.youtube.com/watch?v=_7X6Yeydgyg)
+- [A Brief History of Graphics](https://www.youtube.com/watch?v=QyjyWUrHsFc)
