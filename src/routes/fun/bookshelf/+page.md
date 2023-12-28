@@ -6,6 +6,21 @@
 
 # Bookshelf
 
+## 2023
+
+1. Priestdaddy – Patricia Lockwood
+2. Journal 29 – Dimitris Chassapakis
+3. Skulduggery Pleasant: Hell Breaks Loose – Derek Landy
+4. Humankind: A Hopeful History – Rutger Bregman
+5. Steal Like an Artist – Austin Kleon
+6. Chain-Gang All-Stars – Nana Kwame Adjei-Brenyah
+7. No Longer Human – Osamu Dazai
+8. This is How You Lose the Time War – Amal El-Mohtar & Max Gladstone
+9. The Stuff Games Are Made Of – Pippin Barr
+10. Embroideries – Marjane Satrapi
+11. Humans – Matt Haig
+12. The Beauty of Games – Frank Lantz
+
 ## 2022
 
 1. "just like hamburger; exactly like hamburger" – Tim Rogers
