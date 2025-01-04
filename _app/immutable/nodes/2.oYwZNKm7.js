@@ -1,0 +1,1 @@
+import{a as o,t as s}from"../chunks/disclose-version.BdpnkpC4.js";import{a2 as p,a3 as i,Q as l,a4 as n,a5 as c}from"../chunks/runtime.wGhI371t.js";import{s as m}from"../chunks/snippet.CIQ3ynDX.js";var d=s('<article class="svelte-1er77a2"><!></article>');function h(e,t){p(t,!0);var a=d(),r=n(a);m(r,()=>t.children??l),c(a),o(e,a),i()}export{h as component};
