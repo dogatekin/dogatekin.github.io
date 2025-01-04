@@ -68,8 +68,7 @@
 	>
 		<ul>
 			<li>
-				Researching and developing ML solutions to improve Oracle-internal and customer products
-				worldwide.
+				Researching and developing ML solutions, analyzing large amounts of data, and working with LLMs. Currently working on cybersecurity topics.
 			</li>
 		</ul>
 	</Experience>
@@ -85,7 +84,7 @@
 	>
 		<ul>
 			<li>
-				Researching and developing ML solutions to improve Oracle-internal and customer products
+				Researched and developed ML solutions to improve Oracle-internal and customer products
 				worldwide.
 			</li>
 		</ul>

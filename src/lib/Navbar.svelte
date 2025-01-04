@@ -50,6 +50,7 @@
 			<!-- svelte-ignore a11y-missing-attribute -->
 			<!-- svelte-ignore missing-declaration -->
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<!-- svelte-ignore a11y-interactive-supports-focus -->
 			<a class="toggler" role="button" on:click={toggleTheme}><i class="fas fa-adjust" /></a>
 		</div>
 	</div>
@@ -66,6 +67,7 @@
 		<!-- svelte-ignore a11y-missing-attribute -->
 		<!-- svelte-ignore missing-declaration -->
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-interactive-supports-focus -->
 		<a class="toggler" role="button" on:click={toggleTheme}><i class="fas fa-adjust" /></a>
 		<Burger bind:open={menu} />
 	</div>
