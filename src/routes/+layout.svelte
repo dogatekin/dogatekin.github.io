@@ -3,8 +3,10 @@
 	import Menu from '$lib/Menu.svelte';
 	import A from '$lib/A.svelte';
 	import '../app.css';
+	
+	let { children } = $props();
 
-	let menu = false;
+	let menu = $state(false);
 </script>
 
 <A />
@@ -13,7 +15,7 @@
 <Menu bind:open={menu} />
 
 <main id="content">
-	<slot />
+	{@render children?.()}
 </main>
 
-<footer />
+<footer></footer>

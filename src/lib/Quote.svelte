@@ -1,9 +1,9 @@
 <script>
-	export let cite;
+	let { cite, children } = $props();
 </script>
 
 <blockquote {cite}>
-	<slot />
+	{@render children?.()}
 </blockquote>
 
 <style>

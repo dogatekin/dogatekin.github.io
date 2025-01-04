@@ -2,16 +2,15 @@
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 
-	export let tabItems;
-	export let activeItem;
+	let { tabItems, activeItem } = $props();
 </script>
 
 <div class="tabs">
 	<ul>
 		{#each tabItems as item}
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-			<li on:click={() => dispatch('tabChange', item)}>
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+			<li onclick={() => dispatch('tabChange', item)}>
 				<div class:active={item === activeItem}>{item}</div>
 			</li>
 		{/each}

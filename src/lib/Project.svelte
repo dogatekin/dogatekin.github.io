@@ -1,5 +1,12 @@
 <script>
-	export let name, desc, image, github, link, open;
+	let {
+		name,
+		desc,
+		image,
+		github,
+		link,
+		open = $bindable()
+	} = $props();
 
 	function close() {
 		open = false;
@@ -10,7 +17,8 @@
 	<div id="content">
 		<div id="header">
 			<h2>{name}</h2>
-			<button on:click={close}>
+			<!-- svelte-ignore a11y_consider_explicit_label -->
+			<button onclick={close}>
 				<svg width="32" height="24">
 					<line id="top" x1="0" y1="2" x2="32" y2="2" />
 					<line id="bottom" x1="0" y1="22" x2="32" y2="22" />
@@ -24,10 +32,12 @@
 
 		<div id="links">
 			{#if link}
-				<a href={link} target="_blank" rel="noreferrer"><i class="fas fa-link" /></a>
+				<!-- svelte-ignore a11y_consider_explicit_label -->
+				<a href={link} target="_blank" rel="noreferrer"><i class="fas fa-link"></i></a>
 			{/if}
 			{#if github}
-				<a href={github} target="_blank" rel="noreferrer"><i class="fab fa-github" /></a>
+				<!-- svelte-ignore a11y_consider_explicit_label -->
+				<a href={github} target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
 			{/if}
 		</div>
 	</div>

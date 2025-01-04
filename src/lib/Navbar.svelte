@@ -13,7 +13,7 @@
 		}
 	}
 
-	export let menu = false;
+	let { menu = $bindable(false) } = $props();
 </script>
 
 <svelte:head>
@@ -29,7 +29,7 @@
 
 <nav>
 	<div id="left">
-		<a href="{base}/" on:click={() => (menu = false)}>
+		<a href="{base}/" onclick={() => (menu = false)}>
 			<div id="brand">
 				<div id="logo-holder">
 					<img src="{base}/logo.svg" alt="Logo" id="logo" />
@@ -39,19 +39,22 @@
 		</a>
 
 		<div id="icons">
-			<a href="mailto:dotekin@gmail.com"><i class="fas fa-envelope" /></a>
+			<!-- svelte-ignore a11y_consider_explicit_label -->
+			<a href="mailto:dotekin@gmail.com"><i class="fas fa-envelope"></i></a>
+			<!-- svelte-ignore a11y_consider_explicit_label -->
 			<a target="_blank" rel="noreferrer" href="https://github.com/dogatekin">
-				<i class="fab fa-github" />
+				<i class="fab fa-github"></i>
 			</a>
+			<!-- svelte-ignore a11y_consider_explicit_label -->
 			<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/dogatekin/">
-				<i class="fab fa-linkedin-in" />
+				<i class="fab fa-linkedin-in"></i>
 			</a>
 
-			<!-- svelte-ignore a11y-missing-attribute -->
-			<!-- svelte-ignore missing-declaration -->
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<!-- svelte-ignore a11y-interactive-supports-focus -->
-			<a class="toggler" role="button" on:click={toggleTheme}><i class="fas fa-adjust" /></a>
+			<!-- svelte-ignore a11y_missing_attribute -->
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<!-- svelte-ignore a11y_interactive_supports_focus -->
+			<!-- svelte-ignore a11y_consider_explicit_label -->
+			<a class="toggler" role="button" onclick={toggleTheme}><i class="fas fa-adjust"></i></a>
 		</div>
 	</div>
 
@@ -64,11 +67,11 @@
 	</div>
 
 	<div id="mobile-buttons">
-		<!-- svelte-ignore a11y-missing-attribute -->
-		<!-- svelte-ignore missing-declaration -->
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<!-- svelte-ignore a11y-interactive-supports-focus -->
-		<a class="toggler" role="button" on:click={toggleTheme}><i class="fas fa-adjust" /></a>
+		<!-- svelte-ignore a11y_missing_attribute -->
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_interactive_supports_focus -->
+		<!-- svelte-ignore a11y_consider_explicit_label -->
+		<a class="toggler" role="button" onclick={toggleTheme}><i class="fas fa-adjust"></i></a>
 		<Burger bind:open={menu} />
 	</div>
 </nav>

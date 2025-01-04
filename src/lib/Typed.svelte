@@ -30,7 +30,7 @@
 		<p>I enjoy <a href="{base}/blog/hypnotic-degenerate-spirals/">creative coding</a>.</p>
 		<p>I hope you have a great day!</p>
 	</div>
-	<span id="typed" />
+	<span id="typed"></span>
 </div>
 
 <style>

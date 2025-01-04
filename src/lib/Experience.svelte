@@ -1,5 +1,14 @@
 <script>
-	export let name, lightlogo, darklogo, dates, location, role, gpa;
+	let {
+		name,
+		lightlogo,
+		darklogo,
+		dates,
+		location,
+		role,
+		gpa,
+		children
+	} = $props();
 </script>
 
 <div class="large">
@@ -20,7 +29,7 @@
 					<div>{@html gpa}</div>
 				</div>
 			</div>
-			<slot />
+			{@render children?.()}
 		</div>
 	</div>
 </div>
@@ -43,7 +52,7 @@
 					<div>{@html gpa}</div>
 				</div>
 			</div>
-			<slot />
+			{@render children?.()}
 		</div>
 	</div>
 </div>

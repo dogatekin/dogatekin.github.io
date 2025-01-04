@@ -4,14 +4,14 @@
 	import { base } from '$app/paths';
 	import Project from '$lib/Project.svelte';
 
-	let project = {
+	let project = $state({
 		name: 'Project',
 		desc: 'This is a project.',
 		image: '',
 		link: '',
 		github: '',
 		open: false
-	};
+	});
 
 	let projects = {
 		evolve: {
@@ -208,7 +208,7 @@
 
 <p style="text-align: center;">Click the boxes to learn more, or drag them around if you want!</p>
 
-<div id="matter-container" />
+<div id="matter-container"></div>
 
 <Project {...project} />
 

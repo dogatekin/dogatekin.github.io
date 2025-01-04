@@ -1,5 +1,11 @@
 <script>
-	export let link, title, desc, date, tags;
+	let {
+		link,
+		title,
+		desc,
+		date,
+		tags
+	} = $props();
 </script>
 
 <div class="post">

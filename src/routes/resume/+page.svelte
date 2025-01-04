@@ -268,7 +268,7 @@
 
 	<div class="downloader">
 		<a href="{base}/resume/Doga_Tekin_Resume.pdf">
-			<i class="fas fa-file-download" /> PDF
+			<i class="fas fa-file-download"></i> PDF
 		</a>
 	</div>
 </div>

@@ -3,7 +3,7 @@
 	import Papa from 'papaparse';
 	import { base } from '$app/paths';
 
-	let refresher;
+	let refresher = $state();
 
 	onMount(() => {
 		let recommendation = document.getElementById('recommendation');
@@ -41,11 +41,12 @@
 
 <div id="recommender">
 	Media recommendations:
-	<button on:click={refresher} class="control">
-		<i class="fas fa-redo" />
+	<!-- svelte-ignore a11y_consider_explicit_label -->
+	<button onclick={refresher} class="control">
+		<i class="fas fa-redo"></i>
 	</button>
 </div>
-<div id="recommendation" />
+<div id="recommendation"></div>
 
 <style>
 	#recommender {

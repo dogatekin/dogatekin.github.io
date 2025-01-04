@@ -1,9 +1,9 @@
 <script>
-	export let src;
+	let { src } = $props();
 </script>
 
-<!-- svelte-ignore a11y-missing-attribute -->
-<iframe {src} allowfullscreen frameborder="0" />
+<!-- svelte-ignore a11y_missing_attribute -->
+<iframe {src} allowfullscreen frameborder="0"></iframe>
 
 <style>
 	:global(figure) iframe {
