@@ -4,7 +4,9 @@
 	export let open = false;
 </script>
 
+
 <!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <aside class:open on:click={() => (open = !open)}>
 	<div id="links">
 		<a href="{base}/resume">Resume</a>
