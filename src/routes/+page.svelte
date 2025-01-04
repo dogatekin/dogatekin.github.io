@@ -17,7 +17,7 @@
 		<a href="{base}/projects">Projects</a>
 		<br />
 		<a href="{base}/blog">Blog</a>
-		<a href="{base}/art">Art</a>
+		<a href="{base}/loops">Loops</a>
 		<a href="{base}/fun">Fun</a>
 	</div>
 </div>

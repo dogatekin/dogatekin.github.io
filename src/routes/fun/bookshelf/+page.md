@@ -6,6 +6,22 @@
 
 # Bookshelf
 
+## 2024
+
+1. There Is No Antimemetics Division – qntm (reread)
+2. Seven Games: A Human History – Oliver Roeder
+3. The Three-Body Problem – Cixin Liu
+4. Skulduggery Pleasant: A Mind Full of Murder – Derek Landy
+5. The Dark Forest – Cixin Liu
+6. Death’s End – Cixin Liu
+7. Vermis I – Plastiboo
+8. Bloodchild and Other Stories – Octavia Butler
+9. Tim Rogers Stories (reread)
+10. Mother of Learning Arc 1 – Domagoj Kurmaić
+11. Mother of Learning Arc 2 – Domagoj Kurmaić
+12. Mother of Learning Arc 3 – Domagoj Kurmaić
+13. Mother of Learning Arc 4 – Domagoj Kurmaić
+
 ## 2023
 
 1. Priestdaddy – Patricia Lockwood

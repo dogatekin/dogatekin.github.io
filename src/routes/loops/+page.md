@@ -1,8 +1,8 @@
 <svelte:head>
-	<title>Doga Tekin | Art</title>
+	<title>Doga Tekin | Loops</title>
 </svelte:head>
 
-# Art
+# Loops
 
 ![The Juggler](./assets/Juggle.svg)
 
