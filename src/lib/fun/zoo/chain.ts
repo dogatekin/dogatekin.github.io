@@ -4,6 +4,7 @@ const chain = function (p: p5) {
     let canvas: p5.Renderer
     let chain1: Chain;
     let chain2: Chain;
+    let chain3: Chain;
   
     p.windowResized = function () {
       p.resizeCanvas(p.windowWidth, p.windowHeight);
@@ -33,6 +34,7 @@ const chain = function (p: p5) {
 
       chain1 = new Chain(Array(10).fill(40), Array(9).fill(40), p.createVector(p.width/2, p.height/2));
       chain2 = new Chain(Array(10).fill(40), Array(9).fill(40), p.createVector(50, 50));
+      chain3 = new Chain(Array(10).fill(40), Array(9).fill(40), p.createVector(900, 900));
     }
   
     p.draw = function () {
@@ -41,6 +43,8 @@ const chain = function (p: p5) {
       chain1.display();
       chain2.update();
       chain2.display();
+      chain3.update();
+      chain3.display();
     }    
     
     class Link {
@@ -63,16 +67,6 @@ const chain = function (p: p5) {
         if (typeof this.target !== 'undefined' && typeof this.length !== 'undefined') {
           let dir = p.Vector.sub(this.pos, this.target.pos);
           this.pos = p.Vector.add(this.target.pos, dir.setMag(this.length));
-        } else {
-          let speed = p.mouseIsPressed ? 0.1 : 10;
-          
-          // let target = p.createVector(p.mouseX, p.mouseY);
-          // this.pos.add(p.Vector.sub(target, this.pos).limit(speed));
-          
-          // let heading = p.createVector(1, 10 * (p.noise(0.01*p.frameCount) - 0.5));
-          let heading = p.createVector(1, 0);
-          heading.rotate(3 * p.map(p.noise(0.01 * p.frameCount), 0, 1, -1, 1));
-          this.pos.add(heading.setMag(speed));
         }
       }
     
@@ -87,14 +81,16 @@ const chain = function (p: p5) {
     class Chain {
       links: Link[];
       seed: number;
+      heading: p5.Vector;
 
-      constructor(sizes: number[], lengths: number[], headpos: p5.Vector) {
+      constructor(sizes: number[], lengths: number[], pos: p5.Vector) {
         this.seed = p.int(p.random(0, 1000));
+        this.heading = p.createVector(1, 0);
 
         this.links = [];
-        let x = headpos.x;
+        let x = pos.x;
         for (let size of sizes) {
-          this.links.push(new Link(x, headpos.y, size));
+          this.links.push(new Link(x, pos.y, size));
           x -= size;
         }
         for (let i = 1; i < this.links.length; i++) {
@@ -122,10 +118,14 @@ const chain = function (p: p5) {
       }
 
       update() {
-        // this.screenwrap(p.width/4, 3*p.width/4, p.height/4, 3*p.height/4);
         this.screenwrap();
 
         p.noiseSeed(this.seed);
+        let speed = p.mouseIsPressed ? 0.1 : 10;
+        
+        this.heading.rotate(0.1 * p.map(p.noise(0.05 * p.frameCount), 0, 1, -1, 1));
+        this.links[0].pos.add(this.heading.setMag(speed));
+
         this.links.forEach(link => link.update());
       }
 
