@@ -2,7 +2,8 @@ import type p5 from "p5";
 
 const chain = function (p: p5) {
     let canvas: p5.Renderer
-    let chain: Chain;
+    let chain1: Chain;
+    let chain2: Chain;
   
     p.windowResized = function () {
       p.resizeCanvas(p.windowWidth, p.windowHeight);
@@ -30,26 +31,17 @@ const chain = function (p: p5) {
       // }
       // chain = new Chain(sizes, lengths);
 
-      chain = new Chain(Array(10).fill(40), Array(9).fill(40))
+      chain1 = new Chain(Array(10).fill(40), Array(9).fill(40), p.createVector(p.width/2, p.height/2));
+      chain2 = new Chain(Array(10).fill(40), Array(9).fill(40), p.createVector(50, 50));
     }
   
     p.draw = function () {
       p.clear();
-      
-      // p.stroke(255, 0, 0);
-      // p.line(p.width/4, 0, p.width/4, p.height)
-      // p.line(3*p.width/4, 0, 3*p.width/4, p.height)
-      // p.line(0, p.height/4, p.width, p.height/4)
-      // p.line(0, 3*p.height/4, p.width, 3*p.height/4)
-      // p.stroke(255);
-
-      chain.update();
-      chain.display();
+      chain1.update();
+      chain1.display();
+      chain2.update();
+      chain2.display();
     }    
-
-    function mod(n: number, d: number) {
-      return ((n % d) + d) % d;
-    }
     
     class Link {
       pos: p5.Vector;
@@ -79,7 +71,7 @@ const chain = function (p: p5) {
           
           // let heading = p.createVector(1, 10 * (p.noise(0.01*p.frameCount) - 0.5));
           let heading = p.createVector(1, 0);
-          heading.rotate(4*p.map(p.noise(0.01 * p.frameCount), 0, 1, -1, 1));
+          heading.rotate(3 * p.map(p.noise(0.01 * p.frameCount), 0, 1, -1, 1));
           this.pos.add(heading.setMag(speed));
         }
       }
@@ -94,21 +86,19 @@ const chain = function (p: p5) {
 
     class Chain {
       links: Link[];
-      sizes: number[];
-      lengths: number[];
+      seed: number;
 
-      constructor(sizes: number[], lengths: number[]) {
-        this.sizes = sizes;
-        this.lengths = lengths;
+      constructor(sizes: number[], lengths: number[], headpos: p5.Vector) {
+        this.seed = p.int(p.random(0, 1000));
 
         this.links = [];
-        let x = p.width/2;
+        let x = headpos.x;
         for (let size of sizes) {
-          this.links.push(new Link(x, p.height/2, size));
+          this.links.push(new Link(x, headpos.y, size));
           x -= size;
         }
         for (let i = 1; i < this.links.length; i++) {
-          this.links[i].attach(this.links[i-1], this.lengths[i-1]);
+          this.links[i].attach(this.links[i-1], lengths[i-1]);
         }
       }
 
@@ -134,6 +124,8 @@ const chain = function (p: p5) {
       update() {
         // this.screenwrap(p.width/4, 3*p.width/4, p.height/4, 3*p.height/4);
         this.screenwrap();
+
+        p.noiseSeed(this.seed);
         this.links.forEach(link => link.update());
       }
 
