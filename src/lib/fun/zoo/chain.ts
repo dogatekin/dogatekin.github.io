@@ -22,8 +22,8 @@ const chain = function (p: p5) {
 
       let sizes = Array(10).fill(40);
       let lengths = Array(9).fill(40);
-      // let sizes = Array(10).fill().map(() => p.random(20, 40));
-      // let lengths = Array(9).fill().map(() => p.random(40, 60));
+      // let sizes = Array(10).fill().map(() => p.random(20, 60));
+      // let lengths = Array(9).fill().map(() => p.random(20, 30));
       
       chains = [
         new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2)),
@@ -111,18 +111,81 @@ const chain = function (p: p5) {
         this.screenwrap();
 
         p.noiseSeed(this.seed);
-        let speed = p.mouseIsPressed ? 0.1 : 10;
+        let speed = 10;
         
-        this.heading.rotate(0.1 * p.map(p.noise(0.05 * p.frameCount), 0, 1, -1, 1));
+        if (p.mouseIsPressed) {
+          this.heading = p.Vector.sub(p.createVector(p.mouseX, p.mouseY), this.links[0].pos)
+        }
+        else {
+          this.heading.rotate(0.1 * p.map(p.noise(0.05 * p.frameCount), 0, 1, -1, 1));
+        }
         this.links[0].pos.add(this.heading.setMag(speed));
 
         this.links.forEach(link => link.update());
       }
 
       display() {
-        for (let link of this.links) {
-          link.display();
+        // this.links.forEach(link => link.display());
+
+        p.stroke('#a8d1d1');
+        p.fill('#a8d1d1');
+
+        p.beginShape();
+        
+        let head = this.links[0];
+
+        let dir = this.heading;
+        let pos = p.Vector.add(head.pos, dir.setMag(head.r/2));
+        p.curveVertex(pos.x, pos.y);
+        p.curveVertex(pos.x, pos.y);
+
+        dir = p.Vector.rotate(this.heading, p.PI/2);
+        pos = p.Vector.add(head.pos, dir.setMag(head.r/2));
+        p.curveVertex(pos.x, pos.y);
+
+        // [p.PI/2, -p.PI/2].forEach(angle => {
+        //   // p.circle(pos.x, pos.y, 5);
+        // });
+        
+        for (let i = 1; i < this.links.length; i++) {
+          let cur = this.links[i];
+          let dir = p.Vector.sub(cur.target?.pos, cur.pos).rotate(p.PI/2);
+          let pos = p.Vector.add(cur.pos, dir.setMag(cur.r/2));
+          p.curveVertex(pos.x, pos.y);
         }
+        
+        let tail = this.links.at(-1);
+        dir = p.Vector.sub(tail?.target?.pos, tail?.pos).rotate(p.PI);
+        pos = p.Vector.add(tail?.pos, dir.setMag(tail.r / 2))
+        p.curveVertex(pos.x, pos.y);
+
+        for (let i = this.links.length - 1; i > 0; i--) {
+          let cur = this.links[i];
+          let dir = p.Vector.sub(cur.target?.pos, cur.pos).rotate(-p.PI/2);
+          let pos = p.Vector.add(cur.pos, dir.setMag(cur.r/2));
+          p.curveVertex(pos.x, pos.y);
+        }
+        // [p.PI/2, -p.PI/2].forEach(angle => {
+        //   for (let i = 1; i < this.links.length; i++) {
+        //     let cur = this.links[i];
+        //     let dir = p.Vector.sub(cur.target?.pos, cur.pos).rotate(angle);
+        //     let pos = p.Vector.add(cur.pos, dir.setMag(cur.r/2));
+        //     p.curveVertex(pos.x, pos.y);
+        //     // p.circle(pos.x, pos.y, 5);
+        //   }
+        // });
+
+        dir = p.Vector.rotate(this.heading, -p.PI/2);
+        pos = p.Vector.add(head.pos, dir.setMag(head.r/2));
+        p.curveVertex(pos.x, pos.y);
+
+        dir = this.heading;
+        pos = p.Vector.add(head.pos, dir.setMag(head.r/2));
+        p.curveVertex(pos.x, pos.y);
+        p.curveVertex(pos.x, pos.y);
+        
+        p.endShape();
+        p.stroke(255);
       }
     }
 }
