@@ -1,10 +1,8 @@
 import type p5 from "p5";
 
 const chain = function (p: p5) {
-    let canvas: p5.Renderer
-    let chain1: Chain;
-    let chain2: Chain;
-    let chain3: Chain;
+    let canvas: p5.Renderer;
+    let chains: Chain[];
   
     p.windowResized = function () {
       p.resizeCanvas(p.windowWidth, p.windowHeight);
@@ -19,32 +17,25 @@ const chain = function (p: p5) {
       canvas.style('z-index', '-1');
       
       p.stroke(255);
-      p.strokeWeight(10);
+      p.strokeWeight(8);
       p.noFill();
 
-      // let sizes: number[] = [];
-      // let lengths: number[] = [];
-      // for (let i = 0; i < 10; i++) {
-      //   sizes.push(p.random(20, 40));
-      // }
-      // for (let i = 1; i < 10; i++) {
-      //   lengths.push(p.random(40, 60));
-      // }
-      // chain = new Chain(sizes, lengths);
-
-      chain1 = new Chain(Array(10).fill(40), Array(9).fill(40), p.createVector(p.width/2, p.height/2));
-      chain2 = new Chain(Array(10).fill(40), Array(9).fill(40), p.createVector(50, 50));
-      chain3 = new Chain(Array(10).fill(40), Array(9).fill(40), p.createVector(900, 900));
+      let sizes = Array(10).fill(40);
+      let lengths = Array(9).fill(40);
+      // let sizes = Array(10).fill().map(() => p.random(20, 40));
+      // let lengths = Array(9).fill().map(() => p.random(40, 60));
+      
+      chains = [
+        new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2)),
+        // new Chain(Array(10).fill(size), Array(9).fill(size), p.createVector(50, 50)),
+        // new Chain(Array(10).fill(size), Array(9).fill(size), p.createVector(900, 900))
+      ];
     }
   
     p.draw = function () {
       p.clear();
-      chain1.update();
-      chain1.display();
-      chain2.update();
-      chain2.display();
-      chain3.update();
-      chain3.display();
+      chains.forEach(chain => chain.update());
+      chains.forEach(chain => chain.display());
     }    
     
     class Link {
@@ -85,16 +76,15 @@ const chain = function (p: p5) {
 
       constructor(sizes: number[], lengths: number[], pos: p5.Vector) {
         this.seed = p.int(p.random(0, 1000));
-        this.heading = p.createVector(1, 0);
+        this.heading = p.Vector.random2D();
 
-        this.links = [];
-        let x = pos.x;
-        for (let size of sizes) {
-          this.links.push(new Link(x, pos.y, size));
-          x -= size;
-        }
-        for (let i = 1; i < this.links.length; i++) {
-          this.links[i].attach(this.links[i-1], lengths[i-1]);
+        this.links = [new Link(pos.x, pos.y, sizes[0])];
+
+        for (let i = 1; i < sizes.length; i++) {
+          let prev = this.links[i-1];
+          let pos = p.Vector.sub(prev.pos, this.heading.setMag(lengths[i-1]))
+          this.links.push(new Link(pos.x, pos.y, sizes[i]));
+          this.links[i].attach(prev, lengths[i-1]);
         }
       }
 
