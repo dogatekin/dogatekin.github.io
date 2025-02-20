@@ -27,8 +27,8 @@ const chain = function (p: p5) {
       
       chains = [
         new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2)),
-        // new Chain(Array(10).fill(size), Array(9).fill(size), p.createVector(50, 50)),
-        // new Chain(Array(10).fill(size), Array(9).fill(size), p.createVector(900, 900))
+        // new Chain(Array(10).fill(30), Array(9).fill(30), p.createVector(50, 50)),
+        // new Chain(Array(10).fill(50), Array(9).fill(50), p.createVector(900, 900))
       ];
     }
   
@@ -86,6 +86,8 @@ const chain = function (p: p5) {
           this.links.push(new Link(pos.x, pos.y, sizes[i]));
           this.links[i].attach(prev, lengths[i-1]);
         }
+
+        console.log(p);
       }
 
       screenwrap(l: number = 0, r: number = p.width, u: number = 0, d: number = p.height, pad: number = 20) {
@@ -119,14 +121,15 @@ const chain = function (p: p5) {
         else {
           this.heading.rotate(0.1 * p.map(p.noise(0.05 * p.frameCount), 0, 1, -1, 1));
         }
-        this.links[0].pos.add(this.heading.setMag(speed));
 
+        this.links[0].pos.add(p.Vector.setMag(this.heading, speed));
         this.links.forEach(link => link.update());
       }
 
       display() {
         // this.links.forEach(link => link.display());
 
+        // p.stroke('red');
         p.stroke('#a8d1d1');
         p.fill('#a8d1d1');
 
@@ -134,19 +137,22 @@ const chain = function (p: p5) {
         
         let head = this.links[0];
 
+        // Top of head
         let dir = this.heading;
         let pos = p.Vector.add(head.pos, dir.setMag(head.r/2));
         p.curveVertex(pos.x, pos.y);
+        p.curveVertex(pos.x, pos.y);
+        
+        // Right of head
+        dir = p.Vector.rotate(this.heading, p.PI/4);
+        pos = p.Vector.add(head.pos, dir.setMag(head.r/2));
         p.curveVertex(pos.x, pos.y);
 
         dir = p.Vector.rotate(this.heading, p.PI/2);
         pos = p.Vector.add(head.pos, dir.setMag(head.r/2));
         p.curveVertex(pos.x, pos.y);
-
-        // [p.PI/2, -p.PI/2].forEach(angle => {
-        //   // p.circle(pos.x, pos.y, 5);
-        // });
-        
+          
+        // Right side of body
         for (let i = 1; i < this.links.length; i++) {
           let cur = this.links[i];
           let dir = p.Vector.sub(cur.target?.pos, cur.pos).rotate(p.PI/2);
@@ -154,31 +160,38 @@ const chain = function (p: p5) {
           p.curveVertex(pos.x, pos.y);
         }
         
+        // Tail
         let tail = this.links.at(-1);
+        dir = p.Vector.sub(tail?.target?.pos, tail?.pos).rotate(3*p.PI/4);
+        pos = p.Vector.add(tail?.pos, dir.setMag(tail.r / 2))
+        p.curveVertex(pos.x, pos.y);
+        
         dir = p.Vector.sub(tail?.target?.pos, tail?.pos).rotate(p.PI);
         pos = p.Vector.add(tail?.pos, dir.setMag(tail.r / 2))
         p.curveVertex(pos.x, pos.y);
 
+        dir = p.Vector.sub(tail?.target?.pos, tail?.pos).rotate(-3*p.PI/4);
+        pos = p.Vector.add(tail?.pos, dir.setMag(tail.r / 2))
+        p.curveVertex(pos.x, pos.y);
+
+        // Left side of body
         for (let i = this.links.length - 1; i > 0; i--) {
           let cur = this.links[i];
           let dir = p.Vector.sub(cur.target?.pos, cur.pos).rotate(-p.PI/2);
           let pos = p.Vector.add(cur.pos, dir.setMag(cur.r/2));
           p.curveVertex(pos.x, pos.y);
         }
-        // [p.PI/2, -p.PI/2].forEach(angle => {
-        //   for (let i = 1; i < this.links.length; i++) {
-        //     let cur = this.links[i];
-        //     let dir = p.Vector.sub(cur.target?.pos, cur.pos).rotate(angle);
-        //     let pos = p.Vector.add(cur.pos, dir.setMag(cur.r/2));
-        //     p.curveVertex(pos.x, pos.y);
-        //     // p.circle(pos.x, pos.y, 5);
-        //   }
-        // });
 
+        // Left of head
         dir = p.Vector.rotate(this.heading, -p.PI/2);
         pos = p.Vector.add(head.pos, dir.setMag(head.r/2));
         p.curveVertex(pos.x, pos.y);
+        
+        dir = p.Vector.rotate(this.heading, -p.PI/4);
+        pos = p.Vector.add(head.pos, dir.setMag(head.r/2));
+        p.curveVertex(pos.x, pos.y);
 
+        // Back to the top of head
         dir = this.heading;
         pos = p.Vector.add(head.pos, dir.setMag(head.r/2));
         p.curveVertex(pos.x, pos.y);

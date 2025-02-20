@@ -28,6 +28,7 @@
 	"dependencies": {
 		"matter-js": "^0.20.0",
 		"mdsvex-relative-images": "^1.0.3",
+		"p5": "^1.11.3",
 		"p5-svelte": "^3.1.2",
 		"papaparse": "^5.3.2",
 		"rehype-katex-svelte": "^1.1.2",
