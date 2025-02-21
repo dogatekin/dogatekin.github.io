@@ -22,13 +22,20 @@ const chain = function (p: p5) {
 
       let sizes = Array(10).fill(40);
       let lengths = Array(9).fill(40);
+      let speed = 10;
       // let sizes = Array(10).fill().map(() => p.random(20, 60));
       // let lengths = Array(9).fill().map(() => p.random(20, 30));
       sizes = [68, 75, 81, 84, 83, 77, 64, 51, 38, 32, 14, 4];
       lengths = Array(sizes.length - 1).fill(40);
+
+      if (p.windowWidth < 720) {
+        sizes = sizes.map(s => s / 2);
+        lengths = lengths.map(l => l / 2);
+        speed /= 2;
+      }
       
       chains = [
-        new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2), p.PI/6),
+        new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2), p.PI/6, speed),
         // new Chain(Array(10).fill(30), Array(9).fill(30), p.createVector(50, 50)),
         // new Chain(Array(10).fill(50), Array(9).fill(50), p.createVector(900, 900))
       ];
@@ -100,13 +107,15 @@ const chain = function (p: p5) {
       links: Link[];
       seed: number;
       dir: p5.Vector;
+      speed: number;
 
-      constructor(sizes: number[], lengths: number[], pos: p5.Vector, constraint: number) {
+      constructor(sizes: number[], lengths: number[], pos: p5.Vector, constraint: number, speed: number) {
         this.seed = p.int(p.random(0, 1000));
+        this.speed = speed;
+        
         this.dir = p.Vector.random2D();
-
+        
         this.links = [new Link(pos.x, pos.y, sizes[0])];
-
         for (let i = 1; i < sizes.length; i++) {
           let prev = this.links[i-1];
           let pos = p.Vector.sub(prev.pos, this.dir.setMag(lengths[i-1]))
@@ -138,12 +147,13 @@ const chain = function (p: p5) {
         this.screenwrap();
 
         p.noiseSeed(this.seed);
-        let speed = 10;
+        
+        let speed = this.speed;
         
         if (p.mouseIsPressed) {
           this.dir = p.Vector.sub(p.createVector(p.mouseX, p.mouseY), this.links[0].pos);
           if (this.dir.mag() < 100) {
-            speed = p.map(this.dir.mag(), 100, 0, 10, 0);
+            speed = p.map(this.dir.mag(), 100, 0, this.speed, 0);
           }
         }
         else {
