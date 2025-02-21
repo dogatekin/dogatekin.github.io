@@ -125,6 +125,10 @@ const chain = function (p: p5) {
       }
 
       screenwrap(l: number = 0, r: number = p.width, u: number = 0, d: number = p.height, pad: number = 50) {
+        if (p.windowWidth < 720) {
+          pad /= 2;
+        }
+
         if (this.links.every(link => link.pos.x > r + pad)) {
           let furthest = Math.max(...this.links.map(link => link.pos.x));
           this.links.forEach(link => link.pos.x -= furthest - l + pad/2);
@@ -234,7 +238,7 @@ const chain = function (p: p5) {
         
         p.endShape();
 
-        p.stroke(255);
+        p.stroke(255, 128);
         p.noFill();
         this.links.forEach(link => link.display());
       }
