@@ -1,7 +1,6 @@
 import type p5 from "p5";
 
-const chain = function (p: p5) {
-    let canvas: p5.Renderer;
+const zoo = function (p: p5) {
     let chains: Chain[];
   
     p.windowResized = function () {
@@ -9,6 +8,8 @@ const chain = function (p: p5) {
     }
   
     p.setup = function () {
+      let canvas: p5.Renderer;
+      
       canvas = p.createCanvas(p.windowWidth, p.windowHeight);
       canvas.position(0, 0);
       canvas.style('display', 'fixed');
@@ -243,6 +244,10 @@ const chain = function (p: p5) {
         this.links.forEach(link => link.display());
       }
     }
+
+    class Worm {
+
+    }
 }
 
-export { chain };
+export { zoo };

@@ -17,7 +17,6 @@ const anagram = function (p) {
     'a diet kong',
     'a dote king',
     'a dong kite',
-    'egad i knot',
     'aged i knot',
     'i got naked',
     'i date kong',
@@ -71,6 +70,7 @@ const anagram = function (p) {
     }
 
     shuffleArray(anagrams)
+    anagrams.push('doga tekin') // get back to start to indicate end
 
     p.noLoop()
   }
