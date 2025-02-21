@@ -63,20 +63,10 @@ const chain = function (p: p5) {
         if (typeof this.target !== 'undefined' && typeof this.length !== 'undefined' && typeof this.constraint !== 'undefined') {
           this.dir = p.Vector.sub(this.target.pos, this.pos);
           
-          // let angle = this.dir.angleBetween(this.target.dir);
-          // if (angle > this.constraint) {
-          //   angle = this.constraint;
-          // }
-          // else if (angle < -this.constraint) {
-          //   angle = -this.constraint;
-          // }
-
-          let angle = this.dir.heading();
-          let anchor = this.target.dir.heading();
-          angle = this.constrain(angle, anchor, this.constraint);
-
+          let angle = this.constrain(this.dir.heading(), this.target.dir.heading(), this.constraint);
+          
           this.pos = p.Vector.sub(this.target.pos, p.Vector.fromAngle(angle).setMag(this.length))
-          // this.pos = p.Vector.add(this.target.pos, p.Vector.setMag(this.dir, this.length));
+          // this.pos = p.Vector.add(this.target.pos, p.Vector.setMag(this.dir, -this.length));
         }
       }
 
@@ -109,17 +99,17 @@ const chain = function (p: p5) {
     class Chain {
       links: Link[];
       seed: number;
-      heading: p5.Vector;
+      dir: p5.Vector;
 
       constructor(sizes: number[], lengths: number[], pos: p5.Vector, constraint: number) {
         this.seed = p.int(p.random(0, 1000));
-        this.heading = p.Vector.random2D();
+        this.dir = p.Vector.random2D();
 
         this.links = [new Link(pos.x, pos.y, sizes[0])];
 
         for (let i = 1; i < sizes.length; i++) {
           let prev = this.links[i-1];
-          let pos = p.Vector.sub(prev.pos, this.heading.setMag(lengths[i-1]))
+          let pos = p.Vector.sub(prev.pos, this.dir.setMag(lengths[i-1]))
           this.links.push(new Link(pos.x, pos.y, sizes[i]));
           this.links[i].attach(prev, lengths[i-1], constraint);
         }
@@ -151,14 +141,17 @@ const chain = function (p: p5) {
         let speed = 10;
         
         if (p.mouseIsPressed) {
-          this.heading = p.Vector.sub(p.createVector(p.mouseX, p.mouseY), this.links[0].pos)
+          this.dir = p.Vector.sub(p.createVector(p.mouseX, p.mouseY), this.links[0].pos);
+          if (this.dir.mag() < 100) {
+            speed = p.map(this.dir.mag(), 100, 0, 10, 0);
+          }
         }
         else {
-          this.heading.rotate(0.1 * p.map(p.noise(0.05 * p.frameCount), 0, 1, -1, 1));
+          this.dir.rotate(0.1 * p.map(p.noise(0.05 * p.frameCount), 0, 1, -1, 1));
         }
 
-        this.links[0].dir = this.heading;
-        this.links[0].pos.add(p.Vector.setMag(this.heading, speed));
+        this.links[0].dir = this.dir;
+        this.links[0].pos.add(p.Vector.setMag(this.dir, speed));
         this.links.forEach(link => link.update());
       }
 
@@ -170,17 +163,17 @@ const chain = function (p: p5) {
         let head = this.links[0];
 
         // Top of head
-        let dir = this.heading;
+        let dir = this.dir;
         let pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
         p.curveVertex(pos.x, pos.y);
         p.curveVertex(pos.x, pos.y);
         
         // Right of head
-        dir = p.Vector.rotate(this.heading, p.PI/4);
+        dir = p.Vector.rotate(this.dir, p.PI/4);
         pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
         p.curveVertex(pos.x, pos.y);
 
-        dir = p.Vector.rotate(this.heading, p.PI/2);
+        dir = p.Vector.rotate(this.dir, p.PI/2);
         pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
         p.curveVertex(pos.x, pos.y);
           
@@ -215,16 +208,16 @@ const chain = function (p: p5) {
         }
 
         // Left of head
-        dir = p.Vector.rotate(this.heading, -p.PI/2);
+        dir = p.Vector.rotate(this.dir, -p.PI/2);
         pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
         p.curveVertex(pos.x, pos.y);
         
-        dir = p.Vector.rotate(this.heading, -p.PI/4);
+        dir = p.Vector.rotate(this.dir, -p.PI/4);
         pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
         p.curveVertex(pos.x, pos.y);
 
         // Back to the top of head
-        dir = this.heading;
+        dir = this.dir;
         pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
         p.curveVertex(pos.x, pos.y);
         p.curveVertex(pos.x, pos.y);
