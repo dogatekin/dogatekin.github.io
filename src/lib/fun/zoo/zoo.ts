@@ -1,7 +1,7 @@
 import type p5 from "p5";
 
 const zoo = function (p: p5) {
-    let chains: Chain[];
+    let creatures: any[];
   
     p.windowResized = function () {
       p.resizeCanvas(p.windowWidth, p.windowHeight);
@@ -29,23 +29,26 @@ const zoo = function (p: p5) {
       sizes = [68, 75, 81, 84, 83, 77, 64, 51, 38, 32, 14, 4];
       lengths = Array(sizes.length - 1).fill(40);
 
+      sizes = Array(30).fill().map((v, i) => 100 - 2*i);
+      lengths = Array(sizes.length - 1).fill().map(() => 20);
+
       if (p.windowWidth < 720) {
         sizes = sizes.map(s => s / 2);
         lengths = lengths.map(l => l / 2);
         speed /= 2;
       }
-      
-      chains = [
-        new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2), p.PI/6, speed),
-        // new Chain(Array(10).fill(30), Array(9).fill(30), p.createVector(50, 50)),
-        // new Chain(Array(10).fill(50), Array(9).fill(50), p.createVector(900, 900))
+
+      creatures = [
+        new Worm(new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2), p.PI/6, speed), p.color('#C9CBA3')),
+        // new Worm(new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2), p.PI/6, speed), p.color('#FFE1A8')),
+        // new Worm(new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2), p.PI/6, speed), p.color('#BC4749')),
       ];
     }
   
     p.draw = function () {
       p.clear();
-      chains.forEach(chain => chain.update());
-      chains.forEach(chain => chain.display());
+      creatures.forEach(chain => chain.update());
+      creatures.forEach(chain => chain.display());
     }    
     
     class Link {
@@ -162,7 +165,7 @@ const zoo = function (p: p5) {
           }
         }
         else {
-          this.dir.rotate(0.1 * p.map(p.noise(0.05 * p.frameCount), 0, 1, -1, 1));
+          this.dir.rotate(this.speed/100 * p.map(p.noise(0.05 * p.frameCount), 0, 1, -1, 1));
         }
 
         this.links[0].dir = this.dir;
@@ -171,37 +174,48 @@ const zoo = function (p: p5) {
       }
 
       display() {
-        p.stroke('#a8d1d1');
-        p.fill('#a8d1d1');
+        this.links.forEach(link => link.display());
+      }
+    }
+
+    class Worm {
+      chain: Chain;
+      color: p5.Color;
+
+      constructor(chain: Chain, color: p5.Color) {
+        this.chain = chain;
+        this.color = color;
+      }
+
+      update() {
+        this.chain.update();
+      }
+
+      display() {
+        p.stroke(this.color);
+        p.fill(this.color);
         p.beginShape();
         
-        let head = this.links[0];
+        let head = this.chain.links[0];
+        let dir;
+        let pos;
 
-        // Top of head
-        let dir = this.dir;
-        let pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
-        p.curveVertex(pos.x, pos.y);
-        p.curveVertex(pos.x, pos.y);
-        
         // Right of head
-        dir = p.Vector.rotate(this.dir, p.PI/4);
+        dir = p.Vector.rotate(this.chain.dir, p.PI/2);
         pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
         p.curveVertex(pos.x, pos.y);
-
-        dir = p.Vector.rotate(this.dir, p.PI/2);
-        pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
         p.curveVertex(pos.x, pos.y);
           
         // Right side of body
-        for (let i = 1; i < this.links.length; i++) {
-          let cur = this.links[i];
+        for (let i = 1; i < this.chain.links.length; i++) {
+          let cur = this.chain.links[i];
           let dir = p.Vector.sub(cur.target?.pos, cur.pos).rotate(p.PI/2);
           let pos = p.Vector.add(cur.pos, p.Vector.setMag(dir, cur.r/2));
           p.curveVertex(pos.x, pos.y);
         }
         
         // Tail
-        let tail = this.links.at(-1);
+        let tail = this.chain.links.at(-1);
         dir = p.Vector.sub(tail?.target?.pos, tail?.pos).rotate(3*p.PI/4);
         pos = p.Vector.add(tail?.pos, p.Vector.setMag(dir, tail.r / 2))
         p.curveVertex(pos.x, pos.y);
@@ -215,38 +229,51 @@ const zoo = function (p: p5) {
         p.curveVertex(pos.x, pos.y);
 
         // Left side of body
-        for (let i = this.links.length - 1; i > 0; i--) {
-          let cur = this.links[i];
+        for (let i = this.chain.links.length - 1; i > 0; i--) {
+          let cur = this.chain.links[i];
           let dir = p.Vector.sub(cur.target?.pos, cur.pos).rotate(-p.PI/2);
           let pos = p.Vector.add(cur.pos, p.Vector.setMag(dir, cur.r/2));
           p.curveVertex(pos.x, pos.y);
         }
 
         // Left of head
-        dir = p.Vector.rotate(this.dir, -p.PI/2);
+        dir = p.Vector.rotate(this.chain.dir, -p.PI/2);
         pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
         p.curveVertex(pos.x, pos.y);
         
-        dir = p.Vector.rotate(this.dir, -p.PI/4);
+        dir = p.Vector.rotate(this.chain.dir, -p.PI/3);
+        pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
+        p.curveVertex(pos.x, pos.y);
+        
+        dir = p.Vector.rotate(this.chain.dir, -p.PI/6);
         pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
         p.curveVertex(pos.x, pos.y);
 
-        // Back to the top of head
-        dir = this.dir;
+        // Top of head
+        dir = this.chain.dir;
+        pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
+        p.curveVertex(pos.x, pos.y);
+        
+        // Right of head
+        dir = p.Vector.rotate(this.chain.dir, p.PI/6);
+        pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
+        p.curveVertex(pos.x, pos.y);
+        
+        dir = p.Vector.rotate(this.chain.dir, p.PI/3);
+        pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
+        p.curveVertex(pos.x, pos.y);
+
+        dir = p.Vector.rotate(this.chain.dir, p.PI/2);
         pos = p.Vector.add(head.pos, p.Vector.setMag(dir, head.r/2));
         p.curveVertex(pos.x, pos.y);
         p.curveVertex(pos.x, pos.y);
         
         p.endShape();
 
-        p.stroke(255, 128);
+        p.stroke(255, 64);
         p.noFill();
-        this.links.forEach(link => link.display());
+        this.chain.display();
       }
-    }
-
-    class Worm {
-
     }
 }
 
