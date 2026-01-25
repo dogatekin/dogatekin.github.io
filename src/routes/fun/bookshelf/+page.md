@@ -6,6 +6,20 @@
 
 # Bookshelf
 
+## 2025
+
+1. Treacherous Play – Marcus Carter
+2. Here – Richard McGuire
+3. Raw Dog – Jamie Loftus
+4. Eight Billion Genies – Charles Soule & Ryan Browne
+5. Axiomatic – Greg Egan
+6. Skulduggery Pleasant: A Heart Full of Hatred – Derek Landy
+7. Fluent Python – Luciano Ramalho
+8. When We Cease to Understand the World – Benjamin Labatut
+9. Consider the Lobster – David Foster Wallace
+10. There Is No Antimemetics Division (new edition) – qntm
+
+
 ## 2024
 
 1. There Is No Antimemetics Division – qntm (reread)
