@@ -10,6 +10,14 @@
 <h1>Blog</h1>
 
 <Post
+	title="4-Layer-Deep Acting"
+	link="{base}/blog/4-layer-deep-acting"
+	desc="Acting as a character who is acting as a character who is acting as a character who is acting as a character."
+	tags={['Games', 'Movies']}
+	date="19 July 2026"
+/>
+
+<Post
 	title="Learning JAX by Implementing a Simple Language Model"
 	link="{base}/blog/makemore-jax"
 	desc="Re-implementing makemore, Andrej Karpathy's simple implementation of a language model, in JAX."
