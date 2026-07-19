@@ -1,13 +1,15 @@
 ---
 title: 4-Layer-Deep Acting
-date: '2026-07-30'
+date: '2026-07-19'
 ---
 
 <svelte:head>
-
     <title>Doga Tekin on 4-Layer-Deep Acting</title>
-
 </svelte:head>
+
+<script>
+    import Quote from '$lib/Quote.svelte';
+</script>
 
 # {title}
 
@@ -38,10 +40,15 @@ As if that was not enough, through secret scenes we can access in the game, we f
 
 Is that not a little crazy? We are watching real-life actress Manon Gage, acting as an immortal being called The One, acting as a human called Marissa Marcel, acting as a movie character called Heather, acting as another character in that movie called Maria.
 
-At this depth, is it even possible to show the nuances of how this chain of acting affects the final performance? I wonder if Gage kept all this in mind during the scenes, or if she just focused on the last 2 layers of Heather acting as Maria.
+I wonder how it was like to keep all this in mind during the scenes, trying to let a little bit of the upper layers pass through even though you're probably focusing on the last 2 layers or so at any given time.
 
-For me it's hard to tell while watching, but it is fascinating to think about!
+Passages from the book [IMMORTALITY: Design Works](https://www.lostincult.co.uk/immortality-mobile) show the cast were definitely thinking about this:
 
+<Quote cite="IMMORTALITY: Design Works pg. 527">
+    As with the other actors, Donahue spent time discussing Immortality's extra layer of fiction with Barlow. After all, <strong>everyone was effectively playing a dual role — more in Gage's case</strong>, and the other characters who are inhabited by The One and The Other.
+</Quote>
+
+It's really fun revisiting scenes from Immortality to analyze them from this perspective!
 
 <style>
 	.warning {
