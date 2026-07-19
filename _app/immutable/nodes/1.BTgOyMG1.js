@@ -1,0 +1,1 @@
+import{a as r,t as e}from"../chunks/disclose-version.Ctp7D1Ln.js";import"../chunks/legacy.DfOaBXb1.js";import{n as a}from"../chunks/runtime.CZM5HXV4.js";var n=e("<h1>404</h1> <h2>Sorry, this page does not exist (yet)!</h2>",1);function i(t){var o=n();a(2),r(t,o)}export{i as component};
