@@ -2,7 +2,7 @@ import type p5 from "p5";
 
 const zoo = function (p: p5) {
     let creatures: any[];
-  
+    
     p.windowResized = function () {
       p.resizeCanvas(p.windowWidth, p.windowHeight);
     }
@@ -29,8 +29,8 @@ const zoo = function (p: p5) {
       sizes = [68, 75, 81, 84, 83, 77, 64, 51, 38, 32, 14, 4];
       lengths = Array(sizes.length - 1).fill(40);
 
-      sizes = Array(30).fill().map((v, i) => 100 - 2*i);
-      lengths = Array(sizes.length - 1).fill().map(() => 20);
+      sizes = Array(30).fill(0).map((v, i) => 100 - 2*i);
+      lengths = Array(sizes.length - 1).fill(0).map(() => 20);
 
       if (p.windowWidth < 720) {
         sizes = sizes.map(s => s / 2);
@@ -40,8 +40,8 @@ const zoo = function (p: p5) {
 
       creatures = [
         new Worm(new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2), p.PI/6, speed), p.color('#C9CBA3')),
-        // new Worm(new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2), p.PI/6, speed), p.color('#FFE1A8')),
-        // new Worm(new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2), p.PI/6, speed), p.color('#BC4749')),
+        new Worm(new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2), p.PI/6, speed), p.color('#FFE1A8')),
+        new Worm(new Chain(sizes, lengths, p.createVector(p.width/2, p.height/2), p.PI/6, speed), p.color('#BC4749')),
       ];
     }
   

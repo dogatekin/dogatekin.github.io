@@ -18,4 +18,5 @@ Resources for procedural animations:
 - https://www.alanzucconi.com/2017/04/17/procedural-animations/
 - https://zalo.github.io/blog/constraints/
 - https://x.com/TheRujiK/status/969581641680195585
+- https://www.youtube.com/watch?v=Hc9x1e85L0w
 -->
