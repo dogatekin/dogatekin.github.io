@@ -65,16 +65,6 @@ What sets Whitelight apart for me is his writing and delivery. He does present w
 - [A Serious Critique of Minecraft](https://www.youtube.com/watch?v=ha1rO0btVLU)
 - [Mirror's Edge: 13 Years Later](https://www.youtube.com/watch?v=7e_zNLyEReg)
 
-## Carlos Maza
-
-Carlos makes funny and easy to consume political videos without compromising at all on the informative or argumentative value.
-
-#### Recommendations
-
-- [How To Be Hopeless](https://www.youtube.com/watch?v=iJaE_BvLK6U)
-- [What The Hell Is "Too Far Left"](https://www.youtube.com/watch?v=IMzIzk6xP9o)
-- [Coronavirus And America's Death Cult](https://www.youtube.com/watch?v=vG37wwhbS88)
-
 ## Innuendo Studios
 
 Whether applying art theory to analyze games or deconstructing the psychology and rhetorical strategies of the alt-right, Ian's videos are always engaging and convincing.
@@ -155,16 +145,6 @@ Pop Culture Detective's videos are absolutely eye-opening about problematic thin
 - [The Adorkable Misogyny of The Big Bang Theory](https://www.youtube.com/watch?v=X3-hOigoxHs)
 - [Sexual Assault of Men Played for Laughs - Part 1 Male Perpetrators](https://www.youtube.com/watch?v=uc6QxD2_yQw)
 
-## Philosophy Tube
-
-Abigail has great videos combining philosophy and politics, often using philosophical lenses to look at current events and/or social issues. Always well-written scripts and high production quality as well.
-
-#### Recommendations
-
-- [The Rich Have Their Own Ethics: Effective Altruism & the Crypto Crash (ft. F1nn5ter)](https://www.youtube.com/watch?v=Lm0vHQYKI-Y)
-- [Identity: A Trans Coming Out Story | Philosophy Tube ★](https://www.youtube.com/watch?v=AITRzvm0Xtg)
-- [Suic!de and Ment@l He@lth | Philosophy Tube ★](https://www.youtube.com/watch?v=eQNw2FBdpyE)
-
 ## Razbuten
 
 Raz has many great essays offering opinions on different video game mechanics, but I think his most memorable essays are the ones that focus on the personal aspect of playing games by describing his personal experiences and relationships with some of the games he played.
@@ -187,7 +167,7 @@ Shaun has a very calm, collected, and logical approach and creates detailed and 
 
 ## Super Eyepatch Wolf
 
-Eyepath Wolf is a great dramatic storyteller and frequently makes me feel very invested in subjects I normally care very little about.
+Super Eyepatch Wolf is a great dramatic storyteller and frequently makes me feel very invested in subjects I normally care very little about.
 
 #### Recommendations
 
@@ -224,3 +204,61 @@ Ahoy has a great catalogue of well-researched and detailed documentary-style vid
 - [Four-Byte Burger](https://www.youtube.com/watch?v=i4EFkspO5p4)
 - [POLYBIUS - The Video Game That Doesn't Exist](https://www.youtube.com/watch?v=_7X6Yeydgyg)
 - [A Brief History of Graphics](https://www.youtube.com/watch?v=QyjyWUrHsFc)
+
+## Philosophy Tube
+
+Abigail has great videos combining philosophy and politics, often using philosophical lenses to look at current events and/or social issues. Always well-written scripts and high production quality as well.
+
+#### Recommendations
+
+- [The Rich Have Their Own Ethics: Effective Altruism & the Crypto Crash (ft. F1nn5ter)](https://www.youtube.com/watch?v=Lm0vHQYKI-Y)
+- [Identity: A Trans Coming Out Story | Philosophy Tube ★](https://www.youtube.com/watch?v=AITRzvm0Xtg)
+- [Suic!de and Ment@l He@lth | Philosophy Tube ★](https://www.youtube.com/watch?v=eQNw2FBdpyE)
+
+## Jenny Nicholson
+
+Very entertaining dissections and valid criticisms of TV shows, movies, fandoms, and theme parks (?) made very engaging thanks to Jenny's geekiness and passion about a lot of topics.
+
+#### Recommendations
+
+- [The Spectacular Failure of the Star Wars Hotel](https://www.youtube.com/watch?v=T0CpOYZZZW4)
+- [There’s something wrong with Hallmark’s youtube channel](https://www.youtube.com/watch?v=YHbtaWr6lj8)
+- [The Last Bronycon: a fandom autopsy](https://www.youtube.com/watch?v=4fVOF2PiHnc)
+
+## Sarah Z
+
+#### Recommendations
+
+- [The Narcissist Scare](https://www.youtube.com/watch?v=8ZFQG2e87ZU)
+
+## Lindsay Ellis
+
+#### Recommendations
+
+- []()
+
+## Broey Deschanel
+
+#### Recommendations
+
+- [Hag Horror: Why Are We So Afraid of Old Women?](https://www.youtube.com/watch?v=-kARVRt-p6w)
+
+## oliSUNvia
+
+#### Recommendations
+
+- []()
+
+## ContraPoints
+
+#### Recommendations
+
+- []()
+
+## münecat
+
+#### Recommendations
+
+- []()
+
+## Yhara zayd
