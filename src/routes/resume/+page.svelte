@@ -63,7 +63,7 @@
 		darklogo="{base}/resume/oracle.png"
 		dates="Sep 2023 – Present"
 		location="Zurich, CH"
-		role="Senior Research Engineer"
+		role="Senior Member of Technical Staff"
 		gpa=""
 	>
 		<ul>
@@ -79,7 +79,7 @@
 		darklogo="{base}/resume/oracle.png"
 		dates="Oct 2021 – Aug 2023"
 		location="Zurich, CH"
-		role="Research Engineer"
+		role="Member of Technical Staff"
 		gpa=""
 	>
 		<ul>
@@ -96,7 +96,7 @@
 		darklogo="{base}/resume/oracle.png"
 		dates="Feb 2021 – Sep 2021"
 		location="Zurich, CH"
-		role="Research Engineer Intern"
+		role="Research Intern"
 		gpa=""
 	>
 		<ul>
