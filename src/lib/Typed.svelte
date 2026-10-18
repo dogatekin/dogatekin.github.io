@@ -21,7 +21,7 @@
 	<div id="typed-strings" style="display: none;">
 		<p>I am a computer scientist.</p>
 		<p>I did a Master's at <a href="https://www.epfl.ch/en/">EPFL</a>.</p>
-		<p>I am a senior research engineer at <a href="https://labs.oracle.com/">Oracle Labs</a>.</p>
+		<p>I am a principal researcher & engineer at Oracle.</p>
 		<p>I am interested in <a href="{base}/blog/makemore-jax/">artificial intelligence</a>.</p>
 		<p>I can juggle <s>2</s> <s>3</s> 4 balls.</p>
 		<p>I have been playing the piano for a few years.</p>

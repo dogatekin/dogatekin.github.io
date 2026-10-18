@@ -24,7 +24,7 @@
 		<ul>
 			<li>
 				<strong>
-					Graduated 1st in my class with the highest GPA in the Computer Science department.
+					Graduated 1st in my class (highest GPA in the Computer Science department).
 				</strong>
 			</li>
 			<li>
@@ -45,8 +45,7 @@
 	>
 		<ul>
 			<li>
-				50% scholarship for ranking 1976th among 2,000,000 students taking the undergraduate
-				placement examination.
+				Received a scholarship for ranking in the top 0.1% in Turkey on the entrance exam.
 			</li>
 			<li>
 				Coursework: Algorithms, Data Structures, Machine Learning, Neural Networks, Statistical
@@ -58,10 +57,10 @@
 	<h2>Experience</h2>
 
 	<Experience
-		name="Oracle Labs"
+		name="Oracle Database AI Research"
 		lightlogo="{base}/resume/oracle.png"
 		darklogo="{base}/resume/oracle.png"
-		dates="Sep 2023 – Present"
+		dates="Oct 2026 – Present"
 		location="Zurich, CH"
 		role="Senior Member of Technical Staff"
 		gpa=""
@@ -77,7 +76,23 @@
 		name="Oracle Labs"
 		lightlogo="{base}/resume/oracle.png"
 		darklogo="{base}/resume/oracle.png"
-		dates="Oct 2021 – Aug 2023"
+		dates="Oct 2023 – Sep 2026"
+		location="Zurich, CH"
+		role="Senior Member of Technical Staff"
+		gpa=""
+	>
+		<ul>
+			<li>
+				Researching and developing ML solutions, analyzing large amounts of data, and working with LLMs. Currently working on cybersecurity topics.
+			</li>
+		</ul>
+	</Experience>
+
+	<Experience
+		name="Oracle Labs"
+		lightlogo="{base}/resume/oracle.png"
+		darklogo="{base}/resume/oracle.png"
+		dates="Oct 2021 – Sep 2023"
 		location="Zurich, CH"
 		role="Member of Technical Staff"
 		gpa=""
