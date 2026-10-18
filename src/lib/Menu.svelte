@@ -9,7 +9,7 @@
 <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <aside class:open onclick={() => (open = !open)}>
 	<div id="links">
-		<a href="{base}/resume">Resume</a>
+		<a href="{base}/resume/Doga_Tekin_Resume.pdf">Resume</a>
 		<a href="{base}/projects">Projects</a>
 		<a href="{base}/blog">Blog</a>
 		<a href="{base}/loops">Loops</a>
